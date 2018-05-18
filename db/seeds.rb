@@ -74,35 +74,3 @@ t4 = Category.create style: "Flips, Fizzes, Swizzles, and Smashes"
 
 
 puts "Created #{Category.all.length} categories."
-
-
-
-Ingredient.destroy_all
-
-i1 = Ingredient.create beverage: "Gin"
-i2 = Ingredient.create beverage: "Vodka"
-i3 = Ingredient.create beverage: "Rum"
-i4 = Ingredient.create beverage: "Tequila"
-i5 = Ingredient.create beverage: "Brandy"
-i6 = Ingredient.create beverage: "Curacao"
-i7 = Ingredient.create beverage: "Whisky"
-
-puts "Created #{Ingredient.all.length} ingredients."
-
-
-List.destroy_all
-
-l1 = List.create occasion: "Solo Journey"
-l2 = List.create occasion: "The Dancing Duo"
-l3 = List.create occasion: "Party Time"
-
-puts "Created #{List.all.length} lists."
-
-
-User.destroy_all
-
-u1 = User.create username:"grrrrrant", password: "chicken"
-u2 = User.create username:"textchimp", password: "chicken"
-u3 = User.create username:"mikkimoo", password: "chicken"
-
-puts "Created #{User.all.length} users."
