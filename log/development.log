@@ -1,0 +1,2321 @@
+  [1m[35m (418.9ms)[0m  [1m[35mCREATE DATABASE "my-cocktails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (314.1ms)[0m  [1m[35mCREATE DATABASE "my-cocktails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (40.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBars (20180517141119)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "bars" ("id" bigserial primary key, "name" text, "image" text, "description" text, "phone" text, "website" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180517141119_create_bars.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517141119"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-17 14:15:49.232751"], ["updated_at", "2018-05-17 14:15:49.232751"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mBar Load (1.2ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mBar Create (0.7ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Baxter Inn"], ["description", "In true New York or Boston bar tradition, it's difficult to find. Located at in the basement of a building at the back of an unmarked alleyway off Clarence Street, this drinking den – full of character and people – is an unexpected surprise for the first time visitor.\n\nThe dark, linear interior features a bar that runs almost the full 10 metres of its length. It’s one of the best and most well-stocked and tiered bars we’ve seen for a while. The initially overwhelming list of almost 800 whiskies (featuring everything from Talisker 10-year-old to Glenfiddich 12-year-old) can be deciphered by the helpful staff.\n\nThe menu isn't limited to whisky, though. It also includes all the usual spirits and cocktails; and large beer and wine lists. The crew is just as happy to mix up a killer negroni as they are something more bespoke, like a Talisker 10 Sour."], ["phone", "(02) 9221 5580"], ["created_at", "2018-05-17 14:42:13.048552"], ["updated_at", "2018-05-17 14:42:13.048552"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stitch"], ["description", "The Stitch story starts in 2009 when Karl Schlothauer and Chris Lehoux transformed an old garage in Darlinghurst into Pocket Bar. One of the first small bars, Pocket soon proved a hit. A couple of years later and the Pocket crew was eyeing expansion. Stitch opened in early 2011.\n\nFrom the initial idea of adorning the walls with old Singer sewing machines, they decided to go all out with the theme. Sewing machines and spools of thread mark the bar's street entrance. Downstairs, there’s a wall of booths, tables set against the staircase and vintage lamps throwing murky light.\n\nThe bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu."], ["phone", "(02) 9279 0380"], ["created_at", "2018-05-17 14:42:13.052409"], ["updated_at", "2018-05-17 14:42:13.052409"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Assembly Bar"], ["description", "Assembly Bar sits a little removed from the big-hitting bar scene further uptown. But that's no reason to overlook it. Following an ownership change in 2014, the space has kept its recycled, industrial aesthetic. Thanks to the addition of some all-star bartenders, it also gained some serious cocktail credentials.\n\nAssembly's main room sports concrete floors, vintage Chesterfields and recycled wooden crates fashioned into tables. A spiral staircase leads to the mezzanine, where a dumb waiter elevates drinks from the bar, and tealight candles flicker against the dark. Outside, picnic tables sit on AstroTurf below a wall of faux ivy studded with fairy lights.\n\nAt the bar, house-made syrups, bitters and tinctures are used to create classic cocktails and a revolving, seasonal list. The Finale has green Chartreuse, gin, lime, coconut syrup, pineapple syrup and coconut flakes. A Vogue mixes lychee liqueur, lemon, apple juice and gin."], ["phone", "(02) 9261 0552"], ["created_at", "2018-05-17 14:42:13.054172"], ["updated_at", "2018-05-17 14:42:13.054172"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mBar Create (0.2ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Grasshopper"], ["description", "It’s tricky to locate, but when you do, Grasshopper is one of the nicer things to find lurking at the end of a dark alley. Planted inconspicuously at the far end of Temperance Lane, this tiny CBD sanctuary was one of the first of a number of small bars to crop up in the midst of Sydney’s interior.\n\nOpened by Martin O’Sullivan (who is President of the Small Bar Association) and Belinda Lai, Grasshopper is both a bar and a restaurant. The latter is a wonderfully cosy room upstairs with a small, French-leaning menu. Champagne and oysters? Veal with snail and garlic butter? Steak au poivre? Don’t mind if we do! The food is rich, tasty and suited to the warm, candle-flecked atmosphere.\n\nIf you’re just in for a drink, head downstairs. In the depths of the ‘hopper you will find some competent bartenders mixing a list of quaintly old-fashioned drinks with a wonderfully new-age quality (they serve them in recycled jam jars)."], ["phone", "(02) 9947 9025"], ["created_at", "2018-05-17 14:42:13.055766"], ["updated_at", "2018-05-17 14:42:13.055766"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mjølner"], ["description", "The first thing you see when you come down the stairs is part of a Viking ship. Almenning says a local craftsman has carved the head of a dragon to protrude from the wall. Then there’s all the ancient Viking replica weapons and armour pieces collected by the team.\n\nThe carvery has a daily rotation of four mains: a bird, a fish, meat and veg. It may be duck on Monday, chicken on Tuesday and pheasant on Wednesday. The animals will be done whole on a rotisserie.\n\nMeat hangs visibly in fridges (converted from old kilns) and carved in a “carving throne” – an extension of the kitchen that flows into the dining space. There is also a “leg service”, where you can buy your own leg of cured meats and ask for it to be brought to your table, where it can be sliced for you on request. The starters and desserts will be more modern-Australian.\n\nThere are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus on cocktails. There’s also some craft beers available."], ["phone", "(02) 8646 4930"], ["created_at", "2018-05-17 14:42:13.057577"], ["updated_at", "2018-05-17 14:42:13.057577"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Create (0.2ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Barber Shop"], ["description", "Climb the steps past the barber shop and you'll find yourself in a large room housing an elegant bar covered with white tiles. Tables and chairs sit atop concrete floors and tea light candles flicker through the murky light. There's an outdoor area out back. It's a pleasant spot, made so by dangling plants and funky old stools. And if the laneway looks familiar, that's because it's also home to The Baxter Inn.\n\nTo drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture."], ["phone", "(02) 9299 9699"], ["created_at", "2018-05-17 14:42:13.059566"], ["updated_at", "2018-05-17 14:42:13.059566"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateCocktails (20180517145536)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "cocktails" ("id" bigserial primary key, "name" text, "image" text, "bar_id" integer, "category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180517145536_create_cocktails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517145536"]]
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateCocktails (20180517145536)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (3.7ms)[0m  [1m[35mDROP TABLE "cocktails"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20180517145536"]]
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (140.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "my-cocktails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (139.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "my-cocktails_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (401.0ms)[0m  [1m[35mCREATE DATABASE "my-cocktails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (313.6ms)[0m  [1m[35mCREATE DATABASE "my-cocktails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateBars (20180517141119)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "bars" ("id" bigserial primary key, "name" text, "image" text, "description" text, "phone" text, "website" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180517141119_create_bars.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517141119"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-17 15:06:50.504419"], ["updated_at", "2018-05-17 15:06:50.504419"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateCocktails (20180517150816)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "cocktails" ("id" bigserial primary key, "name" text, "image" text, "description" text, "bar_id" integer, "category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180517150816_create_cocktails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517150816"]]
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mBar Load (1.0ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mBar Create (1.5ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Baxter Inn"], ["description", "In true New York or Boston bar tradition, it's difficult to find. Located at in the basement of a building at the back of an unmarked alleyway off Clarence Street, this drinking den – full of character and people – is an unexpected surprise for the first time visitor.\n\nThe dark, linear interior features a bar that runs almost the full 10 metres of its length. It’s one of the best and most well-stocked and tiered bars we’ve seen for a while. The initially overwhelming list of almost 800 whiskies (featuring everything from Talisker 10-year-old to Glenfiddich 12-year-old) can be deciphered by the helpful staff.\n\nThe menu isn't limited to whisky, though. It also includes all the usual spirits and cocktails; and large beer and wine lists. The crew is just as happy to mix up a killer negroni as they are something more bespoke, like a Talisker 10 Sour."], ["phone", "(02) 9221 5580"], ["created_at", "2018-05-17 15:56:27.345769"], ["updated_at", "2018-05-17 15:56:27.345769"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stitch"], ["description", "The Stitch story starts in 2009 when Karl Schlothauer and Chris Lehoux transformed an old garage in Darlinghurst into Pocket Bar. One of the first small bars, Pocket soon proved a hit. A couple of years later and the Pocket crew was eyeing expansion. Stitch opened in early 2011.\n\nFrom the initial idea of adorning the walls with old Singer sewing machines, they decided to go all out with the theme. Sewing machines and spools of thread mark the bar's street entrance. Downstairs, there’s a wall of booths, tables set against the staircase and vintage lamps throwing murky light.\n\nThe bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu."], ["phone", "(02) 9279 0380"], ["created_at", "2018-05-17 15:56:27.350725"], ["updated_at", "2018-05-17 15:56:27.350725"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Assembly Bar"], ["description", "Assembly Bar sits a little removed from the big-hitting bar scene further uptown. But that's no reason to overlook it. Following an ownership change in 2014, the space has kept its recycled, industrial aesthetic. Thanks to the addition of some all-star bartenders, it also gained some serious cocktail credentials.\n\nAssembly's main room sports concrete floors, vintage Chesterfields and recycled wooden crates fashioned into tables. A spiral staircase leads to the mezzanine, where a dumb waiter elevates drinks from the bar, and tealight candles flicker against the dark. Outside, picnic tables sit on AstroTurf below a wall of faux ivy studded with fairy lights.\n\nAt the bar, house-made syrups, bitters and tinctures are used to create classic cocktails and a revolving, seasonal list. The Finale has green Chartreuse, gin, lime, coconut syrup, pineapple syrup and coconut flakes. A Vogue mixes lychee liqueur, lemon, apple juice and gin."], ["phone", "(02) 9261 0552"], ["created_at", "2018-05-17 15:56:27.352789"], ["updated_at", "2018-05-17 15:56:27.352789"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Grasshopper"], ["description", "It’s tricky to locate, but when you do, Grasshopper is one of the nicer things to find lurking at the end of a dark alley. Planted inconspicuously at the far end of Temperance Lane, this tiny CBD sanctuary was one of the first of a number of small bars to crop up in the midst of Sydney’s interior.\n\nOpened by Martin O’Sullivan (who is President of the Small Bar Association) and Belinda Lai, Grasshopper is both a bar and a restaurant. The latter is a wonderfully cosy room upstairs with a small, French-leaning menu. Champagne and oysters? Veal with snail and garlic butter? Steak au poivre? Don’t mind if we do! The food is rich, tasty and suited to the warm, candle-flecked atmosphere.\n\nIf you’re just in for a drink, head downstairs. In the depths of the ‘hopper you will find some competent bartenders mixing a list of quaintly old-fashioned drinks with a wonderfully new-age quality (they serve them in recycled jam jars)."], ["phone", "(02) 9947 9025"], ["created_at", "2018-05-17 15:56:27.354803"], ["updated_at", "2018-05-17 15:56:27.354803"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mjølner"], ["description", "The first thing you see when you come down the stairs is part of a Viking ship. Almenning says a local craftsman has carved the head of a dragon to protrude from the wall. Then there’s all the ancient Viking replica weapons and armour pieces collected by the team.\n\nThe carvery has a daily rotation of four mains: a bird, a fish, meat and veg. It may be duck on Monday, chicken on Tuesday and pheasant on Wednesday. The animals will be done whole on a rotisserie.\n\nMeat hangs visibly in fridges (converted from old kilns) and carved in a “carving throne” – an extension of the kitchen that flows into the dining space. There is also a “leg service”, where you can buy your own leg of cured meats and ask for it to be brought to your table, where it can be sliced for you on request. The starters and desserts will be more modern-Australian.\n\nThere are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus on cocktails. There’s also some craft beers available."], ["phone", "(02) 8646 4930"], ["created_at", "2018-05-17 15:56:27.357004"], ["updated_at", "2018-05-17 15:56:27.357004"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Barber Shop"], ["description", "Climb the steps past the barber shop and you'll find yourself in a large room housing an elegant bar covered with white tiles. Tables and chairs sit atop concrete floors and tea light candles flicker through the murky light. There's an outdoor area out back. It's a pleasant spot, made so by dangling plants and funky old stools. And if the laneway looks familiar, that's because it's also home to The Baxter Inn.\n\nTo drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture."], ["phone", "(02) 9299 9699"], ["created_at", "2018-05-17 15:56:27.359051"], ["updated_at", "2018-05-17 15:56:27.359051"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:43
+  [1m[36mCocktail Load (1.0ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Long Island Iced Tea"], ["description", "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola."], ["created_at", "2018-05-17 15:56:27.374961"], ["updated_at", "2018-05-17 15:56:27.374961"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dirty Martini"], ["description", "Includes dry vermouth and olive brine, shaken with ice and served with an olive."], ["created_at", "2018-05-17 15:56:27.377027"], ["updated_at", "2018-05-17 15:56:27.377027"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Singapore Sling"], ["description", "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry."], ["created_at", "2018-05-17 15:56:27.379235"], ["updated_at", "2018-05-17 15:56:27.379235"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gin Fizz"], ["description", "With lemon juice, sugar and carbonated water served on ice in a highball glass."], ["created_at", "2018-05-17 15:56:27.381025"], ["updated_at", "2018-05-17 15:56:27.381025"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Piña colada"], ["description", "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. "], ["created_at", "2018-05-17 15:56:27.382588"], ["updated_at", "2018-05-17 15:56:27.382588"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bahama Mama"], ["description", "With coconut liqueur, coffee liqueur, and pineapple juice served on the rocks."], ["created_at", "2018-05-17 15:56:27.384450"], ["updated_at", "2018-05-17 15:56:27.384450"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Zombie"], ["description", "With orange curaçao, grenadine, bitters, passion fruit, orange juice, lemon juice, and lime juice."], ["created_at", "2018-05-17 15:56:27.385942"], ["updated_at", "2018-05-17 15:56:27.385942"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mojito"], ["description", "With mint, sparkling water and simple syrup served on ice garnished with lime and a sprig of mint."], ["created_at", "2018-05-17 15:56:27.387428"], ["updated_at", "2018-05-17 15:56:27.387428"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Margarita"], ["description", "A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served with salt on the rim of the glass."], ["created_at", "2018-05-17 15:56:27.389022"], ["updated_at", "2018-05-17 15:56:27.389022"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tequila Sunrise"], ["description", "The Tequila Sunrise is a cocktail made of tequila, orange juice, and grenadine syrup and served unmixed in a tall glass."], ["created_at", "2018-05-17 15:56:27.390567"], ["updated_at", "2018-05-17 15:56:27.390567"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "21st Century"], ["description", "It is named after the Twentieth Century Limited train that ran between Chicago and New York City from 1902 to 1967. Includes gin, Lillet Blanc, white creme de cacao and fresh lemon juice."], ["created_at", "2018-05-17 15:56:27.391958"], ["updated_at", "2018-05-17 15:56:27.391958"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bloody Mary"], ["description", "A cocktail containing vodka, tomato juice, and combinations of other spices and flavorings including Worcestershire sauce, hot sauces, garlic, herbs, horseradish, celery, olives, salt, black pepper, lemon juice, lime juice and/or celery salt. "], ["created_at", "2018-05-17 15:56:27.393645"], ["updated_at", "2018-05-17 15:56:27.393645"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sex on the Beach"], ["description", "A cocktail containing vodka, peach schnapps, orange juice and cranberry juice."], ["created_at", "2018-05-17 15:56:27.395256"], ["updated_at", "2018-05-17 15:56:27.395256"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Irish coffee"], ["description", "A cocktail consisting of hot coffee, Irish whiskey, and sugar, stirred, and topped with thick cream. The coffee is drunk through the cream. "], ["created_at", "2018-05-17 15:56:27.396736"], ["updated_at", "2018-05-17 15:56:27.396736"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Godfather"], ["description", "The Godfather is a duo mixed drink made of Scotch whisky and amaretto. Typically, the drink is served on the rocks in an old fashioned glass."], ["created_at", "2018-05-17 15:56:27.398221"], ["updated_at", "2018-05-17 15:56:27.398221"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateCategories (20180517160923)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "style" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180517160923_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517160923"]]
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mBar Load (0.8ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.7ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mBar Create (0.6ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Baxter Inn"], ["description", "In true New York or Boston bar tradition, it's difficult to find. Located at in the basement of a building at the back of an unmarked alleyway off Clarence Street, this drinking den – full of character and people – is an unexpected surprise for the first time visitor.\n\nThe dark, linear interior features a bar that runs almost the full 10 metres of its length. It’s one of the best and most well-stocked and tiered bars we’ve seen for a while. The initially overwhelming list of almost 800 whiskies (featuring everything from Talisker 10-year-old to Glenfiddich 12-year-old) can be deciphered by the helpful staff.\n\nThe menu isn't limited to whisky, though. It also includes all the usual spirits and cocktails; and large beer and wine lists. The crew is just as happy to mix up a killer negroni as they are something more bespoke, like a Talisker 10 Sour."], ["phone", "(02) 9221 5580"], ["created_at", "2018-05-17 16:12:20.290212"], ["updated_at", "2018-05-17 16:12:20.290212"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stitch"], ["description", "The Stitch story starts in 2009 when Karl Schlothauer and Chris Lehoux transformed an old garage in Darlinghurst into Pocket Bar. One of the first small bars, Pocket soon proved a hit. A couple of years later and the Pocket crew was eyeing expansion. Stitch opened in early 2011.\n\nFrom the initial idea of adorning the walls with old Singer sewing machines, they decided to go all out with the theme. Sewing machines and spools of thread mark the bar's street entrance. Downstairs, there’s a wall of booths, tables set against the staircase and vintage lamps throwing murky light.\n\nThe bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu."], ["phone", "(02) 9279 0380"], ["created_at", "2018-05-17 16:12:20.293071"], ["updated_at", "2018-05-17 16:12:20.293071"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mBar Create (0.6ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Assembly Bar"], ["description", "Assembly Bar sits a little removed from the big-hitting bar scene further uptown. But that's no reason to overlook it. Following an ownership change in 2014, the space has kept its recycled, industrial aesthetic. Thanks to the addition of some all-star bartenders, it also gained some serious cocktail credentials.\n\nAssembly's main room sports concrete floors, vintage Chesterfields and recycled wooden crates fashioned into tables. A spiral staircase leads to the mezzanine, where a dumb waiter elevates drinks from the bar, and tealight candles flicker against the dark. Outside, picnic tables sit on AstroTurf below a wall of faux ivy studded with fairy lights.\n\nAt the bar, house-made syrups, bitters and tinctures are used to create classic cocktails and a revolving, seasonal list. The Finale has green Chartreuse, gin, lime, coconut syrup, pineapple syrup and coconut flakes. A Vogue mixes lychee liqueur, lemon, apple juice and gin."], ["phone", "(02) 9261 0552"], ["created_at", "2018-05-17 16:12:20.295236"], ["updated_at", "2018-05-17 16:12:20.295236"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Grasshopper"], ["description", "It’s tricky to locate, but when you do, Grasshopper is one of the nicer things to find lurking at the end of a dark alley. Planted inconspicuously at the far end of Temperance Lane, this tiny CBD sanctuary was one of the first of a number of small bars to crop up in the midst of Sydney’s interior.\n\nOpened by Martin O’Sullivan (who is President of the Small Bar Association) and Belinda Lai, Grasshopper is both a bar and a restaurant. The latter is a wonderfully cosy room upstairs with a small, French-leaning menu. Champagne and oysters? Veal with snail and garlic butter? Steak au poivre? Don’t mind if we do! The food is rich, tasty and suited to the warm, candle-flecked atmosphere.\n\nIf you’re just in for a drink, head downstairs. In the depths of the ‘hopper you will find some competent bartenders mixing a list of quaintly old-fashioned drinks with a wonderfully new-age quality (they serve them in recycled jam jars)."], ["phone", "(02) 9947 9025"], ["created_at", "2018-05-17 16:12:20.297727"], ["updated_at", "2018-05-17 16:12:20.297727"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mjølner"], ["description", "The first thing you see when you come down the stairs is part of a Viking ship. Almenning says a local craftsman has carved the head of a dragon to protrude from the wall. Then there’s all the ancient Viking replica weapons and armour pieces collected by the team.\n\nThe carvery has a daily rotation of four mains: a bird, a fish, meat and veg. It may be duck on Monday, chicken on Tuesday and pheasant on Wednesday. The animals will be done whole on a rotisserie.\n\nMeat hangs visibly in fridges (converted from old kilns) and carved in a “carving throne” – an extension of the kitchen that flows into the dining space. There is also a “leg service”, where you can buy your own leg of cured meats and ask for it to be brought to your table, where it can be sliced for you on request. The starters and desserts will be more modern-Australian.\n\nThere are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus on cocktails. There’s also some craft beers available."], ["phone", "(02) 8646 4930"], ["created_at", "2018-05-17 16:12:20.300245"], ["updated_at", "2018-05-17 16:12:20.300245"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Barber Shop"], ["description", "Climb the steps past the barber shop and you'll find yourself in a large room housing an elegant bar covered with white tiles. Tables and chairs sit atop concrete floors and tea light candles flicker through the murky light. There's an outdoor area out back. It's a pleasant spot, made so by dangling plants and funky old stools. And if the laneway looks familiar, that's because it's also home to The Baxter Inn.\n\nTo drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture."], ["phone", "(02) 9299 9699"], ["created_at", "2018-05-17 16:12:20.302603"], ["updated_at", "2018-05-17 16:12:20.302603"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:43
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Long Island Iced Tea"], ["description", "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola."], ["created_at", "2018-05-17 16:12:20.343309"], ["updated_at", "2018-05-17 16:12:20.343309"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dirty Martini"], ["description", "Includes dry vermouth and olive brine, shaken with ice and served with an olive."], ["created_at", "2018-05-17 16:12:20.345512"], ["updated_at", "2018-05-17 16:12:20.345512"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Singapore Sling"], ["description", "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry."], ["created_at", "2018-05-17 16:12:20.347626"], ["updated_at", "2018-05-17 16:12:20.347626"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gin Fizz"], ["description", "With lemon juice, sugar and carbonated water served on ice in a highball glass."], ["created_at", "2018-05-17 16:12:20.349667"], ["updated_at", "2018-05-17 16:12:20.349667"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Piña colada"], ["description", "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. "], ["created_at", "2018-05-17 16:12:20.351726"], ["updated_at", "2018-05-17 16:12:20.351726"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bahama Mama"], ["description", "With coconut liqueur, coffee liqueur, and pineapple juice served on the rocks."], ["created_at", "2018-05-17 16:12:20.353621"], ["updated_at", "2018-05-17 16:12:20.353621"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Zombie"], ["description", "With orange curaçao, grenadine, bitters, passion fruit, orange juice, lemon juice, and lime juice."], ["created_at", "2018-05-17 16:12:20.355560"], ["updated_at", "2018-05-17 16:12:20.355560"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mojito"], ["description", "With mint, sparkling water and simple syrup served on ice garnished with lime and a sprig of mint."], ["created_at", "2018-05-17 16:12:20.357628"], ["updated_at", "2018-05-17 16:12:20.357628"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Margarita"], ["description", "A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served with salt on the rim of the glass."], ["created_at", "2018-05-17 16:12:20.359887"], ["updated_at", "2018-05-17 16:12:20.359887"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tequila Sunrise"], ["description", "The Tequila Sunrise is a cocktail made of tequila, orange juice, and grenadine syrup and served unmixed in a tall glass."], ["created_at", "2018-05-17 16:12:20.361726"], ["updated_at", "2018-05-17 16:12:20.361726"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "21st Century"], ["description", "It is named after the Twentieth Century Limited train that ran between Chicago and New York City from 1902 to 1967. Includes gin, Lillet Blanc, white creme de cacao and fresh lemon juice."], ["created_at", "2018-05-17 16:12:20.363646"], ["updated_at", "2018-05-17 16:12:20.363646"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mCocktail Create (0.5ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bloody Mary"], ["description", "A cocktail containing vodka, tomato juice, and combinations of other spices and flavorings including Worcestershire sauce, hot sauces, garlic, herbs, horseradish, celery, olives, salt, black pepper, lemon juice, lime juice and/or celery salt. "], ["created_at", "2018-05-17 16:12:20.365678"], ["updated_at", "2018-05-17 16:12:20.365678"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sex on the Beach"], ["description", "A cocktail containing vodka, peach schnapps, orange juice and cranberry juice."], ["created_at", "2018-05-17 16:12:20.367800"], ["updated_at", "2018-05-17 16:12:20.367800"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Irish coffee"], ["description", "A cocktail consisting of hot coffee, Irish whiskey, and sugar, stirred, and topped with thick cream. The coffee is drunk through the cream. "], ["created_at", "2018-05-17 16:12:20.369575"], ["updated_at", "2018-05-17 16:12:20.369575"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Godfather"], ["description", "The Godfather is a duo mixed drink made of Scotch whisky and amaretto. Typically, the drink is served on the rocks in an old fashioned glass."], ["created_at", "2018-05-17 16:12:20.371397"], ["updated_at", "2018-05-17 16:12:20.371397"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:65
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Stirred Cocktails"], ["created_at", "2018-05-17 16:12:20.384253"], ["updated_at", "2018-05-17 16:12:20.384253"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:72
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Sours"], ["created_at", "2018-05-17 16:12:20.386646"], ["updated_at", "2018-05-17 16:12:20.386646"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Highballs"], ["created_at", "2018-05-17 16:12:20.388400"], ["updated_at", "2018-05-17 16:12:20.388400"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:74
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Flips, Fizzes, Swizzles, and Smashes"], ["created_at", "2018-05-17 16:12:20.390460"], ["updated_at", "2018-05-17 16:12:20.390460"]]
+  ↳ db/seeds.rb:74
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:74
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:77
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateIngredients (20180517163401)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" bigserial primary key, "beverage" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180517163401_create_ingredients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517163401"]]
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mBar Load (0.6ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.6ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.9ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mBar Create (0.5ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Baxter Inn"], ["description", "In true New York or Boston bar tradition, it's difficult to find. Located at in the basement of a building at the back of an unmarked alleyway off Clarence Street, this drinking den – full of character and people – is an unexpected surprise for the first time visitor.\n\nThe dark, linear interior features a bar that runs almost the full 10 metres of its length. It’s one of the best and most well-stocked and tiered bars we’ve seen for a while. The initially overwhelming list of almost 800 whiskies (featuring everything from Talisker 10-year-old to Glenfiddich 12-year-old) can be deciphered by the helpful staff.\n\nThe menu isn't limited to whisky, though. It also includes all the usual spirits and cocktails; and large beer and wine lists. The crew is just as happy to mix up a killer negroni as they are something more bespoke, like a Talisker 10 Sour."], ["phone", "(02) 9221 5580"], ["created_at", "2018-05-17 16:40:25.280396"], ["updated_at", "2018-05-17 16:40:25.280396"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stitch"], ["description", "The Stitch story starts in 2009 when Karl Schlothauer and Chris Lehoux transformed an old garage in Darlinghurst into Pocket Bar. One of the first small bars, Pocket soon proved a hit. A couple of years later and the Pocket crew was eyeing expansion. Stitch opened in early 2011.\n\nFrom the initial idea of adorning the walls with old Singer sewing machines, they decided to go all out with the theme. Sewing machines and spools of thread mark the bar's street entrance. Downstairs, there’s a wall of booths, tables set against the staircase and vintage lamps throwing murky light.\n\nThe bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu."], ["phone", "(02) 9279 0380"], ["created_at", "2018-05-17 16:40:25.282770"], ["updated_at", "2018-05-17 16:40:25.282770"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Assembly Bar"], ["description", "Assembly Bar sits a little removed from the big-hitting bar scene further uptown. But that's no reason to overlook it. Following an ownership change in 2014, the space has kept its recycled, industrial aesthetic. Thanks to the addition of some all-star bartenders, it also gained some serious cocktail credentials.\n\nAssembly's main room sports concrete floors, vintage Chesterfields and recycled wooden crates fashioned into tables. A spiral staircase leads to the mezzanine, where a dumb waiter elevates drinks from the bar, and tealight candles flicker against the dark. Outside, picnic tables sit on AstroTurf below a wall of faux ivy studded with fairy lights.\n\nAt the bar, house-made syrups, bitters and tinctures are used to create classic cocktails and a revolving, seasonal list. The Finale has green Chartreuse, gin, lime, coconut syrup, pineapple syrup and coconut flakes. A Vogue mixes lychee liqueur, lemon, apple juice and gin."], ["phone", "(02) 9261 0552"], ["created_at", "2018-05-17 16:40:25.284749"], ["updated_at", "2018-05-17 16:40:25.284749"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Grasshopper"], ["description", "It’s tricky to locate, but when you do, Grasshopper is one of the nicer things to find lurking at the end of a dark alley. Planted inconspicuously at the far end of Temperance Lane, this tiny CBD sanctuary was one of the first of a number of small bars to crop up in the midst of Sydney’s interior.\n\nOpened by Martin O’Sullivan (who is President of the Small Bar Association) and Belinda Lai, Grasshopper is both a bar and a restaurant. The latter is a wonderfully cosy room upstairs with a small, French-leaning menu. Champagne and oysters? Veal with snail and garlic butter? Steak au poivre? Don’t mind if we do! The food is rich, tasty and suited to the warm, candle-flecked atmosphere.\n\nIf you’re just in for a drink, head downstairs. In the depths of the ‘hopper you will find some competent bartenders mixing a list of quaintly old-fashioned drinks with a wonderfully new-age quality (they serve them in recycled jam jars)."], ["phone", "(02) 9947 9025"], ["created_at", "2018-05-17 16:40:25.286883"], ["updated_at", "2018-05-17 16:40:25.286883"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mBar Create (0.5ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mjølner"], ["description", "The first thing you see when you come down the stairs is part of a Viking ship. Almenning says a local craftsman has carved the head of a dragon to protrude from the wall. Then there’s all the ancient Viking replica weapons and armour pieces collected by the team.\n\nThe carvery has a daily rotation of four mains: a bird, a fish, meat and veg. It may be duck on Monday, chicken on Tuesday and pheasant on Wednesday. The animals will be done whole on a rotisserie.\n\nMeat hangs visibly in fridges (converted from old kilns) and carved in a “carving throne” – an extension of the kitchen that flows into the dining space. There is also a “leg service”, where you can buy your own leg of cured meats and ask for it to be brought to your table, where it can be sliced for you on request. The starters and desserts will be more modern-Australian.\n\nThere are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus on cocktails. There’s also some craft beers available."], ["phone", "(02) 8646 4930"], ["created_at", "2018-05-17 16:40:25.288948"], ["updated_at", "2018-05-17 16:40:25.288948"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Barber Shop"], ["description", "Climb the steps past the barber shop and you'll find yourself in a large room housing an elegant bar covered with white tiles. Tables and chairs sit atop concrete floors and tea light candles flicker through the murky light. There's an outdoor area out back. It's a pleasant spot, made so by dangling plants and funky old stools. And if the laneway looks familiar, that's because it's also home to The Baxter Inn.\n\nTo drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture."], ["phone", "(02) 9299 9699"], ["created_at", "2018-05-17 16:40:25.291514"], ["updated_at", "2018-05-17 16:40:25.291514"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:43
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mCocktail Create (0.5ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Long Island Iced Tea"], ["description", "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola."], ["created_at", "2018-05-17 16:40:25.331317"], ["updated_at", "2018-05-17 16:40:25.331317"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Singapore Sling"], ["description", "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry."], ["created_at", "2018-05-17 16:40:25.333764"], ["updated_at", "2018-05-17 16:40:25.333764"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gin Fizz"], ["description", "With lemon juice, sugar and carbonated water served on ice in a highball glass."], ["created_at", "2018-05-17 16:40:25.335811"], ["updated_at", "2018-05-17 16:40:25.335811"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Piña colada"], ["description", "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. "], ["created_at", "2018-05-17 16:40:25.337800"], ["updated_at", "2018-05-17 16:40:25.337800"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Adios M**********r"], ["description", "A delicious cocktail with Vodka, Gin, Rum, Tequila, 7up and Blue Curacao."], ["created_at", "2018-05-17 16:40:25.339651"], ["updated_at", "2018-05-17 16:40:25.339651"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Zombie"], ["description", "With orange curaçao, grenadine, bitters, passion fruit, orange juice, lemon juice, and lime juice."], ["created_at", "2018-05-17 16:40:25.341735"], ["updated_at", "2018-05-17 16:40:25.341735"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mojito"], ["description", "With mint, sparkling water and simple syrup served on ice garnished with lime and a sprig of mint."], ["created_at", "2018-05-17 16:40:25.343824"], ["updated_at", "2018-05-17 16:40:25.343824"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Margarita"], ["description", "A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served with salt on the rim of the glass."], ["created_at", "2018-05-17 16:40:25.345721"], ["updated_at", "2018-05-17 16:40:25.345721"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tequila Sunrise"], ["description", "The Tequila Sunrise is a cocktail made of tequila, orange juice, and grenadine syrup and served unmixed in a tall glass."], ["created_at", "2018-05-17 16:40:25.347598"], ["updated_at", "2018-05-17 16:40:25.347598"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fog Cutter"], ["description", "The Fog Cutter is up there in terms of sheer number of different spirits put in a glass. It contains rum, gin, Cognac and sherry, as well as an orange and lemon juice mix—plus a little cocktail umbrella (this is a tiki drink, after all)."], ["created_at", "2018-05-17 16:40:25.349419"], ["updated_at", "2018-05-17 16:40:25.349419"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mCocktail Create (0.7ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bloody Mary"], ["description", "A cocktail containing vodka, tomato juice, and combinations of other spices and flavorings including Worcestershire sauce, hot sauces, garlic, herbs, horseradish, celery, olives, salt, black pepper, lemon juice, lime juice and/or celery salt. "], ["created_at", "2018-05-17 16:40:25.351555"], ["updated_at", "2018-05-17 16:40:25.351555"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fish House Punch"], ["description", "If you’re hosting a party for a whole horde of L.I.I.T. lovers looking for something new, whip up a batch of Fish House Punch. The mix of dark rum, Cognac and peach brandy is enhanced by black tea, lemon juice and simple syrup."], ["created_at", "2018-05-17 16:40:25.353868"], ["updated_at", "2018-05-17 16:40:25.353868"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mCocktail Create (0.6ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Irish coffee"], ["description", "A cocktail consisting of hot coffee, Irish whiskey, and sugar, stirred, and topped with thick cream. The coffee is drunk through the cream. "], ["created_at", "2018-05-17 16:40:25.356214"], ["updated_at", "2018-05-17 16:40:25.356214"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Godfather"], ["description", "The Godfather is a duo mixed drink made of Scotch whisky and amaretto."], ["created_at", "2018-05-17 16:40:25.358565"], ["updated_at", "2018-05-17 16:40:25.358565"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Stirred Cocktails"], ["created_at", "2018-05-17 16:40:25.379514"], ["updated_at", "2018-05-17 16:40:25.379514"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Sours"], ["created_at", "2018-05-17 16:40:25.382000"], ["updated_at", "2018-05-17 16:40:25.382000"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:72
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Highballs"], ["created_at", "2018-05-17 16:40:25.384139"], ["updated_at", "2018-05-17 16:40:25.384139"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Flips, Fizzes, Swizzles, and Smashes"], ["created_at", "2018-05-17 16:40:25.386153"], ["updated_at", "2018-05-17 16:40:25.386153"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:76
+  [1m[36mIngredient Load (0.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mIngredient Create (0.6ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Gin"], ["created_at", "2018-05-17 16:40:25.401721"], ["updated_at", "2018-05-17 16:40:25.401721"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Vodka"], ["created_at", "2018-05-17 16:40:25.404340"], ["updated_at", "2018-05-17 16:40:25.404340"]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Rum"], ["created_at", "2018-05-17 16:40:25.406495"], ["updated_at", "2018-05-17 16:40:25.406495"]]
+  ↳ db/seeds.rb:84
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Tequila"], ["created_at", "2018-05-17 16:40:25.409769"], ["updated_at", "2018-05-17 16:40:25.409769"]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:86
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Brandy"], ["created_at", "2018-05-17 16:40:25.412268"], ["updated_at", "2018-05-17 16:40:25.412268"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:87
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Curacao"], ["created_at", "2018-05-17 16:40:25.414349"], ["updated_at", "2018-05-17 16:40:25.414349"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:88
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Whisky"], ["created_at", "2018-05-17 16:40:25.416212"], ["updated_at", "2018-05-17 16:40:25.416212"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:88
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:90
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateLists (20180517164305)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "lists" ("id" bigserial primary key, "occasion" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180517164305_create_lists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517164305"]]
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Baxter Inn"], ["description", "In true New York or Boston bar tradition, it's difficult to find. Located at in the basement of a building at the back of an unmarked alleyway off Clarence Street, this drinking den – full of character and people – is an unexpected surprise for the first time visitor.\n\nThe dark, linear interior features a bar that runs almost the full 10 metres of its length. It’s one of the best and most well-stocked and tiered bars we’ve seen for a while. The initially overwhelming list of almost 800 whiskies (featuring everything from Talisker 10-year-old to Glenfiddich 12-year-old) can be deciphered by the helpful staff.\n\nThe menu isn't limited to whisky, though. It also includes all the usual spirits and cocktails; and large beer and wine lists. The crew is just as happy to mix up a killer negroni as they are something more bespoke, like a Talisker 10 Sour."], ["phone", "(02) 9221 5580"], ["created_at", "2018-05-17 16:43:18.515455"], ["updated_at", "2018-05-17 16:43:18.515455"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mBar Create (0.2ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stitch"], ["description", "The Stitch story starts in 2009 when Karl Schlothauer and Chris Lehoux transformed an old garage in Darlinghurst into Pocket Bar. One of the first small bars, Pocket soon proved a hit. A couple of years later and the Pocket crew was eyeing expansion. Stitch opened in early 2011.\n\nFrom the initial idea of adorning the walls with old Singer sewing machines, they decided to go all out with the theme. Sewing machines and spools of thread mark the bar's street entrance. Downstairs, there’s a wall of booths, tables set against the staircase and vintage lamps throwing murky light.\n\nThe bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu."], ["phone", "(02) 9279 0380"], ["created_at", "2018-05-17 16:43:18.517508"], ["updated_at", "2018-05-17 16:43:18.517508"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Assembly Bar"], ["description", "Assembly Bar sits a little removed from the big-hitting bar scene further uptown. But that's no reason to overlook it. Following an ownership change in 2014, the space has kept its recycled, industrial aesthetic. Thanks to the addition of some all-star bartenders, it also gained some serious cocktail credentials.\n\nAssembly's main room sports concrete floors, vintage Chesterfields and recycled wooden crates fashioned into tables. A spiral staircase leads to the mezzanine, where a dumb waiter elevates drinks from the bar, and tealight candles flicker against the dark. Outside, picnic tables sit on AstroTurf below a wall of faux ivy studded with fairy lights.\n\nAt the bar, house-made syrups, bitters and tinctures are used to create classic cocktails and a revolving, seasonal list. The Finale has green Chartreuse, gin, lime, coconut syrup, pineapple syrup and coconut flakes. A Vogue mixes lychee liqueur, lemon, apple juice and gin."], ["phone", "(02) 9261 0552"], ["created_at", "2018-05-17 16:43:18.519082"], ["updated_at", "2018-05-17 16:43:18.519082"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mBar Create (0.2ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Grasshopper"], ["description", "It’s tricky to locate, but when you do, Grasshopper is one of the nicer things to find lurking at the end of a dark alley. Planted inconspicuously at the far end of Temperance Lane, this tiny CBD sanctuary was one of the first of a number of small bars to crop up in the midst of Sydney’s interior.\n\nOpened by Martin O’Sullivan (who is President of the Small Bar Association) and Belinda Lai, Grasshopper is both a bar and a restaurant. The latter is a wonderfully cosy room upstairs with a small, French-leaning menu. Champagne and oysters? Veal with snail and garlic butter? Steak au poivre? Don’t mind if we do! The food is rich, tasty and suited to the warm, candle-flecked atmosphere.\n\nIf you’re just in for a drink, head downstairs. In the depths of the ‘hopper you will find some competent bartenders mixing a list of quaintly old-fashioned drinks with a wonderfully new-age quality (they serve them in recycled jam jars)."], ["phone", "(02) 9947 9025"], ["created_at", "2018-05-17 16:43:18.520698"], ["updated_at", "2018-05-17 16:43:18.520698"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mBar Create (0.2ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mjølner"], ["description", "The first thing you see when you come down the stairs is part of a Viking ship. Almenning says a local craftsman has carved the head of a dragon to protrude from the wall. Then there’s all the ancient Viking replica weapons and armour pieces collected by the team.\n\nThe carvery has a daily rotation of four mains: a bird, a fish, meat and veg. It may be duck on Monday, chicken on Tuesday and pheasant on Wednesday. The animals will be done whole on a rotisserie.\n\nMeat hangs visibly in fridges (converted from old kilns) and carved in a “carving throne” – an extension of the kitchen that flows into the dining space. There is also a “leg service”, where you can buy your own leg of cured meats and ask for it to be brought to your table, where it can be sliced for you on request. The starters and desserts will be more modern-Australian.\n\nThere are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus on cocktails. There’s also some craft beers available."], ["phone", "(02) 8646 4930"], ["created_at", "2018-05-17 16:43:18.522259"], ["updated_at", "2018-05-17 16:43:18.522259"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Create (0.2ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Barber Shop"], ["description", "Climb the steps past the barber shop and you'll find yourself in a large room housing an elegant bar covered with white tiles. Tables and chairs sit atop concrete floors and tea light candles flicker through the murky light. There's an outdoor area out back. It's a pleasant spot, made so by dangling plants and funky old stools. And if the laneway looks familiar, that's because it's also home to The Baxter Inn.\n\nTo drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture."], ["phone", "(02) 9299 9699"], ["created_at", "2018-05-17 16:43:18.523946"], ["updated_at", "2018-05-17 16:43:18.523946"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:43
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 31]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 32]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 33]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 34]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 35]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 36]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 37]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 38]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 39]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 40]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 41]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 42]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 43]]
+  ↳ db/seeds.rb:47
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 44]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Long Island Iced Tea"], ["description", "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola."], ["created_at", "2018-05-17 16:43:18.557061"], ["updated_at", "2018-05-17 16:43:18.557061"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Singapore Sling"], ["description", "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry."], ["created_at", "2018-05-17 16:43:18.559134"], ["updated_at", "2018-05-17 16:43:18.559134"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gin Fizz"], ["description", "With lemon juice, sugar and carbonated water served on ice in a highball glass."], ["created_at", "2018-05-17 16:43:18.560717"], ["updated_at", "2018-05-17 16:43:18.560717"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Piña colada"], ["description", "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. "], ["created_at", "2018-05-17 16:43:18.562380"], ["updated_at", "2018-05-17 16:43:18.562380"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Adios M**********r"], ["description", "A delicious cocktail with Vodka, Gin, Rum, Tequila, 7up and Blue Curacao."], ["created_at", "2018-05-17 16:43:18.563982"], ["updated_at", "2018-05-17 16:43:18.563982"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Zombie"], ["description", "With orange curaçao, grenadine, bitters, passion fruit, orange juice, lemon juice, and lime juice."], ["created_at", "2018-05-17 16:43:18.565533"], ["updated_at", "2018-05-17 16:43:18.565533"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mojito"], ["description", "With mint, sparkling water and simple syrup served on ice garnished with lime and a sprig of mint."], ["created_at", "2018-05-17 16:43:18.567074"], ["updated_at", "2018-05-17 16:43:18.567074"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Margarita"], ["description", "A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served with salt on the rim of the glass."], ["created_at", "2018-05-17 16:43:18.568517"], ["updated_at", "2018-05-17 16:43:18.568517"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tequila Sunrise"], ["description", "The Tequila Sunrise is a cocktail made of tequila, orange juice, and grenadine syrup and served unmixed in a tall glass."], ["created_at", "2018-05-17 16:43:18.570052"], ["updated_at", "2018-05-17 16:43:18.570052"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fog Cutter"], ["description", "The Fog Cutter is up there in terms of sheer number of different spirits put in a glass. It contains rum, gin, Cognac and sherry, as well as an orange and lemon juice mix—plus a little cocktail umbrella (this is a tiki drink, after all)."], ["created_at", "2018-05-17 16:43:18.571564"], ["updated_at", "2018-05-17 16:43:18.571564"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bloody Mary"], ["description", "A cocktail containing vodka, tomato juice, and combinations of other spices and flavorings including Worcestershire sauce, hot sauces, garlic, herbs, horseradish, celery, olives, salt, black pepper, lemon juice, lime juice and/or celery salt. "], ["created_at", "2018-05-17 16:43:18.573166"], ["updated_at", "2018-05-17 16:43:18.573166"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fish House Punch"], ["description", "If you’re hosting a party for a whole horde of L.I.I.T. lovers looking for something new, whip up a batch of Fish House Punch. The mix of dark rum, Cognac and peach brandy is enhanced by black tea, lemon juice and simple syrup."], ["created_at", "2018-05-17 16:43:18.574658"], ["updated_at", "2018-05-17 16:43:18.574658"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Irish coffee"], ["description", "A cocktail consisting of hot coffee, Irish whiskey, and sugar, stirred, and topped with thick cream. The coffee is drunk through the cream. "], ["created_at", "2018-05-17 16:43:18.576232"], ["updated_at", "2018-05-17 16:43:18.576232"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Godfather"], ["description", "The Godfather is a duo mixed drink made of Scotch whisky and amaretto."], ["created_at", "2018-05-17 16:43:18.577836"], ["updated_at", "2018-05-17 16:43:18.577836"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.2ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.2ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.2ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Stirred Cocktails"], ["created_at", "2018-05-17 16:43:18.594018"], ["updated_at", "2018-05-17 16:43:18.594018"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Sours"], ["created_at", "2018-05-17 16:43:18.596410"], ["updated_at", "2018-05-17 16:43:18.596410"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:72
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Highballs"], ["created_at", "2018-05-17 16:43:18.598134"], ["updated_at", "2018-05-17 16:43:18.598134"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Flips, Fizzes, Swizzles, and Smashes"], ["created_at", "2018-05-17 16:43:18.599722"], ["updated_at", "2018-05-17 16:43:18.599722"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:76
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Gin"], ["created_at", "2018-05-17 16:43:18.620157"], ["updated_at", "2018-05-17 16:43:18.620157"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Vodka"], ["created_at", "2018-05-17 16:43:18.622150"], ["updated_at", "2018-05-17 16:43:18.622150"]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Rum"], ["created_at", "2018-05-17 16:43:18.623594"], ["updated_at", "2018-05-17 16:43:18.623594"]]
+  ↳ db/seeds.rb:84
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Tequila"], ["created_at", "2018-05-17 16:43:18.625127"], ["updated_at", "2018-05-17 16:43:18.625127"]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:86
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Brandy"], ["created_at", "2018-05-17 16:43:18.626702"], ["updated_at", "2018-05-17 16:43:18.626702"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:87
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Curacao"], ["created_at", "2018-05-17 16:43:18.628230"], ["updated_at", "2018-05-17 16:43:18.628230"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:88
+  [1m[36mIngredient Create (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Whisky"], ["created_at", "2018-05-17 16:43:18.629742"], ["updated_at", "2018-05-17 16:43:18.629742"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:88
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:90
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mBar Load (0.7ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (1.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Baxter Inn"], ["description", "In true New York or Boston bar tradition, it's difficult to find. Located at in the basement of a building at the back of an unmarked alleyway off Clarence Street, this drinking den – full of character and people – is an unexpected surprise for the first time visitor.\n\nThe dark, linear interior features a bar that runs almost the full 10 metres of its length. It’s one of the best and most well-stocked and tiered bars we’ve seen for a while. The initially overwhelming list of almost 800 whiskies (featuring everything from Talisker 10-year-old to Glenfiddich 12-year-old) can be deciphered by the helpful staff.\n\nThe menu isn't limited to whisky, though. It also includes all the usual spirits and cocktails; and large beer and wine lists. The crew is just as happy to mix up a killer negroni as they are something more bespoke, like a Talisker 10 Sour."], ["phone", "(02) 9221 5580"], ["created_at", "2018-05-17 16:47:03.841568"], ["updated_at", "2018-05-17 16:47:03.841568"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mBar Create (0.2ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stitch"], ["description", "The Stitch story starts in 2009 when Karl Schlothauer and Chris Lehoux transformed an old garage in Darlinghurst into Pocket Bar. One of the first small bars, Pocket soon proved a hit. A couple of years later and the Pocket crew was eyeing expansion. Stitch opened in early 2011.\n\nFrom the initial idea of adorning the walls with old Singer sewing machines, they decided to go all out with the theme. Sewing machines and spools of thread mark the bar's street entrance. Downstairs, there’s a wall of booths, tables set against the staircase and vintage lamps throwing murky light.\n\nThe bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu."], ["phone", "(02) 9279 0380"], ["created_at", "2018-05-17 16:47:03.843910"], ["updated_at", "2018-05-17 16:47:03.843910"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Assembly Bar"], ["description", "Assembly Bar sits a little removed from the big-hitting bar scene further uptown. But that's no reason to overlook it. Following an ownership change in 2014, the space has kept its recycled, industrial aesthetic. Thanks to the addition of some all-star bartenders, it also gained some serious cocktail credentials.\n\nAssembly's main room sports concrete floors, vintage Chesterfields and recycled wooden crates fashioned into tables. A spiral staircase leads to the mezzanine, where a dumb waiter elevates drinks from the bar, and tealight candles flicker against the dark. Outside, picnic tables sit on AstroTurf below a wall of faux ivy studded with fairy lights.\n\nAt the bar, house-made syrups, bitters and tinctures are used to create classic cocktails and a revolving, seasonal list. The Finale has green Chartreuse, gin, lime, coconut syrup, pineapple syrup and coconut flakes. A Vogue mixes lychee liqueur, lemon, apple juice and gin."], ["phone", "(02) 9261 0552"], ["created_at", "2018-05-17 16:47:03.845520"], ["updated_at", "2018-05-17 16:47:03.845520"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Grasshopper"], ["description", "It’s tricky to locate, but when you do, Grasshopper is one of the nicer things to find lurking at the end of a dark alley. Planted inconspicuously at the far end of Temperance Lane, this tiny CBD sanctuary was one of the first of a number of small bars to crop up in the midst of Sydney’s interior.\n\nOpened by Martin O’Sullivan (who is President of the Small Bar Association) and Belinda Lai, Grasshopper is both a bar and a restaurant. The latter is a wonderfully cosy room upstairs with a small, French-leaning menu. Champagne and oysters? Veal with snail and garlic butter? Steak au poivre? Don’t mind if we do! The food is rich, tasty and suited to the warm, candle-flecked atmosphere.\n\nIf you’re just in for a drink, head downstairs. In the depths of the ‘hopper you will find some competent bartenders mixing a list of quaintly old-fashioned drinks with a wonderfully new-age quality (they serve them in recycled jam jars)."], ["phone", "(02) 9947 9025"], ["created_at", "2018-05-17 16:47:03.847962"], ["updated_at", "2018-05-17 16:47:03.847962"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mjølner"], ["description", "The first thing you see when you come down the stairs is part of a Viking ship. Almenning says a local craftsman has carved the head of a dragon to protrude from the wall. Then there’s all the ancient Viking replica weapons and armour pieces collected by the team.\n\nThe carvery has a daily rotation of four mains: a bird, a fish, meat and veg. It may be duck on Monday, chicken on Tuesday and pheasant on Wednesday. The animals will be done whole on a rotisserie.\n\nMeat hangs visibly in fridges (converted from old kilns) and carved in a “carving throne” – an extension of the kitchen that flows into the dining space. There is also a “leg service”, where you can buy your own leg of cured meats and ask for it to be brought to your table, where it can be sliced for you on request. The starters and desserts will be more modern-Australian.\n\nThere are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus on cocktails. There’s also some craft beers available."], ["phone", "(02) 8646 4930"], ["created_at", "2018-05-17 16:47:03.850087"], ["updated_at", "2018-05-17 16:47:03.850087"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Create (0.2ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Barber Shop"], ["description", "Climb the steps past the barber shop and you'll find yourself in a large room housing an elegant bar covered with white tiles. Tables and chairs sit atop concrete floors and tea light candles flicker through the murky light. There's an outdoor area out back. It's a pleasant spot, made so by dangling plants and funky old stools. And if the laneway looks familiar, that's because it's also home to The Baxter Inn.\n\nTo drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture."], ["phone", "(02) 9299 9699"], ["created_at", "2018-05-17 16:47:03.851840"], ["updated_at", "2018-05-17 16:47:03.851840"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:43
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 45]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 46]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 47]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 48]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 49]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 50]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 51]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 52]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 53]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 54]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 55]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 56]]
+  ↳ db/seeds.rb:47
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 57]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 58]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mCocktail Create (0.5ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Long Island Iced Tea"], ["description", "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola."], ["created_at", "2018-05-17 16:47:03.888056"], ["updated_at", "2018-05-17 16:47:03.888056"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Singapore Sling"], ["description", "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry."], ["created_at", "2018-05-17 16:47:03.890407"], ["updated_at", "2018-05-17 16:47:03.890407"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gin Fizz"], ["description", "With lemon juice, sugar and carbonated water served on ice in a highball glass."], ["created_at", "2018-05-17 16:47:03.892525"], ["updated_at", "2018-05-17 16:47:03.892525"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Piña colada"], ["description", "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. "], ["created_at", "2018-05-17 16:47:03.894716"], ["updated_at", "2018-05-17 16:47:03.894716"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Adios M**********r"], ["description", "A delicious cocktail with Vodka, Gin, Rum, Tequila, 7up and Blue Curacao."], ["created_at", "2018-05-17 16:47:03.896883"], ["updated_at", "2018-05-17 16:47:03.896883"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Zombie"], ["description", "With orange curaçao, grenadine, bitters, passion fruit, orange juice, lemon juice, and lime juice."], ["created_at", "2018-05-17 16:47:03.899038"], ["updated_at", "2018-05-17 16:47:03.899038"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mojito"], ["description", "With mint, sparkling water and simple syrup served on ice garnished with lime and a sprig of mint."], ["created_at", "2018-05-17 16:47:03.901116"], ["updated_at", "2018-05-17 16:47:03.901116"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Margarita"], ["description", "A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served with salt on the rim of the glass."], ["created_at", "2018-05-17 16:47:03.903192"], ["updated_at", "2018-05-17 16:47:03.903192"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tequila Sunrise"], ["description", "The Tequila Sunrise is a cocktail made of tequila, orange juice, and grenadine syrup and served unmixed in a tall glass."], ["created_at", "2018-05-17 16:47:03.905276"], ["updated_at", "2018-05-17 16:47:03.905276"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fog Cutter"], ["description", "The Fog Cutter is up there in terms of sheer number of different spirits put in a glass. It contains rum, gin, Cognac and sherry, as well as an orange and lemon juice mix—plus a little cocktail umbrella (this is a tiki drink, after all)."], ["created_at", "2018-05-17 16:47:03.907156"], ["updated_at", "2018-05-17 16:47:03.907156"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bloody Mary"], ["description", "A cocktail containing vodka, tomato juice, and combinations of other spices and flavorings including Worcestershire sauce, hot sauces, garlic, herbs, horseradish, celery, olives, salt, black pepper, lemon juice, lime juice and/or celery salt. "], ["created_at", "2018-05-17 16:47:03.909039"], ["updated_at", "2018-05-17 16:47:03.909039"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fish House Punch"], ["description", "If you’re hosting a party for a whole horde of L.I.I.T. lovers looking for something new, whip up a batch of Fish House Punch. The mix of dark rum, Cognac and peach brandy is enhanced by black tea, lemon juice and simple syrup."], ["created_at", "2018-05-17 16:47:03.910939"], ["updated_at", "2018-05-17 16:47:03.910939"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Irish coffee"], ["description", "A cocktail consisting of hot coffee, Irish whiskey, and sugar, stirred, and topped with thick cream. The coffee is drunk through the cream. "], ["created_at", "2018-05-17 16:47:03.912878"], ["updated_at", "2018-05-17 16:47:03.912878"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Godfather"], ["description", "The Godfather is a duo mixed drink made of Scotch whisky and amaretto."], ["created_at", "2018-05-17 16:47:03.914813"], ["updated_at", "2018-05-17 16:47:03.914813"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.2ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Stirred Cocktails"], ["created_at", "2018-05-17 16:47:03.936516"], ["updated_at", "2018-05-17 16:47:03.936516"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Sours"], ["created_at", "2018-05-17 16:47:03.938659"], ["updated_at", "2018-05-17 16:47:03.938659"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:72
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Highballs"], ["created_at", "2018-05-17 16:47:03.940691"], ["updated_at", "2018-05-17 16:47:03.940691"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Flips, Fizzes, Swizzles, and Smashes"], ["created_at", "2018-05-17 16:47:03.942716"], ["updated_at", "2018-05-17 16:47:03.942716"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:76
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Gin"], ["created_at", "2018-05-17 16:47:03.967608"], ["updated_at", "2018-05-17 16:47:03.967608"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Vodka"], ["created_at", "2018-05-17 16:47:03.970042"], ["updated_at", "2018-05-17 16:47:03.970042"]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Rum"], ["created_at", "2018-05-17 16:47:03.971905"], ["updated_at", "2018-05-17 16:47:03.971905"]]
+  ↳ db/seeds.rb:84
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Tequila"], ["created_at", "2018-05-17 16:47:03.973834"], ["updated_at", "2018-05-17 16:47:03.973834"]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:86
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Brandy"], ["created_at", "2018-05-17 16:47:03.975730"], ["updated_at", "2018-05-17 16:47:03.975730"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:87
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Curacao"], ["created_at", "2018-05-17 16:47:03.977585"], ["updated_at", "2018-05-17 16:47:03.977585"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:88
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Whisky"], ["created_at", "2018-05-17 16:47:03.979449"], ["updated_at", "2018-05-17 16:47:03.979449"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:88
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:90
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:95
+  [1m[36mList Create (0.7ms)[0m  [1m[32mINSERT INTO "lists" ("occasion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["occasion", "Solo Journey"], ["created_at", "2018-05-17 16:47:03.992370"], ["updated_at", "2018-05-17 16:47:03.992370"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:96
+  [1m[36mList Create (0.3ms)[0m  [1m[32mINSERT INTO "lists" ("occasion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["occasion", "The Dancing Duo"], ["created_at", "2018-05-17 16:47:03.995096"], ["updated_at", "2018-05-17 16:47:03.995096"]]
+  ↳ db/seeds.rb:96
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:96
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mList Create (0.3ms)[0m  [1m[32mINSERT INTO "lists" ("occasion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["occasion", "Party Time"], ["created_at", "2018-05-17 16:47:03.996989"], ["updated_at", "2018-05-17 16:47:03.996989"]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ db/seeds.rb:99
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20180517165204)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "image" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180517165204_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517165204"]]
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7139546747196403050)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mBar Load (1.8ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.7ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.4ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mBar Create (0.5ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Baxter Inn"], ["description", "In true New York or Boston bar tradition, it's difficult to find. Located at in the basement of a building at the back of an unmarked alleyway off Clarence Street, this drinking den – full of character and people – is an unexpected surprise for the first time visitor.\n\nThe dark, linear interior features a bar that runs almost the full 10 metres of its length. It’s one of the best and most well-stocked and tiered bars we’ve seen for a while. The initially overwhelming list of almost 800 whiskies (featuring everything from Talisker 10-year-old to Glenfiddich 12-year-old) can be deciphered by the helpful staff.\n\nThe menu isn't limited to whisky, though. It also includes all the usual spirits and cocktails; and large beer and wine lists. The crew is just as happy to mix up a killer negroni as they are something more bespoke, like a Talisker 10 Sour."], ["phone", "(02) 9221 5580"], ["created_at", "2018-05-17 16:53:50.407531"], ["updated_at", "2018-05-17 16:53:50.407531"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stitch"], ["description", "The Stitch story starts in 2009 when Karl Schlothauer and Chris Lehoux transformed an old garage in Darlinghurst into Pocket Bar. One of the first small bars, Pocket soon proved a hit. A couple of years later and the Pocket crew was eyeing expansion. Stitch opened in early 2011.\n\nFrom the initial idea of adorning the walls with old Singer sewing machines, they decided to go all out with the theme. Sewing machines and spools of thread mark the bar's street entrance. Downstairs, there’s a wall of booths, tables set against the staircase and vintage lamps throwing murky light.\n\nThe bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu."], ["phone", "(02) 9279 0380"], ["created_at", "2018-05-17 16:53:50.410418"], ["updated_at", "2018-05-17 16:53:50.410418"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Assembly Bar"], ["description", "Assembly Bar sits a little removed from the big-hitting bar scene further uptown. But that's no reason to overlook it. Following an ownership change in 2014, the space has kept its recycled, industrial aesthetic. Thanks to the addition of some all-star bartenders, it also gained some serious cocktail credentials.\n\nAssembly's main room sports concrete floors, vintage Chesterfields and recycled wooden crates fashioned into tables. A spiral staircase leads to the mezzanine, where a dumb waiter elevates drinks from the bar, and tealight candles flicker against the dark. Outside, picnic tables sit on AstroTurf below a wall of faux ivy studded with fairy lights.\n\nAt the bar, house-made syrups, bitters and tinctures are used to create classic cocktails and a revolving, seasonal list. The Finale has green Chartreuse, gin, lime, coconut syrup, pineapple syrup and coconut flakes. A Vogue mixes lychee liqueur, lemon, apple juice and gin."], ["phone", "(02) 9261 0552"], ["created_at", "2018-05-17 16:53:50.413271"], ["updated_at", "2018-05-17 16:53:50.413271"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Grasshopper"], ["description", "It’s tricky to locate, but when you do, Grasshopper is one of the nicer things to find lurking at the end of a dark alley. Planted inconspicuously at the far end of Temperance Lane, this tiny CBD sanctuary was one of the first of a number of small bars to crop up in the midst of Sydney’s interior.\n\nOpened by Martin O’Sullivan (who is President of the Small Bar Association) and Belinda Lai, Grasshopper is both a bar and a restaurant. The latter is a wonderfully cosy room upstairs with a small, French-leaning menu. Champagne and oysters? Veal with snail and garlic butter? Steak au poivre? Don’t mind if we do! The food is rich, tasty and suited to the warm, candle-flecked atmosphere.\n\nIf you’re just in for a drink, head downstairs. In the depths of the ‘hopper you will find some competent bartenders mixing a list of quaintly old-fashioned drinks with a wonderfully new-age quality (they serve them in recycled jam jars)."], ["phone", "(02) 9947 9025"], ["created_at", "2018-05-17 16:53:50.415484"], ["updated_at", "2018-05-17 16:53:50.415484"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mjølner"], ["description", "The first thing you see when you come down the stairs is part of a Viking ship. Almenning says a local craftsman has carved the head of a dragon to protrude from the wall. Then there’s all the ancient Viking replica weapons and armour pieces collected by the team.\n\nThe carvery has a daily rotation of four mains: a bird, a fish, meat and veg. It may be duck on Monday, chicken on Tuesday and pheasant on Wednesday. The animals will be done whole on a rotisserie.\n\nMeat hangs visibly in fridges (converted from old kilns) and carved in a “carving throne” – an extension of the kitchen that flows into the dining space. There is also a “leg service”, where you can buy your own leg of cured meats and ask for it to be brought to your table, where it can be sliced for you on request. The starters and desserts will be more modern-Australian.\n\nThere are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus on cocktails. There’s also some craft beers available."], ["phone", "(02) 8646 4930"], ["created_at", "2018-05-17 16:53:50.417915"], ["updated_at", "2018-05-17 16:53:50.417915"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Barber Shop"], ["description", "Climb the steps past the barber shop and you'll find yourself in a large room housing an elegant bar covered with white tiles. Tables and chairs sit atop concrete floors and tea light candles flicker through the murky light. There's an outdoor area out back. It's a pleasant spot, made so by dangling plants and funky old stools. And if the laneway looks familiar, that's because it's also home to The Baxter Inn.\n\nTo drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture."], ["phone", "(02) 9299 9699"], ["created_at", "2018-05-17 16:53:50.420273"], ["updated_at", "2018-05-17 16:53:50.420273"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:43
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 59]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 60]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 61]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 62]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 63]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 64]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 65]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 66]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 67]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 68]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 69]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 70]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 71]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 72]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Long Island Iced Tea"], ["description", "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola."], ["created_at", "2018-05-17 16:53:50.463047"], ["updated_at", "2018-05-17 16:53:50.463047"]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Singapore Sling"], ["description", "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry."], ["created_at", "2018-05-17 16:53:50.465137"], ["updated_at", "2018-05-17 16:53:50.465137"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gin Fizz"], ["description", "With lemon juice, sugar and carbonated water served on ice in a highball glass."], ["created_at", "2018-05-17 16:53:50.466893"], ["updated_at", "2018-05-17 16:53:50.466893"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Piña colada"], ["description", "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. "], ["created_at", "2018-05-17 16:53:50.468914"], ["updated_at", "2018-05-17 16:53:50.468914"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Adios M**********r"], ["description", "A delicious cocktail with Vodka, Gin, Rum, Tequila, 7up and Blue Curacao."], ["created_at", "2018-05-17 16:53:50.471207"], ["updated_at", "2018-05-17 16:53:50.471207"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Zombie"], ["description", "With orange curaçao, grenadine, bitters, passion fruit, orange juice, lemon juice, and lime juice."], ["created_at", "2018-05-17 16:53:50.473094"], ["updated_at", "2018-05-17 16:53:50.473094"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mojito"], ["description", "With mint, sparkling water and simple syrup served on ice garnished with lime and a sprig of mint."], ["created_at", "2018-05-17 16:53:50.474869"], ["updated_at", "2018-05-17 16:53:50.474869"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Margarita"], ["description", "A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served with salt on the rim of the glass."], ["created_at", "2018-05-17 16:53:50.476663"], ["updated_at", "2018-05-17 16:53:50.476663"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tequila Sunrise"], ["description", "The Tequila Sunrise is a cocktail made of tequila, orange juice, and grenadine syrup and served unmixed in a tall glass."], ["created_at", "2018-05-17 16:53:50.478413"], ["updated_at", "2018-05-17 16:53:50.478413"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fog Cutter"], ["description", "The Fog Cutter is up there in terms of sheer number of different spirits put in a glass. It contains rum, gin, Cognac and sherry, as well as an orange and lemon juice mix—plus a little cocktail umbrella (this is a tiki drink, after all)."], ["created_at", "2018-05-17 16:53:50.480171"], ["updated_at", "2018-05-17 16:53:50.480171"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bloody Mary"], ["description", "A cocktail containing vodka, tomato juice, and combinations of other spices and flavorings including Worcestershire sauce, hot sauces, garlic, herbs, horseradish, celery, olives, salt, black pepper, lemon juice, lime juice and/or celery salt. "], ["created_at", "2018-05-17 16:53:50.481876"], ["updated_at", "2018-05-17 16:53:50.481876"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fish House Punch"], ["description", "If you’re hosting a party for a whole horde of L.I.I.T. lovers looking for something new, whip up a batch of Fish House Punch. The mix of dark rum, Cognac and peach brandy is enhanced by black tea, lemon juice and simple syrup."], ["created_at", "2018-05-17 16:53:50.483653"], ["updated_at", "2018-05-17 16:53:50.483653"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Irish coffee"], ["description", "A cocktail consisting of hot coffee, Irish whiskey, and sugar, stirred, and topped with thick cream. The coffee is drunk through the cream. "], ["created_at", "2018-05-17 16:53:50.485640"], ["updated_at", "2018-05-17 16:53:50.485640"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Godfather"], ["description", "The Godfather is a duo mixed drink made of Scotch whisky and amaretto."], ["created_at", "2018-05-17 16:53:50.487399"], ["updated_at", "2018-05-17 16:53:50.487399"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Stirred Cocktails"], ["created_at", "2018-05-17 16:53:50.507353"], ["updated_at", "2018-05-17 16:53:50.507353"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Sours"], ["created_at", "2018-05-17 16:53:50.509592"], ["updated_at", "2018-05-17 16:53:50.509592"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:72
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Highballs"], ["created_at", "2018-05-17 16:53:50.511649"], ["updated_at", "2018-05-17 16:53:50.511649"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Flips, Fizzes, Swizzles, and Smashes"], ["created_at", "2018-05-17 16:53:50.513408"], ["updated_at", "2018-05-17 16:53:50.513408"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:76
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:80
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:80
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Gin"], ["created_at", "2018-05-17 16:53:50.536523"], ["updated_at", "2018-05-17 16:53:50.536523"]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Vodka"], ["created_at", "2018-05-17 16:53:50.538728"], ["updated_at", "2018-05-17 16:53:50.538728"]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Rum"], ["created_at", "2018-05-17 16:53:50.540609"], ["updated_at", "2018-05-17 16:53:50.540609"]]
+  ↳ db/seeds.rb:84
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Tequila"], ["created_at", "2018-05-17 16:53:50.542433"], ["updated_at", "2018-05-17 16:53:50.542433"]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:86
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Brandy"], ["created_at", "2018-05-17 16:53:50.544349"], ["updated_at", "2018-05-17 16:53:50.544349"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:87
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Curacao"], ["created_at", "2018-05-17 16:53:50.546553"], ["updated_at", "2018-05-17 16:53:50.546553"]]
+  ↳ db/seeds.rb:87
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:87
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:88
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Whisky"], ["created_at", "2018-05-17 16:53:50.548619"], ["updated_at", "2018-05-17 16:53:50.548619"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:88
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:90
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mList Destroy (0.4ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mList Destroy (0.3ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mList Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:95
+  [1m[36mList Create (0.4ms)[0m  [1m[32mINSERT INTO "lists" ("occasion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["occasion", "Solo Journey"], ["created_at", "2018-05-17 16:53:50.565924"], ["updated_at", "2018-05-17 16:53:50.565924"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:96
+  [1m[36mList Create (0.4ms)[0m  [1m[32mINSERT INTO "lists" ("occasion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["occasion", "The Dancing Duo"], ["created_at", "2018-05-17 16:53:50.567992"], ["updated_at", "2018-05-17 16:53:50.567992"]]
+  ↳ db/seeds.rb:96
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:96
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mList Create (0.3ms)[0m  [1m[32mINSERT INTO "lists" ("occasion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["occasion", "Party Time"], ["created_at", "2018-05-17 16:53:50.570954"], ["updated_at", "2018-05-17 16:53:50.570954"]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ db/seeds.rb:99
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:102
