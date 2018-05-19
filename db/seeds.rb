@@ -133,9 +133,9 @@ l3.cocktails << c2 << c4 << c5 << c6 << c8 << c9 << c11 << c12 << c15
 
 User.destroy_all
 
-u1 = User.create username: "grrrrrant", password: "chicken"
-u2 = User.create username: "textchimp", password: "chicken"
-u3 = User.create username: "mikkimoo", password: "chicken"
+u1 = User.create username: "grrrrrant", password: "chicken", email: "grant@ga.co"
+u2 = User.create username: "textchimp", password: "chicken", email: "luke@ga.co"
+u3 = User.create username: "mikkimoo", password: "chicken", email: "mikarla@ga.co"
 
 puts "Created #{User.all.length} users."
 
