@@ -1,10 +1,28 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Cocktail.destroy_all
+
+c1 = Cocktail.create name: "Long Island Iced Tea", description: "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola."
+c2 = Cocktail.create name: "Singapore Sling", description: "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry."
+c3 = Cocktail.create name: "Gin Fizz", description: "With lemon juice, sugar and carbonated water served on ice in a highball glass."
+c4 = Cocktail.create name: "Red Fox", description: "Fresh pressed Watermelon Juice, Stoli vodka, vanilla syrup, a touch of rose syrup topped with sparkling wine and garnished with fresh watermelon."
+c5 = Cocktail.create name: "Irn – Bro", description: "A fresh take on a whiskey highball with Michter’s Rye, Suze, bianco vermouth and a zesty, house-made mandarin soda."
+c6 = Cocktail.create name: "Piña colada", description: "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. "
+c7 = Cocktail.create name: "Rye & Tight", description: "A boozy libation of rye whiskey, cherry heering and cold drip coffee infused Italian amaro with a touch of absinthe to lift it all up."
+c8 = Cocktail.create name: "Agua Fresca", description: "Let’s get tropical! Mango and papaya infused Cazadores tequila paired with a bitter sweet orange liqueur and grapefruit bitters."
+c9 = Cocktail.create name: "Rich & Famous", description: "The perfect mix of 666 Butter Vodka, high quality Toby’s Estate Coffee, Coffee liqueur, Galliano Vanila Liqueur, Dusted with cocoa and coffee beans."
+c10 = Cocktail.create name: "El Pasaporte", description: "Fresh passion fruit, fresh squezed lime juice, symple syrup, maraschino liqueur and with it’s rich vanilla and caramel flavor notes, Bacardi Carta Oro! Garnished with Maraschino Cherry."
+c11 = Cocktail.create name: "MARTIN PLACE", description: "TAKE 2 ponies Rutte celery gin, 1/2 pony Aperol, 1 tbs Maraschine liquor, 1 dash of Hibiscus and drops Angostura bitters "
+c12 = Cocktail.create name: "MILLIONAIRE", description: "TAKE 1 pony House rum mix, 1 pony Sloe Gin, 1 pony apricot Brandy and 1 squeeze lime juice."
+c13 = Cocktail.create name: "Feeling Meady", description: "Martell VS Cognac, pedro ximinez sherry,
+black walnut & barrel aged bitters, egg white & a touch of mead. A short and punchy tipple with dessert-like
+qualities."
+c14 = Cocktail.create name: "Eric the Red", description: "Wyborowa vodka OR Beefeater gin, port, tomato, beetroot, horseradish, dulse, house pickled onion and spices. Blood red in colour with incredible depth of flavour, crowned with root vegetable crisps."
+c15 = Cocktail.create name: "Bahama Mama", description: "With coconut liqueur, coffee liqueur, and pineapple juice served on the rocks."
+c16 = Cocktail.create name: "Beet Highball", description: "1.5 oz Beetroot Gin, 0.5 oz Peach Liqueur, 1 oz Rhubarb Tea, 0.5 oz Gresh Pressed Lime and 0.5 oz Soda Water."
+
+puts "Created #{Cocktail.all.length} cocktails."
+
+
+
 
 
 Bar.destroy_all
@@ -42,26 +60,13 @@ To drink, there's a good list of Australian beers and a wine list that's heavy o
 
 puts "Created #{Bar.all.length} bars."
 
+b1.cocktails << c1 << c2 << c3
+b2.cocktails << c5 << c7 << c8 << c9
+b3.cocktails << c4 << c6 << c10
+b4.cocktails << c11 << c12
+b5.cocktails << c13 << c14
+b6.cocktails << c15 << c16
 
-
-Cocktail.destroy_all
-
-c1 = Cocktail.create name: "Long Island Iced Tea", description: "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola."
-c3 = Cocktail.create name: "Singapore Sling", description: "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry."
-c4 = Cocktail.create name: "Gin Fizz", description: "With lemon juice, sugar and carbonated water served on ice in a highball glass."
-c5 = Cocktail.create name: "Piña colada", description: "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. "
-c6 = Cocktail.create name: "Adios M**********r", description: "A delicious cocktail with Vodka, Gin, Rum, Tequila, 7up and Blue Curacao."
-c7 = Cocktail.create name: "Zombie", description: "With orange curaçao, grenadine, bitters, passion fruit, orange juice, lemon juice, and lime juice."
-c8 = Cocktail.create name: "Mojito", description: "With mint, sparkling water and simple syrup served on ice garnished with lime and a sprig of mint."
-c9 = Cocktail.create name: "Margarita", description: "A margarita is a cocktail consisting of tequila, orange liqueur, and lime juice often served with salt on the rim of the glass."
-c10 = Cocktail.create name: "Tequila Sunrise", description: "The Tequila Sunrise is a cocktail made of tequila, orange juice, and grenadine syrup and served unmixed in a tall glass."
-c11 = Cocktail.create name: "Fog Cutter", description: "The Fog Cutter is up there in terms of sheer number of different spirits put in a glass. It contains rum, gin, Cognac and sherry, as well as an orange and lemon juice mix—plus a little cocktail umbrella (this is a tiki drink, after all)."
-c12 = Cocktail.create name: "Bloody Mary", description: "A cocktail containing vodka, tomato juice, and combinations of other spices and flavorings including Worcestershire sauce, hot sauces, garlic, herbs, horseradish, celery, olives, salt, black pepper, lemon juice, lime juice and/or celery salt. "
-c13 = Cocktail.create name: "Fish House Punch", description: "If you’re hosting a party for a whole horde of L.I.I.T. lovers looking for something new, whip up a batch of Fish House Punch. The mix of dark rum, Cognac and peach brandy is enhanced by black tea, lemon juice and simple syrup."
-c14 = Cocktail.create name: "Irish coffee", description: "A cocktail consisting of hot coffee, Irish whiskey, and sugar, stirred, and topped with thick cream. The coffee is drunk through the cream. "
-c15 = Cocktail.create name: "Godfather", description: "The Godfather is a duo mixed drink made of Scotch whisky and amaretto."
-
-puts "Created #{Cocktail.all.length} cocktails."
 
 
 
@@ -75,6 +80,10 @@ t4 = Category.create style: "Flips, Fizzes, Swizzles, and Smashes"
 
 puts "Created #{Category.all.length} categories."
 
+t1.cocktails << c4 << c6 << c8 << c14
+t2.cocktails << c9 << c10 << c15
+t3.cocktails << c1 << c2 << c5 << c7 << c11 << c16
+t4.cocktails << c3 << c12 << c13
 
 
 Ingredient.destroy_all
@@ -84,10 +93,29 @@ i2 = Ingredient.create beverage: "Vodka"
 i3 = Ingredient.create beverage: "Rum"
 i4 = Ingredient.create beverage: "Tequila"
 i5 = Ingredient.create beverage: "Brandy"
-i6 = Ingredient.create beverage: "Curacao"
-i7 = Ingredient.create beverage: "Whisky"
+i6 = Ingredient.create beverage: "Whisky"
+i7 = Ingredient.create beverage: "liqueur"
 
 puts "Created #{Ingredient.all.length} ingredients."
+
+# i1.cocktails << c1
+
+c1.ingredients << i1 << i2 << i3 << i4 << i7
+c2.ingredients << i5 << i7
+c3.ingredients << i1
+c4.ingredients << i2
+c5.ingredients << i6
+c6.ingredients << i3
+c7.ingredients << i6
+c8.ingredients << i4 << i7
+c9.ingredients << i2 << i7
+c10.ingredients << i3 << i7
+c11.ingredients << i1 << i7
+c12.ingredients << i1 << i3 << i5
+c13.ingredients << i5
+c14.ingredients << i1 << i2
+c15.ingredients << i7
+c16.ingredients << i1 << i7
 
 
 List.destroy_all
@@ -98,6 +126,10 @@ l3 = List.create name: "Party Time"
 
 puts "Created #{List.all.length} lists."
 
+l1.cocktails << c1 << c3 << c5 << c7 << c13
+l2.cocktails << c1 << c2 << c6 << c10 << c14 << c15 << c16
+l3.cocktails << c2 << c4 << c5 << c6 << c8 << c9 << c11 << c12 << c15
+
 
 User.destroy_all
 
@@ -106,3 +138,7 @@ u2 = User.create username: "textchimp", password: "chicken"
 u3 = User.create username: "mikkimoo", password: "chicken"
 
 puts "Created #{User.all.length} users."
+
+u1.lists << l1
+u2.lists << l2
+u3.lists << l3
