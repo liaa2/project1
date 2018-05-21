@@ -28695,3 +28695,74 @@ Processing by CocktailsController#show as HTML
 Completed 200 OK in 43ms (Views: 38.7ms | ActiveRecord: 1.0ms)
 
 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 15:41:42 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FqN6t5XJbRHWk1YWAJtpdwhKHo0VSvhoAC6dq896UCNWaLBMdsxaiM4MlwhpOZ2ofoor4+E40w3WbKhwZiEhzg=="}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 15:41:42 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 15:41:48 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a1shJhLfyOrlov1Z4AJjPNa/WuRV/fRCj4FOE4t81vIrkOvd8dr/c/09PEeJoJfjoH9viqGP3ydZw3vIIienHw==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 68ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-21 15:41:48 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 32]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mBar Load (1.3ms)[0m  [1m[34mSELECT "bars".* FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1[0m  [["user_id", 32]]
+  ↳ app/views/users/show.html.erb:13
+  Rendered users/show.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 72ms (Views: 56.4ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 15:41:50 +1000
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 29.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 15:44:04 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p5zkxsikOq3/ZgzXCU6KbUMnT82ohfpNS5fE+qrgIuHnVy49K6ENNOf5zclg7H6yNed6o1z30Sid1fEhA7tTDA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 15:44:04 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 57ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 15:44:06 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 52ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
