@@ -1,0 +1,21 @@
+<h1>Cocktail: <%= @cocktail.name %></h1>
+
+<p>What is <%= @cocktail.name  %>?</p>
+<%= @cocktail.description %>
+
+<p>Ingredients:</p>
+<ul>
+<% @cocktail.ingredients.each do |i| %>
+<li>
+  <%=  i.beverage %>
+</li>
+<% end %>
+</ul>
+
+<% if @cocktail.image.present? %>
+<%= image_tag @cocktail.image %>
+<% end %>
+<br>
+
+<%= link_to "Edit", edit_cocktail_path(@cocktail) %>
+<%= link_to "Delete", cocktail_path(@cocktail), method: :delete %>
