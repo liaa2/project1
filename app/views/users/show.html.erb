@@ -6,6 +6,7 @@
 <p><strong><%= link_to l.name, list_path(l) %></strong></p>
 <% end %>
 
+<%= link_to "Add More", new_list_path%>
 
 <p>The bars I like: </p>
 
@@ -13,3 +14,5 @@
 <% @user.bars.each do |b| %>
 <p><strong><%= link_to b.name, bar_path(b) %></strong></p>
 <% end %>
+
+<%= link_to "Check for more", bars_path%>

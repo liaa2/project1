@@ -1,0 +1,26 @@
+<h1><%= @bar.name %> cocktails menu</h1>
+
+<ul>
+<% @bar.cocktails.each do |cocktail| %>
+<li>
+ <%= check_box_tag (cocktail.name, value = "#{cocktail.name}",checked = false) %>
+ <%= cocktail.name %>
+ <br>
+ <%= link_to cocktail.image, cocktail_path(cocktail) %>
+</li>
+<% end %>
+</ul>
+<br>
+
+<p>What to add them to your lists? Choose your list here:</p>
+<% if @current_user.present? %>
+  <% @lists.each do |list| %>
+    <%=form_for list do |f| %>
+      <!-- <fieldset> -->
+    <%= f.label :id, 'My lists' %>
+    <%= f.select :id, @current_user.lists.pluck(:name), include_blank: true %>
+      <!-- </fieldset> -->
+      <%= f.submit %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -1,4 +1,5 @@
 class CocktailsController < ApplicationController
+  before_action :check_if_logged_in, expect: [:index, :show]
   before_action :get_cocktail, only: [:show, :edit, :update, :destroy]
   def new
     @cocktail = Cocktail.new

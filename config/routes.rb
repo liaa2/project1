@@ -15,8 +15,13 @@ Rails.application.routes.draw do
   resources :lists
 
   resources :bars
+  get "/bars/:id/favourite" => "bars#favourite", as: :favourite_bar
+  get "/bars/:id/unfavourite" => "bars#unfavourite", as: :unfavourite_bar
+  get "/bars/:id/menu" => "bars#menu", as: :menu_bar
 
   resources :cocktails
+
+  resources :comments
 end
 
 

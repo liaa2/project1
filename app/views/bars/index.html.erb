@@ -1,2 +1,16 @@
-<h1>Bars#index</h1>
-<p>Find me in app/views/bars/index.html.erb</p>
+<h1>Bars in Sydney</h1>
+
+<ul>
+<% @bars.each do |b| %>
+
+  <li>
+  <%= link_to b.name, bar_path(b) %>
+  </li>
+  <% end %>
+</ul>
+
+<br>
+<%= link_to "Add More", new_bar_path %>
+<br>
+<br>
+<%= link_to "Back To My Profile", profile_path %>

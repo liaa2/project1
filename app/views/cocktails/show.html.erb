@@ -17,5 +17,19 @@
 <% end %>
 <br>
 
+
+<p>Add it to my list:</p>
+<br>
+<%# if @current_user.present? %>
+<%# @current_user.lists.each do |list| %>
+  <%=form_for @current_user do |f| %>
+    <!-- <fieldset> -->
+  <%= f.label :id, 'My lists' %>
+  <%= f.select :id, @current_user.lists.pluck(:name), include_blank: true %>
+    <!-- </fieldset> -->
+  <%= f.submit "Add"%>
+  <% end %>
+<%# end %>
+
 <%= link_to "Edit", edit_cocktail_path(@cocktail) %>
 <%= link_to "Delete", cocktail_path(@cocktail), method: :delete %>

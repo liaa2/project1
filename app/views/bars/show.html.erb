@@ -8,9 +8,35 @@
 
 <p><%= @bar.description %></p>
 <br>
-<p><strong>Phone: </strong> <%= @bar.phone %></p>
-<p><strong>Website: </strong> <%= @bar.website %></p>
 
-<%= link_to "Edit", edit_bar_path(@bar) %>
+<% if @current_user.present? %>
+
+  <% if @current_user.bars.include? @bar %>
+    <%= link_to 'Remove from Favourites', unfavourite_bar_path( @bar ) %>
+  <% else %>
+    <%= link_to 'Add to Favourites', favourite_bar_path( @bar ) %>
+  <% end %>
+  <br>
+<% end %>
+
+<%# link_to "Cocktails Menu", menu_bar_path(@bar) %>
+
+<p><strong>Phone: </strong> <%= @bar.phone %></p>
+<p><strong>Website: </strong> <%= link_to @bar.name, "#{@bar.website}", target: "_blank"%></p>
+
+<p><strong>Popular drinks:</strong></p>
+<ul>
+<% @bar.cocktails.each do |cocktail| %>
+<li>
+<%= link_to cocktail.name, cocktail_path(cocktail) %>
+</li>
+<% end %>
+</ul>
+
+<% if @current_user.present? %>
+  <%= link_to "Edit", edit_bar_path(@bar) %>&nbsp;&nbsp;&nbsp;
+  <%= link_to "Delete", bar_path(@bar), method: :delete %>
+<% end %>
+<br>
 
 <%= link_to "Back to Main Page", bars_path %>
