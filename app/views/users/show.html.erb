@@ -2,9 +2,14 @@
 
 <p>My personal lists</p>
 
-<% for @user.lists.each do |l| %>
-<p><strong><%= l.name %></strong></p>
+<% @user.lists.each do |l| %>
+<p><strong><%= link_to l.name, list_path(l) %></strong></p>
 <% end %>
 
 
 <p>The bars I like: </p>
+
+
+<% @user.bars.each do |b| %>
+<p><strong><%= link_to b.name, bar_path(b) %></strong></p>
+<% end %>

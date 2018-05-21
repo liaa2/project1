@@ -1,4 +1,5 @@
 class BarsController < ApplicationController
+  before_action :get_bar, only: [:show, :edit, :update, :destroy]
   def new
   end
 
@@ -6,10 +7,10 @@ class BarsController < ApplicationController
   end
 
   def show
-    @bars = Bar.all
   end
 
   def index
+    @bars = Bar.all
   end
 
   def edit
@@ -19,5 +20,11 @@ class BarsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def get_bar
+    @bar = Bar.find params[:id]
   end
 end

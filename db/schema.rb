@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_19_025652) do
+ActiveRecord::Schema.define(version: 2018_05_21_023617) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,20 +25,25 @@ ActiveRecord::Schema.define(version: 2018_05_19_025652) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.text "style"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "bars_users", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "bar_id"
   end
+
+  # create_table "categories", force: :cascade do |t|
+  #   t.text "style"
+  #   t.datetime "created_at", null: false
+  #   t.datetime "updated_at", null: false
+  # end
 
   create_table "cocktails", force: :cascade do |t|
     t.text "name"
     t.text "image"
     t.text "description"
     t.integer "bar_id"
-    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "category"
   end
 
   create_table "cocktails_ingredients", id: false, force: :cascade do |t|

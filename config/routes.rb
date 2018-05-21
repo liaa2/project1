@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   resources :lists
 
   resources :bars
+
+  resources :cocktails
 end
 
 

@@ -1,23 +1,23 @@
 Cocktail.destroy_all
 
-c1 = Cocktail.create name: "Long Island Iced Tea", description: "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola."
-c2 = Cocktail.create name: "Singapore Sling", description: "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry."
-c3 = Cocktail.create name: "Gin Fizz", description: "With lemon juice, sugar and carbonated water served on ice in a highball glass."
-c4 = Cocktail.create name: "Red Fox", description: "Fresh pressed Watermelon Juice, Stoli vodka, vanilla syrup, a touch of rose syrup topped with sparkling wine and garnished with fresh watermelon."
-c5 = Cocktail.create name: "Irn – Bro", description: "A fresh take on a whiskey highball with Michter’s Rye, Suze, bianco vermouth and a zesty, house-made mandarin soda."
-c6 = Cocktail.create name: "Piña colada", description: "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. "
-c7 = Cocktail.create name: "Rye & Tight", description: "A boozy libation of rye whiskey, cherry heering and cold drip coffee infused Italian amaro with a touch of absinthe to lift it all up."
-c8 = Cocktail.create name: "Agua Fresca", description: "Let’s get tropical! Mango and papaya infused Cazadores tequila paired with a bitter sweet orange liqueur and grapefruit bitters."
-c9 = Cocktail.create name: "Rich & Famous", description: "The perfect mix of 666 Butter Vodka, high quality Toby’s Estate Coffee, Coffee liqueur, Galliano Vanila Liqueur, Dusted with cocoa and coffee beans."
-c10 = Cocktail.create name: "El Pasaporte", description: "Fresh passion fruit, fresh squezed lime juice, symple syrup, maraschino liqueur and with it’s rich vanilla and caramel flavor notes, Bacardi Carta Oro! Garnished with Maraschino Cherry."
-c11 = Cocktail.create name: "MARTIN PLACE", description: "TAKE 2 ponies Rutte celery gin, 1/2 pony Aperol, 1 tbs Maraschine liquor, 1 dash of Hibiscus and drops Angostura bitters "
-c12 = Cocktail.create name: "MILLIONAIRE", description: "TAKE 1 pony House rum mix, 1 pony Sloe Gin, 1 pony apricot Brandy and 1 squeeze lime juice."
+c1 = Cocktail.create name: "Long Island Iced Tea", description: "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola.", category: "Highballs"
+c2 = Cocktail.create name: "Singapore Sling", description: "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry.", category: "Highballs"
+c3 = Cocktail.create name: "Gin Fizz", description: "With lemon juice, sugar and carbonated water served on ice in a highball glass.", category: "Flips, Fizzes, Swizzles, and Smashes"
+c4 = Cocktail.create name: "Red Fox", description: "Fresh pressed Watermelon Juice, Stoli vodka, vanilla syrup, a touch of rose syrup topped with sparkling wine and garnished with fresh watermelon.", category: "Stirred Cocktails"
+c5 = Cocktail.create name: "Irn – Bro", description: "A fresh take on a whiskey highball with Michter’s Rye, Suze, bianco vermouth and a zesty, house-made mandarin soda.", category: "Highballs"
+c6 = Cocktail.create name: "Piña colada", description: "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. ", category: "Stirred Cocktails"
+c7 = Cocktail.create name: "Rye & Tight", description: "A boozy libation of rye whiskey, cherry heering and cold drip coffee infused Italian amaro with a touch of absinthe to lift it all up.", category: "Highballs"
+c8 = Cocktail.create name: "Agua Fresca", description: "Let’s get tropical! Mango and papaya infused Cazadores tequila paired with a bitter sweet orange liqueur and grapefruit bitters.", category: "Stirred Cocktails"
+c9 = Cocktail.create name: "Rich & Famous", description: "The perfect mix of 666 Butter Vodka, high quality Toby’s Estate Coffee, Coffee liqueur, Galliano Vanila Liqueur, Dusted with cocoa and coffee beans.", category: "Sours"
+c10 = Cocktail.create name: "El Pasaporte", description: "Fresh passion fruit, fresh squezed lime juice, symple syrup, maraschino liqueur and with it’s rich vanilla and caramel flavor notes, Bacardi Carta Oro! Garnished with Maraschino Cherry.", category: "Sours"
+c11 = Cocktail.create name: "MARTIN PLACE", description: "TAKE 2 ponies Rutte celery gin, 1/2 pony Aperol, 1 tbs Maraschine liquor, 1 dash of Hibiscus and drops Angostura bitters ", category: "Highballs"
+c12 = Cocktail.create name: "MILLIONAIRE", description: "TAKE 1 pony House rum mix, 1 pony Sloe Gin, 1 pony apricot Brandy and 1 squeeze lime juice.", category: "Flips, Fizzes, Swizzles, and Smashes"
 c13 = Cocktail.create name: "Feeling Meady", description: "Martell VS Cognac, pedro ximinez sherry,
 black walnut & barrel aged bitters, egg white & a touch of mead. A short and punchy tipple with dessert-like
-qualities."
-c14 = Cocktail.create name: "Eric the Red", description: "Wyborowa vodka OR Beefeater gin, port, tomato, beetroot, horseradish, dulse, house pickled onion and spices. Blood red in colour with incredible depth of flavour, crowned with root vegetable crisps."
-c15 = Cocktail.create name: "Bahama Mama", description: "With coconut liqueur, coffee liqueur, and pineapple juice served on the rocks."
-c16 = Cocktail.create name: "Beet Highball", description: "1.5 oz Beetroot Gin, 0.5 oz Peach Liqueur, 1 oz Rhubarb Tea, 0.5 oz Gresh Pressed Lime and 0.5 oz Soda Water."
+qualities.", category: "Flips, Fizzes, Swizzles, and Smashes"
+c14 = Cocktail.create name: "Eric the Red", description: "Wyborowa vodka OR Beefeater gin, port, tomato, beetroot, horseradish, dulse, house pickled onion and spices. Blood red in colour with incredible depth of flavour, crowned with root vegetable crisps.", category: "Stirred Cocktails"
+c15 = Cocktail.create name: "Bahama Mama", description: "With coconut liqueur, coffee liqueur, and pineapple juice served on the rocks.", category: "Sours"
+c16 = Cocktail.create name: "Beet Highball", description: "1.5 oz Beetroot Gin, 0.5 oz Peach Liqueur, 1 oz Rhubarb Tea, 0.5 oz Gresh Pressed Lime and 0.5 oz Soda Water.", category: "Highballs"
 
 puts "Created #{Cocktail.all.length} cocktails."
 
@@ -69,21 +69,21 @@ b6.cocktails << c15 << c16
 
 
 
+#
+# Category.destroy_all
+#
+# t1 = Category.create style: "Stirred Cocktails"
+# t2 = Category.create style: "Sours"
+# t3 = Category.create style: "Highballs"
+# t4 = Category.create style: "Flips, Fizzes, Swizzles, and Smashes"
+#
+#
+# puts "Created #{Category.all.length} categories."
 
-Category.destroy_all
-
-t1 = Category.create style: "Stirred Cocktails"
-t2 = Category.create style: "Sours"
-t3 = Category.create style: "Highballs"
-t4 = Category.create style: "Flips, Fizzes, Swizzles, and Smashes"
-
-
-puts "Created #{Category.all.length} categories."
-
-t1.cocktails << c4 << c6 << c8 << c14
-t2.cocktails << c9 << c10 << c15
-t3.cocktails << c1 << c2 << c5 << c7 << c11 << c16
-t4.cocktails << c3 << c12 << c13
+# t1.cocktails << c4 << c6 << c8 << c14
+# t2.cocktails << c9 << c10 << c15
+# t3.cocktails << c1 << c2 << c5 << c7 << c11 << c16
+# t4.cocktails << c3 << c12 << c13
 
 
 Ingredient.destroy_all
@@ -142,3 +142,7 @@ puts "Created #{User.all.length} users."
 u1.lists << l1
 u2.lists << l2
 u3.lists << l3
+
+u1.bars << b1 << b2 << b3
+u2.bars << b1 << b2 << b4 << b6
+u3.bars << b2 << b5 << b6

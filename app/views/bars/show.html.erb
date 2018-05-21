@@ -1,2 +1,16 @@
-<h1>Bars#show</h1>
-<p>Find me in app/views/bars/show.html.erb</p>
+<h1><%= @bar.name %></h1>
+
+<% if @bar.image.present? %>
+<%= image_tag @bar.image %>
+<% else %>
+<%= image_tag "http://thepouringtales.com/wp-content/uploads/2016/01/The-Baxter-Inn-Sydney-132.jpg" %>
+<% end %>
+
+<p><%= @bar.description %></p>
+<br>
+<p><strong>Phone: </strong> <%= @bar.phone %></p>
+<p><strong>Website: </strong> <%= @bar.website %></p>
+
+<%= link_to "Edit", edit_bar_path(@bar) %>
+
+<%= link_to "Back to Main Page", bars_path %>
