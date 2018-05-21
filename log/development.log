@@ -22537,3 +22537,2995 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (1.4ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 443]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.9ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 443]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 443]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 444]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 444]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 444]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 449]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 449]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 449]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 435]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 435]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 435]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 438]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 438]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 438]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 440]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 440]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 440]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 442]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 442]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 442]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 448]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 448]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 448]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 436]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 436]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 436]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 439]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 439]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 439]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 441]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 441]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 441]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 445]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 445]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 445]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 450]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 450]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 450]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 437]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 437]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 437]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 446]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 446]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 446]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 447]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 447]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 447]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCocktail Create (0.5ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Long Island Iced Tea"], ["description", "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola."], ["created_at", "2018-05-19 12:41:40.103029"], ["updated_at", "2018-05-19 12:41:40.103029"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Singapore Sling"], ["description", "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry."], ["created_at", "2018-05-19 12:41:40.105252"], ["updated_at", "2018-05-19 12:41:40.105252"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gin Fizz"], ["description", "With lemon juice, sugar and carbonated water served on ice in a highball glass."], ["created_at", "2018-05-19 12:41:40.107036"], ["updated_at", "2018-05-19 12:41:40.107036"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Red Fox"], ["description", "Fresh pressed Watermelon Juice, Stoli vodka, vanilla syrup, a touch of rose syrup topped with sparkling wine and garnished with fresh watermelon."], ["created_at", "2018-05-19 12:41:40.108844"], ["updated_at", "2018-05-19 12:41:40.108844"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Irn – Bro"], ["description", "A fresh take on a whiskey highball with Michter’s Rye, Suze, bianco vermouth and a zesty, house-made mandarin soda."], ["created_at", "2018-05-19 12:41:40.110412"], ["updated_at", "2018-05-19 12:41:40.110412"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Piña colada"], ["description", "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. "], ["created_at", "2018-05-19 12:41:40.112315"], ["updated_at", "2018-05-19 12:41:40.112315"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rye & Tight"], ["description", "A boozy libation of rye whiskey, cherry heering and cold drip coffee infused Italian amaro with a touch of absinthe to lift it all up."], ["created_at", "2018-05-19 12:41:40.114461"], ["updated_at", "2018-05-19 12:41:40.114461"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Agua Fresca"], ["description", "Let’s get tropical! Mango and papaya infused Cazadores tequila paired with a bitter sweet orange liqueur and grapefruit bitters."], ["created_at", "2018-05-19 12:41:40.116588"], ["updated_at", "2018-05-19 12:41:40.116588"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rich & Famous"], ["description", "The perfect mix of 666 Butter Vodka, high quality Toby’s Estate Coffee, Coffee liqueur, Galliano Vanila Liqueur, Dusted with cocoa and coffee beans."], ["created_at", "2018-05-19 12:41:40.118665"], ["updated_at", "2018-05-19 12:41:40.118665"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "El Pasaporte"], ["description", "Fresh passion fruit, fresh squezed lime juice, symple syrup, maraschino liqueur and with it’s rich vanilla and caramel flavor notes, Bacardi Carta Oro! Garnished with Maraschino Cherry."], ["created_at", "2018-05-19 12:41:40.120428"], ["updated_at", "2018-05-19 12:41:40.120428"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "MARTIN PLACE"], ["description", "TAKE 2 ponies Rutte celery gin, 1/2 pony Aperol, 1 tbs Maraschine liquor, 1 dash of Hibiscus and drops Angostura bitters "], ["created_at", "2018-05-19 12:41:40.122400"], ["updated_at", "2018-05-19 12:41:40.122400"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "MILLIONAIRE"], ["description", "TAKE 1 pony House rum mix, 1 pony Sloe Gin, 1 pony apricot Brandy and 1 squeeze lime juice."], ["created_at", "2018-05-19 12:41:40.124364"], ["updated_at", "2018-05-19 12:41:40.124364"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Feeling Meady"], ["description", "Martell VS Cognac, pedro ximinez sherry,\nblack walnut & barrel aged bitters, egg white & a touch of mead. A short and punchy tipple with dessert-like\nqualities."], ["created_at", "2018-05-19 12:41:40.126156"], ["updated_at", "2018-05-19 12:41:40.126156"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCocktail Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Eric the Red"], ["description", "Wyborowa vodka OR Beefeater gin, port, tomato, beetroot, horseradish, dulse, house pickled onion and spices. Blood red in colour with incredible depth of flavour, crowned with root vegetable crisps."], ["created_at", "2018-05-19 12:41:40.127671"], ["updated_at", "2018-05-19 12:41:40.127671"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bahama Mama"], ["description", "With coconut liqueur, coffee liqueur, and pineapple juice served on the rocks."], ["created_at", "2018-05-19 12:41:40.129466"], ["updated_at", "2018-05-19 12:41:40.129466"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Beet Highball"], ["description", "1.5 oz Beetroot Gin, 0.5 oz Peach Liqueur, 1 oz Rhubarb Tea, 0.5 oz Gresh Pressed Lime and 0.5 oz Soda Water."], ["created_at", "2018-05-19 12:41:40.131556"], ["updated_at", "2018-05-19 12:41:40.131556"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:22
+  [1m[36mBar Load (0.6ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 175]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 176]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 177]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 178]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 179]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 180]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mBar Create (1.1ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Baxter Inn"], ["description", "In true New York or Boston bar tradition, it's difficult to find. Located at in the basement of a building at the back of an unmarked alleyway off Clarence Street, this drinking den – full of character and people – is an unexpected surprise for the first time visitor.\n\nThe dark, linear interior features a bar that runs almost the full 10 metres of its length. It’s one of the best and most well-stocked and tiered bars we’ve seen for a while. The initially overwhelming list of almost 800 whiskies (featuring everything from Talisker 10-year-old to Glenfiddich 12-year-old) can be deciphered by the helpful staff.\n\nThe menu isn't limited to whisky, though. It also includes all the usual spirits and cocktails; and large beer and wine lists. The crew is just as happy to mix up a killer negroni as they are something more bespoke, like a Talisker 10 Sour."], ["phone", "(02) 9221 5580"], ["created_at", "2018-05-19 12:41:40.157143"], ["updated_at", "2018-05-19 12:41:40.157143"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stitch"], ["description", "The Stitch story starts in 2009 when Karl Schlothauer and Chris Lehoux transformed an old garage in Darlinghurst into Pocket Bar. One of the first small bars, Pocket soon proved a hit. A couple of years later and the Pocket crew was eyeing expansion. Stitch opened in early 2011.\n\nFrom the initial idea of adorning the walls with old Singer sewing machines, they decided to go all out with the theme. Sewing machines and spools of thread mark the bar's street entrance. Downstairs, there’s a wall of booths, tables set against the staircase and vintage lamps throwing murky light.\n\nThe bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu."], ["phone", "(02) 9279 0380"], ["created_at", "2018-05-19 12:41:40.160172"], ["updated_at", "2018-05-19 12:41:40.160172"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Assembly Bar"], ["description", "Assembly Bar sits a little removed from the big-hitting bar scene further uptown. But that's no reason to overlook it. Following an ownership change in 2014, the space has kept its recycled, industrial aesthetic. Thanks to the addition of some all-star bartenders, it also gained some serious cocktail credentials.\n\nAssembly's main room sports concrete floors, vintage Chesterfields and recycled wooden crates fashioned into tables. A spiral staircase leads to the mezzanine, where a dumb waiter elevates drinks from the bar, and tealight candles flicker against the dark. Outside, picnic tables sit on AstroTurf below a wall of faux ivy studded with fairy lights.\n\nAt the bar, house-made syrups, bitters and tinctures are used to create classic cocktails and a revolving, seasonal list. The Finale has green Chartreuse, gin, lime, coconut syrup, pineapple syrup and coconut flakes. A Vogue mixes lychee liqueur, lemon, apple juice and gin."], ["phone", "(02) 9261 0552"], ["created_at", "2018-05-19 12:41:40.162135"], ["updated_at", "2018-05-19 12:41:40.162135"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Grasshopper"], ["description", "It’s tricky to locate, but when you do, Grasshopper is one of the nicer things to find lurking at the end of a dark alley. Planted inconspicuously at the far end of Temperance Lane, this tiny CBD sanctuary was one of the first of a number of small bars to crop up in the midst of Sydney’s interior.\n\nOpened by Martin O’Sullivan (who is President of the Small Bar Association) and Belinda Lai, Grasshopper is both a bar and a restaurant. The latter is a wonderfully cosy room upstairs with a small, French-leaning menu. Champagne and oysters? Veal with snail and garlic butter? Steak au poivre? Don’t mind if we do! The food is rich, tasty and suited to the warm, candle-flecked atmosphere.\n\nIf you’re just in for a drink, head downstairs. In the depths of the ‘hopper you will find some competent bartenders mixing a list of quaintly old-fashioned drinks with a wonderfully new-age quality (they serve them in recycled jam jars)."], ["phone", "(02) 9947 9025"], ["created_at", "2018-05-19 12:41:40.163979"], ["updated_at", "2018-05-19 12:41:40.163979"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mjølner"], ["description", "The first thing you see when you come down the stairs is part of a Viking ship. Almenning says a local craftsman has carved the head of a dragon to protrude from the wall. Then there’s all the ancient Viking replica weapons and armour pieces collected by the team.\n\nThe carvery has a daily rotation of four mains: a bird, a fish, meat and veg. It may be duck on Monday, chicken on Tuesday and pheasant on Wednesday. The animals will be done whole on a rotisserie.\n\nMeat hangs visibly in fridges (converted from old kilns) and carved in a “carving throne” – an extension of the kitchen that flows into the dining space. There is also a “leg service”, where you can buy your own leg of cured meats and ask for it to be brought to your table, where it can be sliced for you on request. The starters and desserts will be more modern-Australian.\n\nThere are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus on cocktails. There’s also some craft beers available."], ["phone", "(02) 8646 4930"], ["created_at", "2018-05-19 12:41:40.167059"], ["updated_at", "2018-05-19 12:41:40.167059"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Barber Shop"], ["description", "Climb the steps past the barber shop and you'll find yourself in a large room housing an elegant bar covered with white tiles. Tables and chairs sit atop concrete floors and tea light candles flicker through the murky light. There's an outdoor area out back. It's a pleasant spot, made so by dangling plants and funky old stools. And if the laneway looks familiar, that's because it's also home to The Baxter Inn.\n\nTo drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture."], ["phone", "(02) 9299 9699"], ["created_at", "2018-05-19 12:41:40.169352"], ["updated_at", "2018-05-19 12:41:40.169352"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCocktail Update (0.5ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 181], ["updated_at", "2018-05-19 12:41:40.176401"], ["id", 451]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 181], ["updated_at", "2018-05-19 12:41:40.179374"], ["id", 452]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 181], ["updated_at", "2018-05-19 12:41:40.181495"], ["id", 453]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 182], ["updated_at", "2018-05-19 12:41:40.183823"], ["id", 455]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 182], ["updated_at", "2018-05-19 12:41:40.185922"], ["id", 457]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 182], ["updated_at", "2018-05-19 12:41:40.188279"], ["id", 458]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 182], ["updated_at", "2018-05-19 12:41:40.190549"], ["id", 459]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 183], ["updated_at", "2018-05-19 12:41:40.192984"], ["id", 454]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 183], ["updated_at", "2018-05-19 12:41:40.195266"], ["id", 456]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 183], ["updated_at", "2018-05-19 12:41:40.197685"], ["id", 460]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 184], ["updated_at", "2018-05-19 12:41:40.201759"], ["id", 461]]
+  ↳ db/seeds.rb:66
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 184], ["updated_at", "2018-05-19 12:41:40.204202"], ["id", 462]]
+  ↳ db/seeds.rb:66
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:67
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 185], ["updated_at", "2018-05-19 12:41:40.206492"], ["id", 463]]
+  ↳ db/seeds.rb:67
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:67
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:67
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 185], ["updated_at", "2018-05-19 12:41:40.208624"], ["id", 464]]
+  ↳ db/seeds.rb:67
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:67
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 186], ["updated_at", "2018-05-19 12:41:40.210898"], ["id", 465]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 186], ["updated_at", "2018-05-19 12:41:40.213022"], ["id", 466]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 109]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 110]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 111]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 112]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Stirred Cocktails"], ["created_at", "2018-05-19 12:41:40.235194"], ["updated_at", "2018-05-19 12:41:40.235194"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:76
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Sours"], ["created_at", "2018-05-19 12:41:40.237672"], ["updated_at", "2018-05-19 12:41:40.237672"]]
+  ↳ db/seeds.rb:76
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:76
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:77
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Highballs"], ["created_at", "2018-05-19 12:41:40.239497"], ["updated_at", "2018-05-19 12:41:40.239497"]]
+  ↳ db/seeds.rb:77
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:77
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:78
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("style", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["style", "Flips, Fizzes, Swizzles, and Smashes"], ["created_at", "2018-05-19 12:41:40.241311"], ["updated_at", "2018-05-19 12:41:40.241311"]]
+  ↳ db/seeds.rb:78
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:78
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:81
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 113], ["updated_at", "2018-05-19 12:41:40.245113"], ["id", 454]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 113], ["updated_at", "2018-05-19 12:41:40.247175"], ["id", 456]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 113], ["updated_at", "2018-05-19 12:41:40.249229"], ["id", 458]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 113], ["updated_at", "2018-05-19 12:41:40.251397"], ["id", 464]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 114], ["updated_at", "2018-05-19 12:41:40.253897"], ["id", 459]]
+  ↳ db/seeds.rb:84
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 114], ["updated_at", "2018-05-19 12:41:40.256154"], ["id", 460]]
+  ↳ db/seeds.rb:84
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 114], ["updated_at", "2018-05-19 12:41:40.258333"], ["id", 465]]
+  ↳ db/seeds.rb:84
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 115], ["updated_at", "2018-05-19 12:41:40.260601"], ["id", 451]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 115], ["updated_at", "2018-05-19 12:41:40.262564"], ["id", 452]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 115], ["updated_at", "2018-05-19 12:41:40.264516"], ["id", 455]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mCocktail Update (0.5ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 115], ["updated_at", "2018-05-19 12:41:40.267403"], ["id", 457]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 115], ["updated_at", "2018-05-19 12:41:40.270122"], ["id", 461]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 115], ["updated_at", "2018-05-19 12:41:40.272567"], ["id", 466]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:86
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 116], ["updated_at", "2018-05-19 12:41:40.275122"], ["id", 453]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:86
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 116], ["updated_at", "2018-05-19 12:41:40.280853"], ["id", 462]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:86
+  [1m[36mCocktail Update (0.5ms)[0m  [1m[33mUPDATE "cocktails" SET "category_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["category_id", 116], ["updated_at", "2018-05-19 12:41:40.283258"], ["id", 463]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:86
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 184]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 184]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 185]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 185]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 186]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 186]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 187]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 187]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 188]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 188]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 189]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 189]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 190]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 190]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:91
+  [1m[36mIngredient Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Gin"], ["created_at", "2018-05-19 12:41:40.313807"], ["updated_at", "2018-05-19 12:41:40.313807"]]
+  ↳ db/seeds.rb:91
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:91
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Vodka"], ["created_at", "2018-05-19 12:41:40.316157"], ["updated_at", "2018-05-19 12:41:40.316157"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Rum"], ["created_at", "2018-05-19 12:41:40.318000"], ["updated_at", "2018-05-19 12:41:40.318000"]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Tequila"], ["created_at", "2018-05-19 12:41:40.319849"], ["updated_at", "2018-05-19 12:41:40.319849"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:95
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Brandy"], ["created_at", "2018-05-19 12:41:40.321708"], ["updated_at", "2018-05-19 12:41:40.321708"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:96
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Whisky"], ["created_at", "2018-05-19 12:41:40.323536"], ["updated_at", "2018-05-19 12:41:40.323536"]]
+  ↳ db/seeds.rb:96
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:96
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "liqueur"], ["created_at", "2018-05-19 12:41:40.325383"], ["updated_at", "2018-05-19 12:41:40.325383"]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:99
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 191], ["cocktail_id", 451]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 192], ["cocktail_id", 451]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 193], ["cocktail_id", 451]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 194], ["cocktail_id", 451]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 197], ["cocktail_id", 451]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 195], ["cocktail_id", 452]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 197], ["cocktail_id", 452]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:105
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 191], ["cocktail_id", 453]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:106
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 192], ["cocktail_id", 454]]
+  ↳ db/seeds.rb:106
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:106
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:107
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 196], ["cocktail_id", 455]]
+  ↳ db/seeds.rb:107
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:107
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:108
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 193], ["cocktail_id", 456]]
+  ↳ db/seeds.rb:108
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:108
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:109
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 196], ["cocktail_id", 457]]
+  ↳ db/seeds.rb:109
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:109
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:110
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 194], ["cocktail_id", 458]]
+  ↳ db/seeds.rb:110
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:110
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:110
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 197], ["cocktail_id", 458]]
+  ↳ db/seeds.rb:110
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:110
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:111
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 192], ["cocktail_id", 459]]
+  ↳ db/seeds.rb:111
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:111
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:111
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 197], ["cocktail_id", 459]]
+  ↳ db/seeds.rb:111
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:111
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:112
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 193], ["cocktail_id", 460]]
+  ↳ db/seeds.rb:112
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:112
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:112
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 197], ["cocktail_id", 460]]
+  ↳ db/seeds.rb:112
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:112
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:113
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 191], ["cocktail_id", 461]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:113
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 197], ["cocktail_id", 461]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:114
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 191], ["cocktail_id", 462]]
+  ↳ db/seeds.rb:114
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:114
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:114
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 193], ["cocktail_id", 462]]
+  ↳ db/seeds.rb:114
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:114
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:114
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 195], ["cocktail_id", 462]]
+  ↳ db/seeds.rb:114
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:114
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:115
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 195], ["cocktail_id", 463]]
+  ↳ db/seeds.rb:115
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:115
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:116
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 191], ["cocktail_id", 464]]
+  ↳ db/seeds.rb:116
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:116
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:116
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 192], ["cocktail_id", 464]]
+  ↳ db/seeds.rb:116
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:116
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:117
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 197], ["cocktail_id", 465]]
+  ↳ db/seeds.rb:117
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:117
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:118
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 191], ["cocktail_id", 466]]
+  ↳ db/seeds.rb:118
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:118
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:118
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 197], ["cocktail_id", 466]]
+  ↳ db/seeds.rb:118
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:118
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ db/seeds.rb:121
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:121
+  [1m[36mList::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 37]]
+  ↳ db/seeds.rb:121
+  [1m[36mList Destroy (1.1ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 37]]
+  ↳ db/seeds.rb:121
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:121
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:121
+  [1m[36mList::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 38]]
+  ↳ db/seeds.rb:121
+  [1m[36mList Destroy (0.3ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 38]]
+  ↳ db/seeds.rb:121
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:121
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:121
+  [1m[36mList::HABTM_Cocktails Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 39]]
+  ↳ db/seeds.rb:121
+  [1m[36mList Destroy (0.2ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 39]]
+  ↳ db/seeds.rb:121
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:121
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:123
+  [1m[36mList Create (0.4ms)[0m  [1m[32mINSERT INTO "lists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Solo Journey"], ["created_at", "2018-05-19 12:41:40.420741"], ["updated_at", "2018-05-19 12:41:40.420741"]]
+  ↳ db/seeds.rb:123
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:123
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:124
+  [1m[36mList Create (0.3ms)[0m  [1m[32mINSERT INTO "lists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "The Dancing Duo"], ["created_at", "2018-05-19 12:41:40.422937"], ["updated_at", "2018-05-19 12:41:40.422937"]]
+  ↳ db/seeds.rb:124
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:124
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:125
+  [1m[36mList Create (0.3ms)[0m  [1m[32mINSERT INTO "lists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Party Time"], ["created_at", "2018-05-19 12:41:40.424948"], ["updated_at", "2018-05-19 12:41:40.424948"]]
+  ↳ db/seeds.rb:125
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:125
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ db/seeds.rb:127
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 451], ["list_id", 40]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 453], ["list_id", 40]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 455], ["list_id", 40]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 457], ["list_id", 40]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 463], ["list_id", 40]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 451], ["list_id", 41]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 452], ["list_id", 41]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 456], ["list_id", 41]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 460], ["list_id", 41]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 464], ["list_id", 41]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 465], ["list_id", 41]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 466], ["list_id", 41]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 452], ["list_id", 42]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 454], ["list_id", 42]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 455], ["list_id", 42]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 456], ["list_id", 42]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 458], ["list_id", 42]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 459], ["list_id", 42]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 461], ["list_id", 42]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 462], ["list_id", 42]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 465], ["list_id", 42]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:134
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:134
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:134
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:134
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:134
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:134
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:136
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "grrrrrant"], ["password_digest", "$2a$10$5pTRNfrI22NolPEFkJ7E2OW0qXT37KlcPSoRhyaagqRfHjNwkFc0a"], ["created_at", "2018-05-19 12:41:40.556414"], ["updated_at", "2018-05-19 12:41:40.556414"], ["email", "grant@ga.co"]]
+  ↳ db/seeds.rb:136
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:136
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:137
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "textchimp"], ["password_digest", "$2a$10$yRboiAg.AzcHPqSyt8V0b.0jSpgk/Plpe8IEStb4wTufeoTvUakTC"], ["created_at", "2018-05-19 12:41:40.617104"], ["updated_at", "2018-05-19 12:41:40.617104"], ["email", "luke@ga.co"]]
+  ↳ db/seeds.rb:137
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:137
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:138
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "mikkimoo"], ["password_digest", "$2a$10$4AGrlBVzuKaZU/ObBjEeyuEuT.jrR8Zw2CN4tGkyEaOUYzeYYmTHW"], ["created_at", "2018-05-19 12:41:40.677404"], ["updated_at", "2018-05-19 12:41:40.677404"], ["email", "mikarla@ga.co"]]
+  ↳ db/seeds.rb:138
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:138
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:140
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:142
+  [1m[36mList Update (0.3ms)[0m  [1m[33mUPDATE "lists" SET "updated_at" = $1, "user_id" = $2 WHERE "lists"."id" = $3[0m  [["updated_at", "2018-05-19 12:41:40.683221"], ["user_id", 28], ["id", 40]]
+  ↳ db/seeds.rb:142
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:142
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mList Update (0.3ms)[0m  [1m[33mUPDATE "lists" SET "updated_at" = $1, "user_id" = $2 WHERE "lists"."id" = $3[0m  [["updated_at", "2018-05-19 12:41:40.685306"], ["user_id", 29], ["id", 41]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:144
+  [1m[36mList Update (0.2ms)[0m  [1m[33mUPDATE "lists" SET "updated_at" = $1, "user_id" = $2 WHERE "lists"."id" = $3[0m  [["updated_at", "2018-05-19 12:41:40.687185"], ["user_id", 30], ["id", 42]]
+  ↳ db/seeds.rb:144
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:144
+Started GET "/users/new" for 127.0.0.1 at 2018-05-19 22:58:01 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (19.3ms)
+  Rendered users/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 62ms (Views: 45.4ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-19 22:58:50 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-19 22:58:58 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sAeaBmq7zVKptXIpSba8NHeNwLjuxryPy8ZLbS56rQrwzFD9ib76y7EqszcgFEjrAU311hq0l+odhH62hyHc5w==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 73ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-19 22:58:58 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 18.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-19 22:59:01 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0ki/dg/aK4IweQ+eLlEMUiD3QZvn/KWxgiw4ve23yVKSg3WN7N8cGyjmzoBH8/iNVjd09ROOjtRUbg1mROy4vw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-19 22:59:01 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-19 22:59:06 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EZ8HXevjF0zwlFFTkLjWgUuSsbS8gpykwXwdCKwLgZBRVM2mCOYg1egLkE35GiJePVKE2kjwt8EXPijTBVDwfQ==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 70ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-19 22:59:06 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-19 22:59:17 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/WmNJccy4wHx6k2sFqiwGciiYW4ETakBoOr+V/OttKC9okfeJDfUmOl1jLJ/CkTGvmJUAPA/gmR2qMuMWvbFTQ==", "email"=>"we@sw.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "we@sw.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-19 22:59:17 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-19 22:59:19 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-19 22:59:35 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EZEoiryhrPHVmKGHG9U/VHuoLthhxeXxZ0grdKjV0XRRWuJxX6SbaM0HYJlyd8uLDWgbtpW3zpSxCh6vAY6gmQ==", "user"=>{"username"=>"Theo", "email"=>"theo@ga.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:10
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 58ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-19 22:59:35 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-20 11:06:12 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/views/users/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/Users/linna/wdi/projects/my-cocktails/app/views/users/new.html.erb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/users/new.html.erb:14: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/new.html.erb:16: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/new" for 127.0.0.1 at 2018-05-20 11:06:30 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.4ms)
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-20 11:06:34 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-20 12:39:39 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"en7Xi8GfniAZXVbll8TQHjDZTasf6eHKX4kgdqckicU6tR1wIpqpuQHCl/v+ZiTBRhl4xeubyq+JyxWtDn/4KA==", "user"=>{"username"=>"Theo", "email"=>"theo@ga.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Theo"], ["password_digest", "$2a$10$IvDlly5rpnI.TLCRQ8VlCefr7.92tfC918WXDJhP0VEMRWKGVgofS"], ["created_at", "2018-05-20 02:39:39.812941"], ["updated_at", "2018-05-20 02:39:39.812941"], ["email", "theo@ga.co"]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10
+Redirected to http://localhost:3000/users/31
+Completed 302 Found in 67ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/users/31" for 127.0.0.1 at 2018-05-20 12:39:39 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-20 12:39:42 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4LCV+XfAwlzCWjqSS4WDd34nddYORzMrsGs2ZNWeAKage18ClMX1xdrF+4wiJ3eoCOdAuPo1GE5mKQO/fMVxSw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-20 12:39:42 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-20 17:51:19 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-20 17:51:24 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-20 17:51:28 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-20 17:51:37 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-20 17:51:42 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+eQmNVHO/yUTV2ToaPF02EXAEBJrdgGZUad0+fvtWZi5L+zOssvIvAvIpfYBU4AHMwAlfJ8EKvyH5UEiUrYodQ==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 77ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-20 17:51:43 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 16.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-20 17:51:57 +1000
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `block in load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `rescue in load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/login" for 127.0.0.1 at 2018-05-20 18:24:03 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Qjv5QU6htuCkXCMThGYj183nYBHsuvc/viyy6chqI14C8DO6raSBebzD4g3txNcIuydVfxjI3FpobocyYTFSsw=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-20 18:24:03 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-20 18:24:08 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-21 08:31:55 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (9.1ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-21 08:49:25 +1000
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linna/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (6.1ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.6ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 08:52:04 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 293ms (Views: 280.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 08:52:05 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/lists"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-21 09:19:08 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (6.3ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=lsits" for 127.0.0.1 at 2018-05-21 09:19:13 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lsits"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=lis" for 127.0.0.1 at 2018-05-21 09:19:14 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lis"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=list" for 127.0.0.1 at 2018-05-21 09:19:15 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"list"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:19:17 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:19:18 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:19:20 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-21 09:19:34 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (7.5ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 35ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:19:43 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:19:47 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:21:36 +1000
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/controllers/lists_controller.rb:4: syntax error, unexpected tSYMBEG, expecting '('
+wner, only: [:edit, :update. :destroy]
+                              ^
+/Users/linna/wdi/projects/my-cocktails/app/controllers/lists_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/lists_controller.rb:4: syntax error, unexpected tSYMBEG, expecting '('
+app/controllers/lists_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:27:20 +1000
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/controllers/lists_controller.rb:4: syntax error, unexpected tSYMBEG, expecting '('
+wner, only: [:edit, :update. :destroy]
+                              ^
+/Users/linna/wdi/projects/my-cocktails/app/controllers/lists_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/lists_controller.rb:4: syntax error, unexpected tSYMBEG, expecting '('
+app/controllers/lists_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:27:29 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:31:16 +1000
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/controllers/lists_controller.rb:4: syntax error, unexpected tSYMBEG, expecting '('
+wner, only: [:edit, :update. :destroy]
+                              ^):
+  
+app/controllers/lists_controller.rb:4: syntax error, unexpected tSYMBEG, expecting '('
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:31:39 +1000
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/controllers/lists_controller.rb:4: syntax error, unexpected tSYMBEG, expecting '('
+wner, only: [:edit, :update. :destroy]
+                              ^):
+  
+app/controllers/lists_controller.rb:4: syntax error, unexpected tSYMBEG, expecting '('
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:34:04 +1000
+  
+ActionController::RoutingError (undefined local variable or method `show' for ListsController:Class):
+  
+app/controllers/lists_controller.rb:2:in `<class:ListsController>'
+app/controllers/lists_controller.rb:1:in `<main>'
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:34:21 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/list" for 127.0.0.1 at 2018-05-21 09:34:30 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/list"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:35:05 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:35:05 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:35:23 +1000
+  
+ActionController::RoutingError (undefined local variable or method `show' for ListsController:Class):
+  
+app/controllers/lists_controller.rb:2:in `<class:ListsController>'
+app/controllers/lists_controller.rb:1:in `<main>'
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:40:10 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:40:18 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:40:30 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:40:58 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:42:13 +1000
+  
+ActionController::RoutingError (undefined local variable or method `show' for ListsController:Class):
+  
+app/controllers/lists_controller.rb:2:in `<class:ListsController>'
+app/controllers/lists_controller.rb:1:in `<main>'
+Started GET "/rails/info/routes?path=list" for 127.0.0.1 at 2018-05-21 09:45:17 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"list"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=list" for 127.0.0.1 at 2018-05-21 09:45:17 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"list"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:46:15 +1000
+  
+ActionController::RoutingError (undefined local variable or method `show' for ListsController:Class):
+  
+app/controllers/lists_controller.rb:2:in `<class:ListsController>'
+app/controllers/lists_controller.rb:1:in `<main>'
+Started GET "/rails/info/routes?path=list" for 127.0.0.1 at 2018-05-21 09:46:16 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"list"}
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:46:17 +1000
+  
+ActionController::RoutingError (undefined local variable or method `show' for ListsController:Class):
+  
+app/controllers/lists_controller.rb:2:in `<class:ListsController>'
+app/controllers/lists_controller.rb:1:in `<main>'
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:47:21 +1000
+  
+ActionController::RoutingError (undefined local variable or method `show' for ListsController:Class):
+  
+app/controllers/lists_controller.rb:2:in `<class:ListsController>'
+app/controllers/lists_controller.rb:1:in `<main>'
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:47:22 +1000
+  
+ActionController::RoutingError (undefined local variable or method `show' for ListsController:Class):
+  
+app/controllers/lists_controller.rb:2:in `<class:ListsController>'
+app/controllers/lists_controller.rb:1:in `<main>'
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:49:33 +1000
+  
+ActionController::RoutingError (undefined local variable or method `show' for ListsController:Class):
+  
+app/controllers/lists_controller.rb:2:in `<class:ListsController>'
+app/controllers/lists_controller.rb:1:in `<main>'
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:49:36 +1000
+  
+ActionController::RoutingError (undefined local variable or method `show' for ListsController:Class):
+  
+app/controllers/lists_controller.rb:2:in `<class:ListsController>'
+app/controllers/lists_controller.rb:1:in `<main>'
+Started GET "/rails/info/routes?path=list" for 127.0.0.1 at 2018-05-21 09:50:00 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"list"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=list" for 127.0.0.1 at 2018-05-21 09:50:04 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"list"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=list" for 127.0.0.1 at 2018-05-21 09:50:26 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"list"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=list" for 127.0.0.1 at 2018-05-21 09:50:49 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"list"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:52:38 +1000
+Processing by ListsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_if_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 09:52:38 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 09:53:14 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 09:53:21 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H+K2hZD5iW+70e3SVRLKIedt4vbuzdL0mi4uKhwZJfFfKXx+c/y+9qNOLMw8sD7+ka3XmBq/+ZFMbBvxtUJUHA==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 83ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 09:53:21 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 19.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:53:39 +1000
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.9ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:3
+  Rendered lists/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 44ms (Views: 26.9ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/lists/40" for 127.0.0.1 at 2018-05-21 09:53:44 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `get_lists' for #<ListsController:0x007f83d0878c90>
+Did you mean?  get_list):
+  
+activesupport (5.2.0) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.0) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.0) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/lists/41" for 127.0.0.1 at 2018-05-21 09:54:00 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `get_lists' for #<ListsController:0x007f83d0891060>
+Did you mean?  get_list):
+  
+activesupport (5.2.0) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.0) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.0) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/lists/42" for 127.0.0.1 at 2018-05-21 09:54:04 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `get_lists' for #<ListsController:0x007f83d091a540>
+Did you mean?  get_list):
+  
+activesupport (5.2.0) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.0) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.0) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 28]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 29]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 31]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 30]]
+Started GET "/rails/info/routes?path=lists" for 127.0.0.1 at 2018-05-21 09:56:39 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"lists"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 09:58:16 +1000
+Processing by ListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:3
+  Rendered lists/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lists/40" for 127.0.0.1 at 2018-05-21 09:58:19 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `get_lists' for #<ListsController:0x007f83c8c56bd0>
+Did you mean?  get_list):
+  
+activesupport (5.2.0) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.0) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.0) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/lists/40" for 127.0.0.1 at 2018-05-21 10:04:40 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 13.6ms)
+
+
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/views/lists/show.html.erb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+e", list_path(@list), method :delete );@output_buffer.safe_a
+                              ^):
+  
+app/views/lists/show.html.erb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+Started GET "/lists/40" for 127.0.0.1 at 2018-05-21 10:05:25 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 60ms (Views: 54.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/lists/40/edit" for 127.0.0.1 at 2018-05-21 10:05:35 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/_form.html.erb (13.9ms)
+  Rendered lists/edit.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 55ms (Views: 43.9ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/lists/40" for 127.0.0.1 at 2018-05-21 10:05:43 +1000
+Processing by ListsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w3tRywBDhc4vhnbKimpaUKHVJH32nYlD26fUVokCiQeDsJsw40ayVzcZt9TjyK6P1xUREwLvoiYN5eGNIFn46g==", "list"=>{"name"=>"Solo Journey", "note"=>""}, "commit"=>"Update List", "id"=>"40"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lists_controller.rb:29
+  [1m[36mList Update (1.6ms)[0m  [1m[33mUPDATE "lists" SET "note" = $1, "updated_at" = $2 WHERE "lists"."id" = $3[0m  [["note", ""], ["updated_at", "2018-05-21 00:05:43.768379"], ["id", 40]]
+  ↳ app/controllers/lists_controller.rb:29
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lists_controller.rb:29
+Redirected to http://localhost:3000/lists/40
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/lists/40" for 127.0.0.1 at 2018-05-21 10:05:43 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 23.0ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:05:46 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"35gEyiB643brlU/DmcCvDoneDTt7ye0gJzZfM26AMu2fU84xw3/U7/MKjt3wYlvR/x44VY+7xkXxdGrox9tDAA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:05:46 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2018-05-21 10:05:50 +1000
+Processing by ListsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_if_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:05:50 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:06:00 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K0AWuXGAJHv1nsZbIuZalOlfeWITdD4eN65QcygOIpNri9xCkoUT4u0BB0VLRK5Ln59MDOcGFXvh7GWogVVTfg==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 72ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:06:01 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/profile" for 127.0.0.1 at 2018-05-21 10:10:32 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/user/profile"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=user" for 127.0.0.1 at 2018-05-21 10:12:22 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:13:05 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nhfp/D9lBpTK9mwXnhZI+y9JrdiC1nxPpzU083ED/z7e3CMH3GAxDdJprQn3tLwkWYmYtnakVypxdwEo2FiO0w=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 23ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:13:05 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:13:06 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:13:13 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mSfrgCyT74zDxjsdWL6So1Gr+UyjzamaTeADn4BwcLXZ7CF7z5bYFdtZ+gMxHGZ8J2vMIle/gv+bojZEKSsBWA==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 73ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:13:13 +1000
+Processing by UsersController#profile as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:13:44 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YyVXVKHLEIRspa1YiHxeWuxO0LK/kzTehDjax67w+Ugj7p2vQs4nHXQ6bEbh3qqFmo7l3EvhH7tSeu8cB6uIpQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 16ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:13:44 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:13:45 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:13:50 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zNLvkIEo0XVUb3WrWwl2B9zi9sWe2nHLNDMna9gbHmiMGSVrYi3m7EzwtLUyq4LYqiLDq2qoWq7icRKwcUBvhQ==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 72ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:13:50 +1000
+Processing by UsersController#profile as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-21 10:16:11 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:16:15 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s6dxuAcAu4zbsAMvw53Kq8eCb18VQYLt4EtTLEpPETzzbLtD5AWMFcMvwjGqPz50sUJaMeEzqYg2CWb34xRg0Q=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:16:15 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-21 10:16:19 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:16:22 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:16:28 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qTRrBWYTtyx498QIBBqsO9H6MUQgs1+SBKxXPVm2TTPp/6H+hRaAtWBoBRZtuFjkpzoEKtTBdPfS7mLm8O083g==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 73ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:16:29 +1000
+Processing by UsersController#profile as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-21 10:24:00 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (4.9ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 30ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-21 10:24:48 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (5.3ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/linna/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 32ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=pro" for 127.0.0.1 at 2018-05-21 10:24:55 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"pro"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=pro" for 127.0.0.1 at 2018-05-21 10:25:02 +1000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"pro"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:25:31 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WcbiJbzlP37tujhSz7o9szGFxMem+jSxkuNDSEZLwbgZDSjeX+AI5/Ul+UymGMlsR0XxqVKIH9REoXaT7xCwVQ=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 24ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:25:32 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:25:33 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:25:38 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iDr3uJ327SZmHo88p3CNOvH0k7DvQy3UWaJrKgurRRbI8T1DfvPav36BTiLO0nnlhzSm3hsxBrGP4F7xovA0+w==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 74ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:25:39 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 32.8ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:25:48 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"izNV82Z6j1y8AiXA/8bfREL+0nmT9krrcKtxFyS/ZofL+J8IhX+4xaSd5N6WZCubND7nF2eEYY6m6UTMjeQXag=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:25:48 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:26:38 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:26:43 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XhWc2PjWFwubLBFWvNgt3JekOZ3oq4oADQnnPbt/lf0e3lYjG9MgkoOz0EjVetkD4WQM8xzZoWXbS9LmEiTkEA==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 95ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:26:43 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:28:06 +1000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linna/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RQh0biqxNq+sCEK74on2hvHx54z1x8eM1jtvrM4YrAkFw76VybQBNrSXg6WLKwJZhzHS4gG17OkAeVp3Z0Pd5A=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 33ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:28:06 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 217ms (Views: 215.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:28:08 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:28:08 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:28:13 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cVB41PDVDvgyM/iiwZigI7uMkgfKoLElGiOZvtHen7Qxm7IvE9A5YSqsObyoOlT8zUynaT7SmkDMYaxleIXuWQ==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 80ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:28:13 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 45ms (Views: 39.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:35:56 +1000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/linna/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s6VnxS3posCJm1UuUVH8/Slp8WMOSMn/+c/omMCWRnjzbq0+zuyVWZEElDA48wgiX6nEDfo64povjd1Dac03lQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 28ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:35:56 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 207ms (Views: 204.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:35:58 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:35:58 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 54ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:36:06 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PVlirdJKTFo5FNilPh/jozAVt5Za5uRpQsB0R+MCmkl9kqhWMU97wyGLGbtXvRd8RtWC+K6UzwyUgkGcSlnrpA==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 81ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:36:06 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 43ms (Views: 37.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:36:14 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OS6VmvJKBodAyQ4WVBN7cmE/5etKfYKrl9Vgw+0SujN55V9hEU8xHlhWzwg9sY+tF//Qhb4Pqc5Bl1UYREnL3g=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:36:14 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-21 10:36:17 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/profile"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:36:27 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8txR4oQ0LfnF3WW+6XowG+VzoHcJ5lmQd5zKkr12lRiyF5sZZzEaYN1CpKCA2MTEk7OVGf2UcvWh3v9JFC3k9Q==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 61ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:36:28 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-21 10:36:42 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 29.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-21 10:37:09 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 52ms (Views: 36.1ms | ActiveRecord: 5.3ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:37:12 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6LjN1Jp0XVbdGu4PXZGyM/5Uv/7X63Lm77uPVR+7FQ6ocwcveXFqz8WFLxE0M0bsiJSKkCOZWYM5+bqOtuBk4w=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:37:12 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:37:18 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKeVU+kwqhUzLq05ssLMj0pKjVmb/J02/zVRw5gCD8rIbF+oCjWdjCuxbCfbYDhQPIq4N2+OtlMpd2QYMVl+Jw==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 74ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:37:18 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:37:21 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ri+ayLMicYTBjE6HzzlSwOXArkhkyJyMC7BnGXX99m/u5FAzUCdGHdkTj5mmm6YfkwCbJpC6t+nd8lLC3KaHgg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:37:21 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 28]]
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:44:35 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:44:40 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"51uy3jvFfZv/7iVqqev5RNri8IACqzKW+jtMNK716LenkHgl2MBKAudx5HTASQ2brCLF7vbZGfMseXnvB66ZWg==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/users/28
+Completed 302 Found in 103ms (ActiveRecord: 16.3ms)
+
+
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:44:40 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/views/users/show.html.erb:9: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'):
+  
+app/views/users/show.html.erb:9: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:45:53 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/views/users/show.html.erb:7: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'):
+  
+app/views/users/show.html.erb:7: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 28]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 11]]
+Started GET "/users/28" for 127.0.0.1 at 2018-05-21 10:50:28 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 7.7ms)
+
+
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/views/users/show.html.erb:7: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'):
+  
+app/views/users/show.html.erb:7: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+Started GET "/" for 127.0.0.1 at 2018-05-21 10:50:37 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-21 10:50:39 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DCO3YD+uX7/JeFqvf5byMhMyCPszOVGfL73TlaUGYXtM6H2b3KtoJtHnm7EWNAbtZfI9lcdLevr5/+ZODF0Qlg=="}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-21 10:50:39 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 34ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-21 10:50:46 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"euOdYTB++Wlq61lQTaXktBuk/MF56d3CLM+nkmyq8wI6KFea03vO8HJ0mE4kBxBrbWTJr42b9qf6jZJJxfGC7w==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 72ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-21 10:50:46 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/views/users/show.html.erb:7: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'):
+  
+app/views/users/show.html.erb:7: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+app/controllers/users_controller.rb:30:in `profile'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 28]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 28]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."user_id" = $1 ORDER BY "lists"."id" ASC LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 28]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 28]]
+Started GET "/profile" for 127.0.0.1 at 2018-05-21 10:56:18 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 11.0ms)
+
+
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/views/users/show.html.erb:7: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'):
+  
+app/views/users/show.html.erb:7: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+app/controllers/users_controller.rb:30:in `profile'
+Started PUT "/__web_console/repl_sessions/1cf430c1dccef0f06e299837ee3e60da" for 127.0.0.1 at 2018-05-21 10:56:37 +1000
+Started PUT "/__web_console/repl_sessions/1cf430c1dccef0f06e299837ee3e60da" for 127.0.0.1 at 2018-05-21 10:56:43 +1000
+Started PUT "/__web_console/repl_sessions/1cf430c1dccef0f06e299837ee3e60da" for 127.0.0.1 at 2018-05-21 10:56:45 +1000
+Started PUT "/__web_console/repl_sessions/1cf430c1dccef0f06e299837ee3e60da" for 127.0.0.1 at 2018-05-21 10:56:46 +1000
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."user_id" = $1 LIMIT $2[0m  [["user_id", 28], ["LIMIT", 11]]
+  ↳ /Users/linna/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started PUT "/__web_console/repl_sessions/1cf430c1dccef0f06e299837ee3e60da" for 127.0.0.1 at 2018-05-21 10:56:50 +1000
+Started PUT "/__web_console/repl_sessions/1cf430c1dccef0f06e299837ee3e60da" for 127.0.0.1 at 2018-05-21 10:56:51 +1000
+Started PUT "/__web_console/repl_sessions/1cf430c1dccef0f06e299837ee3e60da" for 127.0.0.1 at 2018-05-21 10:57:08 +1000
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."user_id" = $1 ORDER BY "lists"."id" ASC LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ /Users/linna/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE List Load (0.0ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."user_id" = $1 ORDER BY "lists"."id" ASC LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ /Users/linna/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started PUT "/__web_console/repl_sessions/1cf430c1dccef0f06e299837ee3e60da" for 127.0.0.1 at 2018-05-21 10:57:09 +1000
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."user_id" = $1 ORDER BY "lists"."id" ASC LIMIT $2[0m  [["user_id", 28], ["LIMIT", 1]]
+  ↳ /Users/linna/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started PUT "/__web_console/repl_sessions/1cf430c1dccef0f06e299837ee3e60da" for 127.0.0.1 at 2018-05-21 10:58:00 +1000
+Started PUT "/__web_console/repl_sessions/1cf430c1dccef0f06e299837ee3e60da" for 127.0.0.1 at 2018-05-21 10:58:00 +1000
+Started PUT "/__web_console/repl_sessions/1cf430c1dccef0f06e299837ee3e60da" for 127.0.0.1 at 2018-05-21 10:58:00 +1000
+Started GET "/profile" for 127.0.0.1 at 2018-05-21 10:59:17 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/views/users/show.html.erb:7: syntax error, unexpected ';', expecting &. or :: or '[' or '.'
+'.freeze; end ;@output_buffer.safe_append=' -
+               ^):
+  
+app/views/users/show.html.erb:7: syntax error, unexpected ';', expecting &. or :: or '[' or '.'
+app/controllers/users_controller.rb:30:in `profile'
+Started GET "/profile" for 127.0.0.1 at 2018-05-21 11:01:14 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/views/users/show.html.erb:7: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'):
+  
+app/views/users/show.html.erb:7: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+app/controllers/users_controller.rb:30:in `profile'

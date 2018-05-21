@@ -1,2 +1,12 @@
 <h1>Create an Account</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
+<% if flash[:errors] %>
+<strong>Please correct the following errors:</strong>
+<ol>
+  <% flash[:errors].each do |e| %>
+  <li><%= e %></li>
+  <% end %>
+</ol>
+<% end %>
+
+<%= render partial: "form" %>

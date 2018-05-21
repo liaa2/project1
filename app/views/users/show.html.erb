@@ -1,2 +1,10 @@
 <h1><%= @user.username %> personal profile page</h1>
-<p>This page should show all the details about you</p>
+
+<p>My personal lists</p>
+
+<% for @user.lists.each do |l| %>
+<p><strong><%= l.name %></strong></p>
+<% end %>
+
+
+<p>The bars I like: </p>

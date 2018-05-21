@@ -6,9 +6,15 @@ Rails.application.routes.draw do
   post "/login" => 'session#create'
   delete "/login" => "session#destroy"
 
-  resources :users
 
-  get "/profile" => "user#profile"
+  resources :users
+  # get "users/:id" => "users#profile", as: "users/profile"
+  get "/profile" => "users#profile"
+
+
+  resources :lists
+
+  resources :bars
 end
 
 
