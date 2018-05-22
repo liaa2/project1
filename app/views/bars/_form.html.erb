@@ -1,9 +1,9 @@
-<%= form_for @bar do |f| %>
+<%= form_for(@bar, :html => {:multipart => true}) do |f| %>
   <%= f.label :name%>
   <%= f.text_field :name %>
   <br>
   <%= f.label :image %>
-  <%= f.text_field :image%>
+  <%= f.cl_image_upload :image%>
   <br>
   <%= f.label :description%>
   <%= f.text_field :description %>

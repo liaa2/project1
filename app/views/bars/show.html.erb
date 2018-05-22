@@ -1,7 +1,18 @@
+<% if flash[:success_message] %>
+  <div class="success">
+    <%= flash[:success_message] %>
+  </div>
+
+  <% elsif flash[:duplicate_message] %>
+  <div class="duplicate">
+    <%= flash[:duplicate_message] %>
+  </div>
+<% end %>
+
 <h1><%= @bar.name %></h1>
 
 <% if @bar.image.present? %>
-<%= image_tag @bar.image %>
+<%= cl_image_tag @bar.image %>
 <% else %>
 <%= image_tag "http://thepouringtales.com/wp-content/uploads/2016/01/The-Baxter-Inn-Sydney-132.jpg" %>
 <% end %>
@@ -33,6 +44,35 @@
 <% end %>
 </ul>
 
+
+<hr>
+<p>Comments:</p>
+<% if @comments.present? %>
+<ul>
+  <% @bar.comments.each do |comment|%>
+  <li>
+    <%= comment.user.username %> <br>
+    <%= comment.user.image %> <br>
+    <%= time_ago_in_words( comment.created_at ) %> ago <br>
+    <%= comment.content %>
+    <hr>
+  <% end %>
+  </li>
+<% end %>
+</ul>
+
+<br>
+<br>
+<p>Add your comment here:</p>
+<%= form_tag comment_bar_path(@bar) do %>
+  <%= label_tag :add_comment %>
+  <%= text_area_tag :content %>
+  <br>
+  <%= submit_tag "submit"%>
+<% end %>
+
+
+<hr>
 <% if @current_user.present? %>
   <%= link_to "Edit", edit_bar_path(@bar) %>&nbsp;&nbsp;&nbsp;
   <%= link_to "Delete", bar_path(@bar), method: :delete %>

@@ -1,6 +1,6 @@
 class BarsController < ApplicationController
-  before_action :check_if_logged_in, expect: [:index, :show]
-  before_action :get_bar, only: [:show, :edit, :update, :menu, :destroy]
+  before_action :check_if_logged_in, except: [:index, :show]
+  before_action :get_bar, only: [:show, :edit, :update, :destroy]
 
   def new
     @bar = Bar.new
@@ -8,8 +8,23 @@ class BarsController < ApplicationController
 
   def create
     bar = Bar.new bar_params
+
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      bar.image = req["public_id"]
+    end
+
     bar.save
     redirect_to bars_path
+  end
+
+  def comment
+    comment = Comment.new
+    comment.user_id = @current_user.id
+    comment.content = params[:content]
+    comment.bar_id = params[:id]
+    comment.save
+    redirect_to bar_path(comment.bar_id)
   end
 
   def favourite
@@ -30,14 +45,15 @@ class BarsController < ApplicationController
     redirect_to bar
   end
 
-  def menu
-    # @lists = @current_user.lists
-    @bar = Bar.find params[:id]
-    # render template: "cocktails/index"
-    render :cocktails_path
-  end
+  # def menu
+  #   # @lists = @current_user.lists
+  #   @bar = Bar.find params[:id]
+  #   # render template: "cocktails/index"
+  #   render :cocktails_path
+  # end
 
   def show
+    @comments = Comment.all
   end
 
   def index
@@ -49,6 +65,11 @@ class BarsController < ApplicationController
   end
 
   def update
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      @bar.image = req["public_id"]
+    end
+
     @bar.update bar_params
     redirect_to @bar
   end
@@ -61,7 +82,7 @@ class BarsController < ApplicationController
   private
 
   def bar_params
-    params.require(:bar).permit(:name, :image, :description, :phone, :website)
+    params.require(:bar).permit(:name, :description, :phone, :website)
   end
 
   def get_bar

@@ -5,7 +5,7 @@
 <ul>
 <% @list.cocktails.each do |c| %>
   <li>
-  <strong><%= link_to c.name, cocktail_path( c ) %></strong>,&nbsp;&nbsp;<em><%= link_to c.bar.name, bar_path(c.bar_id)%></em>
+  <strong><%= link_to c.name, cocktail_path( c ) %></strong>,&nbsp;&nbsp;<em><%= link_to c.bar.name, bar_path(c.bar_id)%></em> <%= link_to 'delete', unfavourite_cocktail_path(c.id, @list.id), method: :delete %>
   </li>
   <% end %>
 </ul>

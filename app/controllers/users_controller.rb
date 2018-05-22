@@ -31,6 +31,8 @@ class UsersController < ApplicationController
   end
 
   def update
+    cocktail = Cocktail.find params[:id]
+    redirect_to bar_path(bar)
   end
 
   def edit

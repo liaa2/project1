@@ -17,9 +17,14 @@ Rails.application.routes.draw do
   resources :bars
   get "/bars/:id/favourite" => "bars#favourite", as: :favourite_bar
   get "/bars/:id/unfavourite" => "bars#unfavourite", as: :unfavourite_bar
-  get "/bars/:id/menu" => "bars#menu", as: :menu_bar
+  post "/bars/:id/comment" => "bars#comment", as: :comment_bar
+  # get "/bars/:id/menu" => "bars#menu", as: :menu_bar
 
   resources :cocktails
+
+  # this will add a cocktail to a specific list of favourite cocktails (the list ID is in the form data)
+  post   "/cocktails/:id/favourite"           => "cocktails#favourite",   as: :favourite_cocktail
+  delete "/cocktails/:id/favourite/:list_id"  => "cocktails#unfavourite", as: :unfavourite_cocktail
 
   resources :comments
 end

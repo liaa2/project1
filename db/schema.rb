@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_21_023617) do
+ActiveRecord::Schema.define(version: 2018_05_22_054934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,11 +30,11 @@ ActiveRecord::Schema.define(version: 2018_05_21_023617) do
     t.integer "bar_id"
   end
 
-  # create_table "categories", force: :cascade do |t|
-  #   t.text "style"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  # end
+  create_table "categories", force: :cascade do |t|
+    t.text "style"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cocktails", force: :cascade do |t|
     t.text "name"
@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(version: 2018_05_21_023617) do
   create_table "cocktails_lists", id: false, force: :cascade do |t|
     t.integer "cocktail_id"
     t.integer "list_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "bar_id"
+    t.integer "user_id"
   end
 
   create_table "ingredients", force: :cascade do |t|

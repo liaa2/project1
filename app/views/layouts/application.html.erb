@@ -7,10 +7,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <%= cloudinary_js_config %>
   </head>
 
   <body>
-    <h1>Cocktails DB</h1>
+    <h1>nostrum</h1>
     <nav>
       <% if @current_user.present? %>
        Welcome, <%= @current_user.username %>!
