@@ -45098,3 +45098,2150 @@ Processing by CocktailsController#show as HTML
 Completed 200 OK in 39ms (Views: 32.5ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/cocktails/505" for 127.0.0.1 at 2018-05-22 16:54:53 +1000
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"505"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCocktail Load (0.1ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 505], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:63
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "cocktails_ingredients" ON "ingredients"."id" = "cocktails_ingredients"."ingredient_id" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 505]]
+  ↳ app/views/cocktails/show.html.erb:8
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" INNER JOIN "cocktails_lists" ON "lists"."id" = "cocktails_lists"."list_id" WHERE "cocktails_lists"."cocktail_id" = $1 AND "lists"."user_id" = $2[0m  [["cocktail_id", 505], ["user_id", 39]]
+  ↳ app/views/cocktails/show.html.erb:20
+  [1m[36mBar Load (0.1ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/cocktails/show.html.erb:46
+  Rendered cocktails/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 25.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/bars/203" for 127.0.0.1 at 2018-05-22 16:54:56 +1000
+Processing by BarsController#show as HTML
+  Parameters: {"id"=>"203"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/controllers/bars_controller.rb:89
+  Rendering bars/show.html.erb within layouts/application
+  [1m[36mBar Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1 AND "bars"."id" = $2 LIMIT $3[0m  [["user_id", 39], ["id", 203], ["LIMIT", 1]]
+  ↳ app/views/bars/show.html.erb:25
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" WHERE "cocktails"."bar_id" = $1[0m  [["bar_id", 203]]
+  ↳ app/views/bars/show.html.erb:40
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/bars/show.html.erb:50
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."bar_id" = $1[0m  [["bar_id", 203]]
+  ↳ app/views/bars/show.html.erb:52
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/views/bars/show.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/views/bars/show.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/views/bars/show.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/views/bars/show.html.erb:54
+  Rendered bars/show.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 70ms (Views: 54.0ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/bars" for 127.0.0.1 at 2018-05-22 16:55:06 +1000
+Processing by BarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering bars/index.html.erb within layouts/application
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ app/views/bars/index.html.erb:4
+  Rendered bars/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 35.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-22 16:55:08 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 39]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT "bars".* FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1[0m  [["user_id", 39]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/lists/54" for 127.0.0.1 at 2018-05-22 16:55:12 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 54]]
+  ↳ app/views/lists/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:15
+  Rendered lists/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 47ms (Views: 39.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/lists/52" for 127.0.0.1 at 2018-05-22 16:55:16 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/show.html.erb:6
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:15
+  Rendered lists/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 50ms (Views: 44.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 16:55:18 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:10
+  Rendered lists/edit.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for :c:Symbol):
+     8:   <%= f.text_field :note %>
+     9:   <br>
+    10:   <% @list.cocktails.each do |c|%>
+    11:     <%= f.label :c.name %>
+    12:     <%= f.text_field :c.name%>
+    13:     <br>
+    14:     <%= f.label  :c.bar.name %>
+  
+app/views/lists/edit.html.erb:11:in `block (2 levels) in _app_views_lists_edit_html_erb__2632331757465172967_70272081803540'
+app/views/lists/edit.html.erb:10:in `block in _app_views_lists_edit_html_erb__2632331757465172967_70272081803540'
+app/views/lists/edit.html.erb:3:in `_app_views_lists_edit_html_erb__2632331757465172967_70272081803540'
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:13:18 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (1.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.8ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 59ms (Views: 50.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:14:47 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (1.0ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:12
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:12
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:12
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:12
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:12
+  [1m[36mBar Load (1.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:12
+  Rendered lists/edit.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 61ms (Views: 51.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:16:28 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.1ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 52ms (Views: 44.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:16:38 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 50ms (Views: 42.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:18:39 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  Rendered lists/edit.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 50ms (Views: 44.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:18:52 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 46ms (Views: 38.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:18:58 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 66ms (Views: 59.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:19:52 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 43ms (Views: 36.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:21:06 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.6ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 50ms (Views: 41.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:21:25 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.6ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 46ms (Views: 39.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:23:19 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 42ms (Views: 35.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:24:28 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/Users/linna/wdi/projects/my-cocktails/app/views/lists/edit.html.erb:12: syntax error, unexpected ')'
+ultiple: true}, c.id, true,  );@output_buffer.safe_append='
+                              ^
+/Users/linna/wdi/projects/my-cocktails/app/views/lists/edit.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end
+               ^
+/Users/linna/wdi/projects/my-cocktails/app/views/lists/edit.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/linna/wdi/projects/my-cocktails/app/views/lists/edit.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/linna/wdi/projects/my-cocktails/app/views/lists/edit.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/lists/edit.html.erb:12: syntax error, unexpected ')'
+app/views/lists/edit.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+app/views/lists/edit.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+app/views/lists/edit.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/lists/edit.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:24:33 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  Rendered lists/edit.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for true:TrueClass):
+     9:   <br>
+    10:   Cocktails:<br>
+    11:   <% @list.cocktails.each do |c| %>
+    12:     <%= check_box_tag 'cocktails', {multiple: true}, c.id, true  %>
+    13:     <%= label_tag c.id, "#{c.name} (#{c.bar.name})" %>
+    14:     <br>
+    15:   <% end%>
+  
+app/views/lists/edit.html.erb:12:in `block (2 levels) in _app_views_lists_edit_html_erb__2632331757465172967_70272153561060'
+app/views/lists/edit.html.erb:11:in `block in _app_views_lists_edit_html_erb__2632331757465172967_70272153561060'
+app/views/lists/edit.html.erb:3:in `_app_views_lists_edit_html_erb__2632331757465172967_70272153561060'
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:25:02 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.7ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 51ms (Views: 42.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:25:15 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 47ms (Views: 39.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:25:45 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:45
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.6ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 45ms (Views: 37.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:26:01 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:46
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 207], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 208], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 110ms (Views: 61.4ms | ActiveRecord: 23.7ms)
+
+
+Started PATCH "/lists/52" for 127.0.0.1 at 2018-05-22 17:26:02 +1000
+Processing by ListsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8lhFt+hZgVZT2FLaog8uAJemvtVgooOoIjfsaDOlFRSyk49MC1y2z0tHk8TLrdrf4WaLu5TQqM30ddmzmv5k+Q==", "list"=>{"name"=>"The Dancing Duo", "note"=>""}, "cocktails"=>["505", "506", "510", "514", "518", "519"], "commit"=>"Update List", "id"=>"52"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:46
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.8ms)
+
+
+  
+RuntimeError (hell):
+  
+app/controllers/lists_controller.rb:29:in `update'
+Started PATCH "/lists/52" for 127.0.0.1 at 2018-05-22 17:27:52 +1000
+Processing by ListsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8lhFt+hZgVZT2FLaog8uAJemvtVgooOoIjfsaDOlFRSyk49MC1y2z0tHk8TLrdrf4WaLu5TQqM30ddmzmv5k+Q==", "list"=>{"name"=>"The Dancing Duo", "note"=>""}, "cocktails"=>["505", "506"], "commit"=>"Update List", "id"=>"52"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:46
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+RuntimeError (hell):
+  
+app/controllers/lists_controller.rb:29:in `update'
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHABTM_Cocktails Load (0.5ms)[0m  [1m[34mSELECT "cocktails_lists".* FROM "cocktails_lists" WHERE "cocktails_lists"."list_id" = $1 AND "cocktails_lists"."cocktail_id" IN ($2, $3, $4, $5, $6, $7)[0m  [["list_id", 52], ["cocktail_id", 505], ["cocktail_id", 506], ["cocktail_id", 510], ["cocktail_id", 514], ["cocktail_id", 518], ["cocktail_id", 519]]
+  [1m[36mList::HABTM_Cocktails Destroy (2.5ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."list_id" = $1 AND "cocktails_lists"."cocktail_id" IN ($2, $3, $4, $5, $6, $7)[0m  [["list_id", 52], ["cocktail_id", 505], ["cocktail_id", 506], ["cocktail_id", 510], ["cocktail_id", 514], ["cocktail_id", 518], ["cocktail_id", 519]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 519], ["LIMIT", 1]]
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:33:24 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:53
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.9ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ app/views/lists/edit.html.erb:11
+  Rendered lists/edit.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 97ms (Views: 48.1ms | ActiveRecord: 23.3ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.6ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 505]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (2.0ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 505]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.5ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 505]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 506]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 506]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 506]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 507]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 507]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 507]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 509]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 509]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 509]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 511]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 511]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 511]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 512]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 512]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 512]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 513]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 513]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 513]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 508]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 508]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 508]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 510]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 510]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 510]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 514]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 514]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 514]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 515]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 515]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 515]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 516]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 516]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 516]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 517]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 517]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 517]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 518]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 518]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 518]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 519]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 519]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 519]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Lists Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."cocktail_id" = $1[0m  [["cocktail_id", 520]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail::HABTM_Ingredients Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 520]]
+  ↳ db/seeds.rb:1
+  [1m[36mCocktail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails" WHERE "cocktails"."id" = $1[0m  [["id", 520]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mCocktail Create (1.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Long Island Iced Tea"], ["description", "A potent cocktail consisting of equal parts of, typically, five different distilled alcoholic liquors, usually vodka, gin, rum, tequila, and triple sec, with a small amount of mixer, usually cola."], ["created_at", "2018-05-22 07:33:43.420360"], ["updated_at", "2018-05-22 07:33:43.420360"], ["category", 3]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Singapore Sling"], ["description", "With brandy, fruit juices and liqueurs served in a tall glass garnished with a cherry."], ["created_at", "2018-05-22 07:33:43.424622"], ["updated_at", "2018-05-22 07:33:43.424622"], ["category", 3]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gin Fizz"], ["description", "With lemon juice, sugar and carbonated water served on ice in a highball glass."], ["created_at", "2018-05-22 07:33:43.427208"], ["updated_at", "2018-05-22 07:33:43.427208"], ["category", 2]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Red Fox"], ["description", "Fresh pressed Watermelon Juice, Stoli vodka, vanilla syrup, a touch of rose syrup topped with sparkling wine and garnished with fresh watermelon."], ["created_at", "2018-05-22 07:33:43.429373"], ["updated_at", "2018-05-22 07:33:43.429373"], ["category", 0]]
+  ↳ db/seeds.rb:6
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Irn – Bro"], ["description", "A fresh take on a whiskey highball with Michter’s Rye, Suze, bianco vermouth and a zesty, house-made mandarin soda."], ["created_at", "2018-05-22 07:33:43.431319"], ["updated_at", "2018-05-22 07:33:43.431319"], ["category", 3]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Piña colada"], ["description", "A sweet cocktail made with rum, coconut cream or coconut milk, and pineapple juice, served either blended or shaken with ice. It could be garnished with either a pineapple wedge, maraschino cherry, or both. "], ["created_at", "2018-05-22 07:33:43.433586"], ["updated_at", "2018-05-22 07:33:43.433586"], ["category", 0]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Rye & Tight"], ["description", "A boozy libation of rye whiskey, cherry heering and cold drip coffee infused Italian amaro with a touch of absinthe to lift it all up."], ["created_at", "2018-05-22 07:33:43.436109"], ["updated_at", "2018-05-22 07:33:43.436109"], ["category", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Agua Fresca"], ["description", "Let’s get tropical! Mango and papaya infused Cazadores tequila paired with a bitter sweet orange liqueur and grapefruit bitters."], ["created_at", "2018-05-22 07:33:43.438490"], ["updated_at", "2018-05-22 07:33:43.438490"], ["category", 0]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Rich & Famous"], ["description", "The perfect mix of 666 Butter Vodka, high quality Toby’s Estate Coffee, Coffee liqueur, Galliano Vanila Liqueur, Dusted with cocoa and coffee beans."], ["created_at", "2018-05-22 07:33:43.440876"], ["updated_at", "2018-05-22 07:33:43.440876"], ["category", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "El Pasaporte"], ["description", "Fresh passion fruit, fresh squezed lime juice, symple syrup, maraschino liqueur and with it’s rich vanilla and caramel flavor notes, Bacardi Carta Oro! Garnished with Maraschino Cherry."], ["created_at", "2018-05-22 07:33:43.443310"], ["updated_at", "2018-05-22 07:33:43.443310"], ["category", 1]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "MARTIN PLACE"], ["description", "TAKE 2 ponies Rutte celery gin, 1/2 pony Aperol, 1 tbs Maraschine liquor, 1 dash of Hibiscus and drops Angostura bitters "], ["created_at", "2018-05-22 07:33:43.445387"], ["updated_at", "2018-05-22 07:33:43.445387"], ["category", 3]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCocktail Create (0.4ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "MILLIONAIRE"], ["description", "TAKE 1 pony House rum mix, 1 pony Sloe Gin, 1 pony apricot Brandy and 1 squeeze lime juice."], ["created_at", "2018-05-22 07:33:43.447830"], ["updated_at", "2018-05-22 07:33:43.447830"], ["category", 2]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Feeling Meady"], ["description", "Martell VS Cognac, pedro ximinez sherry,\nblack walnut & barrel aged bitters, egg white & a touch of mead. A short and punchy tipple with dessert-like\nqualities."], ["created_at", "2018-05-22 07:33:43.450110"], ["updated_at", "2018-05-22 07:33:43.450110"], ["category", 2]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Eric the Red"], ["description", "Wyborowa vodka OR Beefeater gin, port, tomato, beetroot, horseradish, dulse, house pickled onion and spices. Blood red in colour with incredible depth of flavour, crowned with root vegetable crisps."], ["created_at", "2018-05-22 07:33:43.452201"], ["updated_at", "2018-05-22 07:33:43.452201"], ["category", 0]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bahama Mama"], ["description", "With coconut liqueur, coffee liqueur, and pineapple juice served on the rocks."], ["created_at", "2018-05-22 07:33:43.454351"], ["updated_at", "2018-05-22 07:33:43.454351"], ["category", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCocktail Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails" ("name", "description", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Beet Highball"], ["description", "1.5 oz Beetroot Gin, 0.5 oz Peach Liqueur, 1 oz Rhubarb Tea, 0.5 oz Gresh Pressed Lime and 0.5 oz Soda Water."], ["created_at", "2018-05-22 07:33:43.456367"], ["updated_at", "2018-05-22 07:33:43.456367"], ["category", 3]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ db/seeds.rb:22
+  [1m[36mBar Load (0.6ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar::HABTM_Users Destroy (0.4ms)[0m  [1m[31mDELETE FROM "bars_users" WHERE "bars_users"."bar_id" = $1[0m  [["bar_id", 203]]
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 203]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar::HABTM_Users Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars_users" WHERE "bars_users"."bar_id" = $1[0m  [["bar_id", 204]]
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.9ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 204]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar::HABTM_Users Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars_users" WHERE "bars_users"."bar_id" = $1[0m  [["bar_id", 205]]
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 205]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar::HABTM_Users Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars_users" WHERE "bars_users"."bar_id" = $1[0m  [["bar_id", 208]]
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 208]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar::HABTM_Users Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars_users" WHERE "bars_users"."bar_id" = $1[0m  [["bar_id", 206]]
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 206]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mBar::HABTM_Users Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars_users" WHERE "bars_users"."bar_id" = $1[0m  [["bar_id", 207]]
+  ↳ db/seeds.rb:28
+  [1m[36mBar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars" WHERE "bars"."id" = $1[0m  [["id", 207]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mBar Create (0.5ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Baxter Inn"], ["description", "In true New York or Boston bar tradition, it's difficult to find. Located at in the basement of a building at the back of an unmarked alleyway off Clarence Street, this drinking den – full of character and people – is an unexpected surprise for the first time visitor.\n\nThe dark, linear interior features a bar that runs almost the full 10 metres of its length. It’s one of the best and most well-stocked and tiered bars we’ve seen for a while. The initially overwhelming list of almost 800 whiskies (featuring everything from Talisker 10-year-old to Glenfiddich 12-year-old) can be deciphered by the helpful staff.\n\nThe menu isn't limited to whisky, though. It also includes all the usual spirits and cocktails; and large beer and wine lists. The crew is just as happy to mix up a killer negroni as they are something more bespoke, like a Talisker 10 Sour."], ["phone", "(02) 9221 5580"], ["created_at", "2018-05-22 07:33:43.505631"], ["updated_at", "2018-05-22 07:33:43.505631"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mBar Create (0.9ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stitch"], ["description", "The Stitch story starts in 2009 when Karl Schlothauer and Chris Lehoux transformed an old garage in Darlinghurst into Pocket Bar. One of the first small bars, Pocket soon proved a hit. A couple of years later and the Pocket crew was eyeing expansion. Stitch opened in early 2011.\n\nFrom the initial idea of adorning the walls with old Singer sewing machines, they decided to go all out with the theme. Sewing machines and spools of thread mark the bar's street entrance. Downstairs, there’s a wall of booths, tables set against the staircase and vintage lamps throwing murky light.\n\nThe bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu."], ["phone", "(02) 9279 0380"], ["created_at", "2018-05-22 07:33:43.508250"], ["updated_at", "2018-05-22 07:33:43.508250"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Assembly Bar"], ["description", "Assembly Bar sits a little removed from the big-hitting bar scene further uptown. But that's no reason to overlook it. Following an ownership change in 2014, the space has kept its recycled, industrial aesthetic. Thanks to the addition of some all-star bartenders, it also gained some serious cocktail credentials.\n\nAssembly's main room sports concrete floors, vintage Chesterfields and recycled wooden crates fashioned into tables. A spiral staircase leads to the mezzanine, where a dumb waiter elevates drinks from the bar, and tealight candles flicker against the dark. Outside, picnic tables sit on AstroTurf below a wall of faux ivy studded with fairy lights.\n\nAt the bar, house-made syrups, bitters and tinctures are used to create classic cocktails and a revolving, seasonal list. The Finale has green Chartreuse, gin, lime, coconut syrup, pineapple syrup and coconut flakes. A Vogue mixes lychee liqueur, lemon, apple juice and gin."], ["phone", "(02) 9261 0552"], ["created_at", "2018-05-22 07:33:43.510903"], ["updated_at", "2018-05-22 07:33:43.510903"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Grasshopper"], ["description", "It’s tricky to locate, but when you do, Grasshopper is one of the nicer things to find lurking at the end of a dark alley. Planted inconspicuously at the far end of Temperance Lane, this tiny CBD sanctuary was one of the first of a number of small bars to crop up in the midst of Sydney’s interior.\n\nOpened by Martin O’Sullivan (who is President of the Small Bar Association) and Belinda Lai, Grasshopper is both a bar and a restaurant. The latter is a wonderfully cosy room upstairs with a small, French-leaning menu. Champagne and oysters? Veal with snail and garlic butter? Steak au poivre? Don’t mind if we do! The food is rich, tasty and suited to the warm, candle-flecked atmosphere.\n\nIf you’re just in for a drink, head downstairs. In the depths of the ‘hopper you will find some competent bartenders mixing a list of quaintly old-fashioned drinks with a wonderfully new-age quality (they serve them in recycled jam jars)."], ["phone", "(02) 9947 9025"], ["created_at", "2018-05-22 07:33:43.518086"], ["updated_at", "2018-05-22 07:33:43.518086"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mBar Create (0.3ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mjølner"], ["description", "The first thing you see when you come down the stairs is part of a Viking ship. Almenning says a local craftsman has carved the head of a dragon to protrude from the wall. Then there’s all the ancient Viking replica weapons and armour pieces collected by the team.\n\nThe carvery has a daily rotation of four mains: a bird, a fish, meat and veg. It may be duck on Monday, chicken on Tuesday and pheasant on Wednesday. The animals will be done whole on a rotisserie.\n\nMeat hangs visibly in fridges (converted from old kilns) and carved in a “carving throne” – an extension of the kitchen that flows into the dining space. There is also a “leg service”, where you can buy your own leg of cured meats and ask for it to be brought to your table, where it can be sliced for you on request. The starters and desserts will be more modern-Australian.\n\nThere are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus on cocktails. There’s also some craft beers available."], ["phone", "(02) 8646 4930"], ["created_at", "2018-05-22 07:33:43.520764"], ["updated_at", "2018-05-22 07:33:43.520764"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mBar Create (0.4ms)[0m  [1m[32mINSERT INTO "bars" ("name", "description", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Barber Shop"], ["description", "Climb the steps past the barber shop and you'll find yourself in a large room housing an elegant bar covered with white tiles. Tables and chairs sit atop concrete floors and tea light candles flicker through the murky light. There's an outdoor area out back. It's a pleasant spot, made so by dangling plants and funky old stools. And if the laneway looks familiar, that's because it's also home to The Baxter Inn.\n\nTo drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture."], ["phone", "(02) 9299 9699"], ["created_at", "2018-05-22 07:33:43.523164"], ["updated_at", "2018-05-22 07:33:43.523164"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCocktail Update (0.5ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 209], ["updated_at", "2018-05-22 07:33:43.530866"], ["id", 521]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 209], ["updated_at", "2018-05-22 07:33:43.533833"], ["id", 522]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 209], ["updated_at", "2018-05-22 07:33:43.536342"], ["id", 523]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 210], ["updated_at", "2018-05-22 07:33:43.538892"], ["id", 525]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 210], ["updated_at", "2018-05-22 07:33:43.541073"], ["id", 527]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 210], ["updated_at", "2018-05-22 07:33:43.543824"], ["id", 528]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 210], ["updated_at", "2018-05-22 07:33:43.546094"], ["id", 529]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 211], ["updated_at", "2018-05-22 07:33:43.548646"], ["id", 524]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 211], ["updated_at", "2018-05-22 07:33:43.550762"], ["id", 526]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 211], ["updated_at", "2018-05-22 07:33:43.552825"], ["id", 530]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 212], ["updated_at", "2018-05-22 07:33:43.555148"], ["id", 531]]
+  ↳ db/seeds.rb:66
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mCocktail Update (0.4ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 212], ["updated_at", "2018-05-22 07:33:43.557256"], ["id", 532]]
+  ↳ db/seeds.rb:66
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:67
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 213], ["updated_at", "2018-05-22 07:33:43.559608"], ["id", 533]]
+  ↳ db/seeds.rb:67
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:67
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:67
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 213], ["updated_at", "2018-05-22 07:33:43.561741"], ["id", 534]]
+  ↳ db/seeds.rb:67
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:67
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 214], ["updated_at", "2018-05-22 07:33:43.563892"], ["id", 535]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mCocktail Update (0.3ms)[0m  [1m[33mUPDATE "cocktails" SET "bar_id" = $1, "updated_at" = $2 WHERE "cocktails"."id" = $3[0m  [["bar_id", 214], ["updated_at", "2018-05-22 07:33:43.565848"], ["id", 536]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 212]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 212]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 213]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 213]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 214]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 214]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 215]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 215]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 216]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 216]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 217]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.3ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 217]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient::HABTM_Cocktails Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_ingredients" WHERE "cocktails_ingredients"."ingredient_id" = $1[0m  [["ingredient_id", 218]]
+  ↳ db/seeds.rb:89
+  [1m[36mIngredient Destroy (0.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 218]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:91
+  [1m[36mIngredient Create (1.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Gin"], ["created_at", "2018-05-22 07:33:43.602293"], ["updated_at", "2018-05-22 07:33:43.602293"]]
+  ↳ db/seeds.rb:91
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:91
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Vodka"], ["created_at", "2018-05-22 07:33:43.605893"], ["updated_at", "2018-05-22 07:33:43.605893"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Rum"], ["created_at", "2018-05-22 07:33:43.607994"], ["updated_at", "2018-05-22 07:33:43.607994"]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Tequila"], ["created_at", "2018-05-22 07:33:43.610074"], ["updated_at", "2018-05-22 07:33:43.610074"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:95
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Brandy"], ["created_at", "2018-05-22 07:33:43.612320"], ["updated_at", "2018-05-22 07:33:43.612320"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:96
+  [1m[36mIngredient Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "Whisky"], ["created_at", "2018-05-22 07:33:43.614713"], ["updated_at", "2018-05-22 07:33:43.614713"]]
+  ↳ db/seeds.rb:96
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:96
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:97
+  [1m[36mIngredient Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("beverage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["beverage", "liqueur"], ["created_at", "2018-05-22 07:33:43.617276"], ["updated_at", "2018-05-22 07:33:43.617276"]]
+  ↳ db/seeds.rb:97
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:97
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ db/seeds.rb:99
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mCocktail::HABTM_Ingredients Create (1.1ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 219], ["cocktail_id", 521]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 220], ["cocktail_id", 521]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 221], ["cocktail_id", 521]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 222], ["cocktail_id", 521]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mCocktail::HABTM_Ingredients Create (0.8ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 225], ["cocktail_id", 521]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 223], ["cocktail_id", 522]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 225], ["cocktail_id", 522]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:105
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 219], ["cocktail_id", 523]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:106
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 220], ["cocktail_id", 524]]
+  ↳ db/seeds.rb:106
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:106
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:107
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 224], ["cocktail_id", 525]]
+  ↳ db/seeds.rb:107
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:107
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:108
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 221], ["cocktail_id", 526]]
+  ↳ db/seeds.rb:108
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:108
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:109
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 224], ["cocktail_id", 527]]
+  ↳ db/seeds.rb:109
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:109
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:110
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 222], ["cocktail_id", 528]]
+  ↳ db/seeds.rb:110
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:110
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:110
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 225], ["cocktail_id", 528]]
+  ↳ db/seeds.rb:110
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:110
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:111
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 220], ["cocktail_id", 529]]
+  ↳ db/seeds.rb:111
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:111
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:111
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 225], ["cocktail_id", 529]]
+  ↳ db/seeds.rb:111
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:111
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:112
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 221], ["cocktail_id", 530]]
+  ↳ db/seeds.rb:112
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:112
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:112
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 225], ["cocktail_id", 530]]
+  ↳ db/seeds.rb:112
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:112
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:113
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 219], ["cocktail_id", 531]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:113
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 225], ["cocktail_id", 531]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:114
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 219], ["cocktail_id", 532]]
+  ↳ db/seeds.rb:114
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:114
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:114
+  [1m[36mCocktail::HABTM_Ingredients Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 221], ["cocktail_id", 532]]
+  ↳ db/seeds.rb:114
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:114
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:114
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 223], ["cocktail_id", 532]]
+  ↳ db/seeds.rb:114
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:114
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:115
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 223], ["cocktail_id", 533]]
+  ↳ db/seeds.rb:115
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:115
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:116
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 219], ["cocktail_id", 534]]
+  ↳ db/seeds.rb:116
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:116
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:116
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 220], ["cocktail_id", 534]]
+  ↳ db/seeds.rb:116
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:116
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:117
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 225], ["cocktail_id", 535]]
+  ↳ db/seeds.rb:117
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:117
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:118
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 219], ["cocktail_id", 536]]
+  ↳ db/seeds.rb:118
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:118
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:118
+  [1m[36mCocktail::HABTM_Ingredients Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_ingredients" ("ingredient_id", "cocktail_id") VALUES ($1, $2)[0m  [["ingredient_id", 225], ["cocktail_id", 536]]
+  ↳ db/seeds.rb:118
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:118
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ db/seeds.rb:121
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:121
+  [1m[36mList::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 51]]
+  ↳ db/seeds.rb:121
+  [1m[36mList Destroy (0.3ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 51]]
+  ↳ db/seeds.rb:121
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:121
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:121
+  [1m[36mList::HABTM_Cocktails Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 52]]
+  ↳ db/seeds.rb:121
+  [1m[36mList Destroy (0.3ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 52]]
+  ↳ db/seeds.rb:121
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:121
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:121
+  [1m[36mList::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 53]]
+  ↳ db/seeds.rb:121
+  [1m[36mList Destroy (0.3ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 53]]
+  ↳ db/seeds.rb:121
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:121
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:121
+  [1m[36mList::HABTM_Cocktails Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 54]]
+  ↳ db/seeds.rb:121
+  [1m[36mList Destroy (0.3ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = $1[0m  [["id", 54]]
+  ↳ db/seeds.rb:121
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:121
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:123
+  [1m[36mList Create (0.4ms)[0m  [1m[32mINSERT INTO "lists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Solo Journey"], ["created_at", "2018-05-22 07:33:43.721392"], ["updated_at", "2018-05-22 07:33:43.721392"]]
+  ↳ db/seeds.rb:123
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:123
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:124
+  [1m[36mList Create (0.4ms)[0m  [1m[32mINSERT INTO "lists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "The Dancing Duo"], ["created_at", "2018-05-22 07:33:43.723924"], ["updated_at", "2018-05-22 07:33:43.723924"]]
+  ↳ db/seeds.rb:124
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:124
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:125
+  [1m[36mList Create (0.4ms)[0m  [1m[32mINSERT INTO "lists" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Party Time"], ["created_at", "2018-05-22 07:33:43.726523"], ["updated_at", "2018-05-22 07:33:43.726523"]]
+  ↳ db/seeds.rb:125
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:125
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ db/seeds.rb:127
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mList::HABTM_Cocktails Create (0.7ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 521], ["list_id", 55]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 523], ["list_id", 55]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 525], ["list_id", 55]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 527], ["list_id", 55]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:129
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 533], ["list_id", 55]]
+  ↳ db/seeds.rb:129
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:129
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 521], ["list_id", 56]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 522], ["list_id", 56]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 526], ["list_id", 56]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 530], ["list_id", 56]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 534], ["list_id", 56]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 535], ["list_id", 56]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:130
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 536], ["list_id", 56]]
+  ↳ db/seeds.rb:130
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:130
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 522], ["list_id", 57]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 524], ["list_id", 57]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.7ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 525], ["list_id", 57]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 526], ["list_id", 57]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 528], ["list_id", 57]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 529], ["list_id", 57]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 531], ["list_id", 57]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 532], ["list_id", 57]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:131
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 535], ["list_id", 57]]
+  ↳ db/seeds.rb:131
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:131
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:134
+  [1m[36mUser::HABTM_Bars Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars_users" WHERE "bars_users"."user_id" = $1[0m  [["user_id", 38]]
+  ↳ db/seeds.rb:134
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 38]]
+  ↳ db/seeds.rb:134
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:134
+  [1m[36mUser::HABTM_Bars Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bars_users" WHERE "bars_users"."user_id" = $1[0m  [["user_id", 39]]
+  ↳ db/seeds.rb:134
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 39]]
+  ↳ db/seeds.rb:134
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:134
+  [1m[36mUser::HABTM_Bars Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bars_users" WHERE "bars_users"."user_id" = $1[0m  [["user_id", 40]]
+  ↳ db/seeds.rb:134
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 40]]
+  ↳ db/seeds.rb:134
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:136
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:136
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "grrrrrant"], ["password_digest", "$2a$10$PJIkIJDflZWQ/j0Jfwrv2.QSt2Y4V4XcCt6o2aePPl6qPosYY6V66"], ["created_at", "2018-05-22 07:33:43.871365"], ["updated_at", "2018-05-22 07:33:43.871365"], ["email", "grant@ga.co"]]
+  ↳ db/seeds.rb:136
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:136
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:137
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "luke@ga.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:137
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "textchimp"], ["password_digest", "$2a$10$Tu/AiL7loyTDtWqA.YcjbO1DWzwytnwH0rdD5VKCT53uq81R/DNb."], ["created_at", "2018-05-22 07:33:43.937272"], ["updated_at", "2018-05-22 07:33:43.937272"], ["email", "luke@ga.co"]]
+  ↳ db/seeds.rb:137
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:137
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:138
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikarla@ga.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:138
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "email") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "mikkimoo"], ["password_digest", "$2a$10$T/yW0iZ7HWcDCu6DU..utOqF6U8KdrX3QRmXQlmXiALO2dcoesPVu"], ["created_at", "2018-05-22 07:33:44.000657"], ["updated_at", "2018-05-22 07:33:44.000657"], ["email", "mikarla@ga.co"]]
+  ↳ db/seeds.rb:138
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:138
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:140
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:142
+  [1m[36mList Update (0.3ms)[0m  [1m[33mUPDATE "lists" SET "updated_at" = $1, "user_id" = $2 WHERE "lists"."id" = $3[0m  [["updated_at", "2018-05-22 07:33:44.006307"], ["user_id", 41], ["id", 55]]
+  ↳ db/seeds.rb:142
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:142
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mList Update (1.0ms)[0m  [1m[33mUPDATE "lists" SET "updated_at" = $1, "user_id" = $2 WHERE "lists"."id" = $3[0m  [["updated_at", "2018-05-22 07:33:44.008405"], ["user_id", 42], ["id", 56]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:144
+  [1m[36mList Update (0.3ms)[0m  [1m[33mUPDATE "lists" SET "updated_at" = $1, "user_id" = $2 WHERE "lists"."id" = $3[0m  [["updated_at", "2018-05-22 07:33:44.011854"], ["user_id", 43], ["id", 57]]
+  ↳ db/seeds.rb:144
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:144
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:146
+  [1m[36mUser::HABTM_Bars Create (0.2ms)[0m  [1m[32mINSERT INTO "bars_users" ("user_id", "bar_id") VALUES ($1, $2)[0m  [["user_id", 41], ["bar_id", 209]]
+  ↳ db/seeds.rb:146
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:146
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:146
+  [1m[36mUser::HABTM_Bars Create (0.2ms)[0m  [1m[32mINSERT INTO "bars_users" ("user_id", "bar_id") VALUES ($1, $2)[0m  [["user_id", 41], ["bar_id", 210]]
+  ↳ db/seeds.rb:146
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:146
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:146
+  [1m[36mUser::HABTM_Bars Create (0.2ms)[0m  [1m[32mINSERT INTO "bars_users" ("user_id", "bar_id") VALUES ($1, $2)[0m  [["user_id", 41], ["bar_id", 211]]
+  ↳ db/seeds.rb:146
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:146
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:147
+  [1m[36mUser::HABTM_Bars Create (0.3ms)[0m  [1m[32mINSERT INTO "bars_users" ("user_id", "bar_id") VALUES ($1, $2)[0m  [["user_id", 42], ["bar_id", 209]]
+  ↳ db/seeds.rb:147
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:147
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:147
+  [1m[36mUser::HABTM_Bars Create (0.2ms)[0m  [1m[32mINSERT INTO "bars_users" ("user_id", "bar_id") VALUES ($1, $2)[0m  [["user_id", 42], ["bar_id", 210]]
+  ↳ db/seeds.rb:147
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:147
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:147
+  [1m[36mUser::HABTM_Bars Create (0.2ms)[0m  [1m[32mINSERT INTO "bars_users" ("user_id", "bar_id") VALUES ($1, $2)[0m  [["user_id", 42], ["bar_id", 212]]
+  ↳ db/seeds.rb:147
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:147
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:147
+  [1m[36mUser::HABTM_Bars Create (0.2ms)[0m  [1m[32mINSERT INTO "bars_users" ("user_id", "bar_id") VALUES ($1, $2)[0m  [["user_id", 42], ["bar_id", 214]]
+  ↳ db/seeds.rb:147
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:147
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:148
+  [1m[36mUser::HABTM_Bars Create (0.2ms)[0m  [1m[32mINSERT INTO "bars_users" ("user_id", "bar_id") VALUES ($1, $2)[0m  [["user_id", 43], ["bar_id", 210]]
+  ↳ db/seeds.rb:148
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:148
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:148
+  [1m[36mUser::HABTM_Bars Create (0.2ms)[0m  [1m[32mINSERT INTO "bars_users" ("user_id", "bar_id") VALUES ($1, $2)[0m  [["user_id", 43], ["bar_id", 213]]
+  ↳ db/seeds.rb:148
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:148
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:148
+  [1m[36mUser::HABTM_Bars Create (0.2ms)[0m  [1m[32mINSERT INTO "bars_users" ("user_id", "bar_id") VALUES ($1, $2)[0m  [["user_id", 43], ["bar_id", 214]]
+  ↳ db/seeds.rb:148
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:148
+Started GET "/lists/52/edit" for 127.0.0.1 at 2018-05-22 17:33:45 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_if_logged_in rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-22 17:33:45 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-22 17:33:55 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6OlDfoaoz+f6Vvf+zJP2mMghxwqtZW04fZ24NOAaADyoIomFZa34fuLJNuClMQJHvuHyZFkXRl2r343vSUFx0Q==", "email"=>"luke@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "luke@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 80ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-22 17:33:55 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 42]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mBar Load (0.6ms)[0m  [1m[34mSELECT "bars".* FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1[0m  [["user_id", 42]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 61ms (Views: 52.6ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/lists/56" for 127.0.0.1 at 2018-05-22 17:33:58 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:53
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mCocktail Load (0.8ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 56]]
+  ↳ app/views/lists/show.html.erb:6
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 209], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 211], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 211], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 213], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 209], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:15
+  Rendered lists/show.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 91ms (Views: 84.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/lists/56/edit" for 127.0.0.1 at 2018-05-22 17:34:00 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:53
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 56]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 209], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 211], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 211], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 213], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mCACHE Bar Load (0.0ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 209], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 81ms (Views: 73.3ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/lists/56" for 127.0.0.1 at 2018-05-22 17:34:08 +1000
+Processing by ListsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p8fuMf65KLIkxbW7FykyiAfObVrdrlV/cyhbbfkDyCDnDCTKHbwfKzxadKV+i8ZXcQ5YNCncfhqlam62UFi5zQ==", "list"=>{"name"=>"The Dancing Duo", "note"=>""}, "cocktails"=>["522", "526"], "commit"=>"Update List", "id"=>"56"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:53
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lists_controller.rb:30
+  [1m[36mList Update (0.6ms)[0m  [1m[33mUPDATE "lists" SET "note" = $1, "updated_at" = $2 WHERE "lists"."id" = $3[0m  [["note", ""], ["updated_at", "2018-05-22 07:34:09.011530"], ["id", 56]]
+  ↳ app/controllers/lists_controller.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lists_controller.rb:30
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 56]]
+  ↳ app/controllers/lists_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lists_controller.rb:33
+  [1m[36mHABTM_Cocktails Load (0.3ms)[0m  [1m[34mSELECT "cocktails_lists".* FROM "cocktails_lists" WHERE "cocktails_lists"."list_id" = $1 AND "cocktails_lists"."cocktail_id" IN ($2, $3, $4, $5, $6, $7, $8)[0m  [["list_id", 56], ["cocktail_id", 522], ["cocktail_id", 526], ["cocktail_id", 530], ["cocktail_id", 534], ["cocktail_id", 535], ["cocktail_id", 536], ["cocktail_id", 521]]
+  ↳ app/controllers/lists_controller.rb:33
+  [1m[36mList::HABTM_Cocktails Destroy (0.6ms)[0m  [1m[31mDELETE FROM "cocktails_lists" WHERE "cocktails_lists"."list_id" = $1 AND "cocktails_lists"."cocktail_id" IN ($2, $3, $4, $5, $6, $7, $8)[0m  [["list_id", 56], ["cocktail_id", 522], ["cocktail_id", 526], ["cocktail_id", 530], ["cocktail_id", 534], ["cocktail_id", 535], ["cocktail_id", 536], ["cocktail_id", 521]]
+  ↳ app/controllers/lists_controller.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lists_controller.rb:33
+  [1m[36mCocktail Load (0.2ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 522], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lists_controller.rb:35
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 522], ["list_id", 56]]
+  ↳ app/controllers/lists_controller.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lists_controller.rb:35
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 526], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lists_controller.rb:35
+  [1m[36mList::HABTM_Cocktails Create (0.2ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 526], ["list_id", 56]]
+  ↳ app/controllers/lists_controller.rb:35
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lists_controller.rb:35
+Redirected to http://localhost:3000/lists/56
+Completed 302 Found in 56ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/lists/56" for 127.0.0.1 at 2018-05-22 17:34:09 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:53
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 56]]
+  ↳ app/views/lists/show.html.erb:6
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 209], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mBar Load (0.1ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 211], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:15
+  Rendered lists/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 49ms (Views: 44.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/bars" for 127.0.0.1 at 2018-05-22 17:34:16 +1000
+Processing by BarsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering bars/index.html.erb within layouts/application
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ app/views/bars/index.html.erb:4
+  Rendered bars/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 47ms (Views: 43.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bars/214" for 127.0.0.1 at 2018-05-22 17:34:18 +1000
+Processing by BarsController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/bars_controller.rb:89
+  Rendering bars/show.html.erb within layouts/application
+  [1m[36mBar Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1 AND "bars"."id" = $2 LIMIT $3[0m  [["user_id", 42], ["id", 214], ["LIMIT", 1]]
+  ↳ app/views/bars/show.html.erb:25
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" WHERE "cocktails"."bar_id" = $1[0m  [["bar_id", 214]]
+  ↳ app/views/bars/show.html.erb:40
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/bars/show.html.erb:50
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."bar_id" = $1[0m  [["bar_id", 214]]
+  ↳ app/views/bars/show.html.erb:52
+  Rendered bars/show.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 59ms (Views: 45.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/cocktails/535" for 127.0.0.1 at 2018-05-22 17:34:22 +1000
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"535"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 535], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:63
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "cocktails_ingredients" ON "ingredients"."id" = "cocktails_ingredients"."ingredient_id" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 535]]
+  ↳ app/views/cocktails/show.html.erb:8
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists" INNER JOIN "cocktails_lists" ON "lists"."id" = "cocktails_lists"."list_id" WHERE "cocktails_lists"."cocktail_id" = $1 AND "lists"."user_id" = $2[0m  [["cocktail_id", 535], ["user_id", 42]]
+  ↳ app/views/cocktails/show.html.erb:20
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "lists"."name", "lists"."id" FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 42]]
+  ↳ app/views/cocktails/show.html.erb:35
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/views/cocktails/show.html.erb:46
+  Rendered cocktails/show.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 61ms (Views: 48.2ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/cocktails/535/favourite" for 127.0.0.1 at 2018-05-22 17:34:25 +1000
+Processing by CocktailsController#favourite as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RQhfOMSjHznzBa8HlbuXIT2hbzAiXaZJHWbCsxq4c7IFw5XDJ6YooOuabhn8GWP+S2FaXtYvjSzLJPdos+MCXw==", "list_id"=>"56", "commit"=>"Add", "id"=>"535"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:22
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 535], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:26
+  [1m[36mCocktail Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1 AND "cocktails"."id" = $2 LIMIT $3[0m  [["list_id", 56], ["id", 535], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cocktails_controller.rb:30
+  [1m[36mList::HABTM_Cocktails Create (0.3ms)[0m  [1m[32mINSERT INTO "cocktails_lists" ("cocktail_id", "list_id") VALUES ($1, $2)[0m  [["cocktail_id", 535], ["list_id", 56]]
+  ↳ app/controllers/cocktails_controller.rb:30
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cocktails_controller.rb:30
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:33
+Redirected to http://localhost:3000/bars/214
+Completed 302 Found in 19ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/bars/214" for 127.0.0.1 at 2018-05-22 17:34:25 +1000
+Processing by BarsController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/bars_controller.rb:89
+  Rendering bars/show.html.erb within layouts/application
+  [1m[36mBar Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1 AND "bars"."id" = $2 LIMIT $3[0m  [["user_id", 42], ["id", 214], ["LIMIT", 1]]
+  ↳ app/views/bars/show.html.erb:25
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" WHERE "cocktails"."bar_id" = $1[0m  [["bar_id", 214]]
+  ↳ app/views/bars/show.html.erb:40
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/bars/show.html.erb:50
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."bar_id" = $1[0m  [["bar_id", 214]]
+  ↳ app/views/bars/show.html.erb:52
+  Rendered bars/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 41ms (Views: 35.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cocktails/535" for 127.0.0.1 at 2018-05-22 17:34:56 +1000
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"535"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 535], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:63
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "cocktails_ingredients" ON "ingredients"."id" = "cocktails_ingredients"."ingredient_id" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 535]]
+  ↳ app/views/cocktails/show.html.erb:8
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists" INNER JOIN "cocktails_lists" ON "lists"."id" = "cocktails_lists"."list_id" WHERE "cocktails_lists"."cocktail_id" = $1 AND "lists"."user_id" = $2[0m  [["cocktail_id", 535], ["user_id", 42]]
+  ↳ app/views/cocktails/show.html.erb:20
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/views/cocktails/show.html.erb:46
+  Rendered cocktails/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 44ms (Views: 36.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cocktails/535" for 127.0.0.1 at 2018-05-22 17:42:02 +1000
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"535"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT  "cocktails".* FROM "cocktails" WHERE "cocktails"."id" = $1 LIMIT $2[0m  [["id", 535], ["LIMIT", 1]]
+  ↳ app/controllers/cocktails_controller.rb:63
+  Rendering cocktails/show.html.erb within layouts/application
+  [1m[36mIngredient Load (1.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "cocktails_ingredients" ON "ingredients"."id" = "cocktails_ingredients"."ingredient_id" WHERE "cocktails_ingredients"."cocktail_id" = $1[0m  [["cocktail_id", 535]]
+  ↳ app/views/cocktails/show.html.erb:8
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists" INNER JOIN "cocktails_lists" ON "lists"."id" = "cocktails_lists"."list_id" WHERE "cocktails_lists"."cocktail_id" = $1 AND "lists"."user_id" = $2[0m  [["cocktail_id", 535], ["user_id", 42]]
+  ↳ app/views/cocktails/show.html.erb:20
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "lists"."name", "lists"."id" FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 42]]
+  ↳ app/views/cocktails/show.html.erb:36
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/views/cocktails/show.html.erb:46
+  Rendered cocktails/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 60ms (Views: 51.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/bars/214" for 127.0.0.1 at 2018-05-22 17:42:10 +1000
+Processing by BarsController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/bars_controller.rb:89
+  Rendering bars/show.html.erb within layouts/application
+  [1m[36mBar Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1 AND "bars"."id" = $2 LIMIT $3[0m  [["user_id", 42], ["id", 214], ["LIMIT", 1]]
+  ↳ app/views/bars/show.html.erb:25
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" WHERE "cocktails"."bar_id" = $1[0m  [["bar_id", 214]]
+  ↳ app/views/bars/show.html.erb:40
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/bars/show.html.erb:50
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."bar_id" = $1[0m  [["bar_id", 214]]
+  ↳ app/views/bars/show.html.erb:52
+  Rendered bars/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 50ms (Views: 42.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/bars" for 127.0.0.1 at 2018-05-22 17:42:20 +1000
+Processing by BarsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering bars/index.html.erb within layouts/application
+  [1m[36mBar Load (1.7ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ app/views/bars/index.html.erb:4
+  Rendered bars/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 39ms (Views: 33.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/bars/210" for 127.0.0.1 at 2018-05-22 17:42:22 +1000
+Processing by BarsController#show as HTML
+  Parameters: {"id"=>"210"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/controllers/bars_controller.rb:89
+  Rendering bars/show.html.erb within layouts/application
+  [1m[36mBar Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1 AND "bars"."id" = $2 LIMIT $3[0m  [["user_id", 42], ["id", 210], ["LIMIT", 1]]
+  ↳ app/views/bars/show.html.erb:25
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" WHERE "cocktails"."bar_id" = $1[0m  [["bar_id", 210]]
+  ↳ app/views/bars/show.html.erb:40
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/bars/show.html.erb:50
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."bar_id" = $1[0m  [["bar_id", 210]]
+  ↳ app/views/bars/show.html.erb:52
+  Rendered bars/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 47ms (Views: 41.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/bars" for 127.0.0.1 at 2018-05-22 17:42:33 +1000
+Processing by BarsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering bars/index.html.erb within layouts/application
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ app/views/bars/index.html.erb:4
+  Rendered bars/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bars/new" for 127.0.0.1 at 2018-05-22 17:42:36 +1000
+Processing by BarsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering bars/new.html.erb within layouts/application
+  Rendered bars/_form.html.erb (3.1ms)
+  Rendered bars/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-22 17:42:43 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 42]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT "bars".* FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1[0m  [["user_id", 42]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/lists/56" for 127.0.0.1 at 2018-05-22 17:42:45 +1000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:53
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 56]]
+  ↳ app/views/lists/show.html.erb:6
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 209], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 211], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mBar Load (0.3ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:15
+  Rendered lists/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 43ms (Views: 37.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/lists/56/edit" for 127.0.0.1 at 2018-05-22 17:42:49 +1000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:53
+  Rendering lists/edit.html.erb within layouts/application
+  [1m[36mCocktail Load (0.6ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" INNER JOIN "cocktails_lists" ON "cocktails"."id" = "cocktails_lists"."cocktail_id" WHERE "cocktails_lists"."list_id" = $1[0m  [["list_id", 56]]
+  ↳ app/views/lists/edit.html.erb:11
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 209], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 211], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/views/lists/edit.html.erb:13
+  Rendered lists/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 47ms (Views: 39.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-22 17:42:55 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."user_id" = $1[0m  [["user_id", 42]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mBar Load (0.5ms)[0m  [1m[34mSELECT "bars".* FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1[0m  [["user_id", 42]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/bars" for 127.0.0.1 at 2018-05-22 17:43:13 +1000
+Processing by BarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  Rendering bars/index.html.erb within layouts/application
+  [1m[36mBar Load (0.4ms)[0m  [1m[34mSELECT "bars".* FROM "bars"[0m
+  ↳ app/views/bars/index.html.erb:4
+  Rendered bars/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bars/214" for 127.0.0.1 at 2018-05-22 17:43:18 +1000
+Processing by BarsController#show as HTML
+  Parameters: {"id"=>"214"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/bars_controller.rb:89
+  Rendering bars/show.html.erb within layouts/application
+  [1m[36mBar Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1 AND "bars"."id" = $2 LIMIT $3[0m  [["user_id", 42], ["id", 214], ["LIMIT", 1]]
+  ↳ app/views/bars/show.html.erb:25
+  [1m[36mCocktail Load (0.3ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" WHERE "cocktails"."bar_id" = $1[0m  [["bar_id", 214]]
+  ↳ app/views/bars/show.html.erb:40
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/bars/show.html.erb:50
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."bar_id" = $1[0m  [["bar_id", 214]]
+  ↳ app/views/bars/show.html.erb:52
+  Rendered bars/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 42ms (Views: 36.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/bars/210" for 127.0.0.1 at 2018-05-22 17:43:23 +1000
+Processing by BarsController#show as HTML
+  Parameters: {"id"=>"210"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+  [1m[36mBar Load (0.2ms)[0m  [1m[34mSELECT  "bars".* FROM "bars" WHERE "bars"."id" = $1 LIMIT $2[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/controllers/bars_controller.rb:89
+  Rendering bars/show.html.erb within layouts/application
+  [1m[36mBar Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "bars" INNER JOIN "bars_users" ON "bars"."id" = "bars_users"."bar_id" WHERE "bars_users"."user_id" = $1 AND "bars"."id" = $2 LIMIT $3[0m  [["user_id", 42], ["id", 210], ["LIMIT", 1]]
+  ↳ app/views/bars/show.html.erb:25
+  [1m[36mCocktail Load (0.4ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails" WHERE "cocktails"."bar_id" = $1[0m  [["bar_id", 210]]
+  ↳ app/views/bars/show.html.erb:40
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/bars/show.html.erb:50
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."bar_id" = $1[0m  [["bar_id", 210]]
+  ↳ app/views/bars/show.html.erb:52
+  Rendered bars/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 44ms (Views: 38.4ms | ActiveRecord: 1.8ms)
+
+

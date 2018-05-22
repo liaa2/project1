@@ -26,7 +26,15 @@ class ListsController < ApplicationController
   end
 
   def update
+    # raise 'hell'
     @list.update list_params
+
+    # make changes to cocktails list (array of IDs in params[:cocktails] provided by form checkboxes)
+    @list.cocktails.destroy_all
+    params[:cocktails].each do |cid|
+      @list.cocktails << Cocktail.find( cid )
+    end
+
     redirect_to @list
   end
 
