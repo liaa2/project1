@@ -18,6 +18,16 @@ class BarsController < ApplicationController
     redirect_to bars_path
   end
 
+  # def cocktail
+  #   @cocktail = Cocktail.new
+  #   if params[:file].present?
+  #     req = Cloudinary::Uploader.upload(params[:file])
+  #     @cocktail.image = req["public_id"]
+  #   end
+  #   @cocktail.bar_id = params[:id]
+  #   @ingredients = Ingredient.all
+  # end
+
   def comment
     comment = Comment.new
     comment.user_id = @current_user.id

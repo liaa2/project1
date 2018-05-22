@@ -10,10 +10,31 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
+//= require jquery
+//= require jquery_ujs
 //= require activestorage
 //= require_tree .
 
-// $(document).ready(function () {
-  // $('#list_id')
-// });
+$(document).ready(function () {
+
+  $('#list_id').on('change', function () {
+    if ($(this).val() === "other") {
+      $("select, .listControl").hide()
+      $("#otherList").show()
+    }
+  })
+
+  $("#addList").on("click", "#newList", function (){
+    // let listName = $("#newList").val()
+    $.ajax({
+      type: "POST",
+      url: "/profile",
+      data: {"name": $("#newList").val()},
+      dataType: "json",
+      success: function(data){
+        console.log(data);
+      }
+    })
+  })
+
+});

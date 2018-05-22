@@ -1,11 +1,11 @@
 <% if flash[:success_message] %>
   <div class="success">
-    <%= flash[:success_message] %>
+    <strong><%= flash[:success_message] %></strong>
   </div>
 
   <% elsif flash[:duplicate_message] %>
   <div class="duplicate">
-    <%= flash[:duplicate_message] %>
+    <strong><%= flash[:duplicate_message] %></strong>
   </div>
 <% end %>
 
@@ -39,11 +39,13 @@
 <ul>
 <% @bar.cocktails.each do |cocktail| %>
 <li>
+
 <%= link_to cocktail.name, cocktail_path(cocktail) %>
 </li>
 <% end %>
 </ul>
-
+<br>
+<%= link_to "Add More Drinks", cocktail_bar_path(@bar)%>
 
 <hr>
 <p>Comments:</p>
@@ -51,8 +53,9 @@
 <ul>
   <% @bar.comments.each do |comment|%>
   <li>
-    <%= comment.user.username %> <br>
-    <%= comment.user.image %> <br>
+    <%= comment.user.image %>&nbsp;<%= comment.user.username %>
+    <br>
+    <br>
     <%= time_ago_in_words( comment.created_at ) %> ago <br>
     <%= comment.content %>
     <hr>
@@ -74,8 +77,8 @@
 
 <hr>
 <% if @current_user.present? %>
-  <%= link_to "Edit", edit_bar_path(@bar) %>&nbsp;&nbsp;&nbsp;
-  <%= link_to "Delete", bar_path(@bar), method: :delete %>
+  <%= link_to "Edit Bar Details", edit_bar_path(@bar) %>&nbsp;&nbsp;&nbsp;
+  <%= link_to "Delete This Bar", bar_path(@bar), method: :delete %>
 <% end %>
 <br>
 

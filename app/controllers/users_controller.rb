@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :check_if_logged_in, only: [:profile]
+  # respond_to :js, :json, :html
 
   def new
     @user = User.new
@@ -23,6 +24,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
+    # @list = List.find params[:id]
+    # respond_with @list
   end
 
   def profile

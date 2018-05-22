@@ -1,0 +1,22 @@
+
+<%= form_for(@cocktail, :html => {:multipart => true}) do |f|%>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :image %>
+<%= f.cl_image_upload :image %>
+<br>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<br>
+  Ingredients:<br>
+  <% @ingredients.each do |i| %>
+  <%= check_box_tag "ingredients[]",i.id, true, id: i.id %>
+  <%= label_tag i.id, "#{i.beverage}" %>
+  <% end %>
+<br>
+<%= f.label :bar_id, "Bar" %>
+<%= f.select :bar_id, Bar.pluck(:name, :id), include_blank: true %>
+<br>
+<%= f.submit%>
+<% end%>

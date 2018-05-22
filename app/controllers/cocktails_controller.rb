@@ -1,11 +1,26 @@
 class CocktailsController < ApplicationController
   before_action :check_if_logged_in, except: [:index, :show]
   before_action :get_cocktail, only: [:show, :edit, :update, :destroy]
+
   def new
     @cocktail = Cocktail.new
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      @cocktail.image = req["public_id"]
+    end
+    @cocktail.bar_id = params[:id]
+    @ingredients = Ingredient.all
   end
 
   def create
+    cocktail = Cocktail.new cocktail_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      cocktail.image = req["public_id"]
+    end
+    cocktail.save
+    # raise "hell"
+    redirect_to cocktail.bar
   end
 
   def show
@@ -45,17 +60,22 @@ class CocktailsController < ApplicationController
   end
 
   def edit
+    @ingredients = Ingredient.all
   end
 
   def update
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      @cocktail.image = req["public_id"]
+    end
     @cocktail.update cocktail_params
     redirect_to @cocktail
   end
 
   def destroy
-    # @cocktail.destroy
-    #
-    # redirect_to profile_path
+    @cocktail.destroy
+    # raise "hell"
+    redirect_to bar_path(@cocktail.bar_id)
   end
 
   private

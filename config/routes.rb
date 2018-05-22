@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get "/bars/:id/favourite" => "bars#favourite", as: :favourite_bar
   get "/bars/:id/unfavourite" => "bars#unfavourite", as: :unfavourite_bar
   post "/bars/:id/comment" => "bars#comment", as: :comment_bar
+  get "/bars/:id/cocktails/new" => "cocktails#new", as: :cocktail_bar
   # get "/bars/:id/menu" => "bars#menu", as: :menu_bar
 
   resources :cocktails

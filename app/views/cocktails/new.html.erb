@@ -1,2 +1,5 @@
-<h1>Cocktails#new</h1>
-<p>Find me in app/views/cocktails/new.html.erb</p>
+<h1>Add Cocktail</h1>
+
+<%= render partial: "form" %>
+<br>
+<%= link_to "Cancel", bar_path(@cocktail.bar_id)%>
