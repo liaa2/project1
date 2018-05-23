@@ -31,32 +31,37 @@ b1 = Bar.create name: "The Baxter Inn", description: "In true New York or Boston
 
 The dark, linear interior features a bar that runs almost the full 10 metres of its length. It’s one of the best and most well-stocked and tiered bars we’ve seen for a while. The initially overwhelming list of almost 800 whiskies (featuring everything from Talisker 10-year-old to Glenfiddich 12-year-old) can be deciphered by the helpful staff.
 
-The menu isn't limited to whisky, though. It also includes all the usual spirits and cocktails; and large beer and wine lists. The crew is just as happy to mix up a killer negroni as they are something more bespoke, like a Talisker 10 Sour.", phone: "(02) 9221 5580"
+The menu isn't limited to whisky, though. It also includes all the usual spirits and cocktails; and large beer and wine lists. The crew is just as happy to mix up a killer negroni as they are something more bespoke, like a Talisker 10 Sour.", phone: "(02) 9221 5580", address: "152-156 Clarence St, Sydney"
+
 b2 = Bar.create name: "Stitch", description: "The Stitch story starts in 2009 when Karl Schlothauer and Chris Lehoux transformed an old garage in Darlinghurst into Pocket Bar. One of the first small bars, Pocket soon proved a hit. A couple of years later and the Pocket crew was eyeing expansion. Stitch opened in early 2011.
 
 From the initial idea of adorning the walls with old Singer sewing machines, they decided to go all out with the theme. Sewing machines and spools of thread mark the bar's street entrance. Downstairs, there’s a wall of booths, tables set against the staircase and vintage lamps throwing murky light.
 
-The bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu.", phone: "(02) 9279 0380"
+The bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu.", phone: "(02) 9279 0380", address: "1 Market St, Sydney NSW 2000"
+
 b3 = Bar.create name: "Assembly Bar", description: "Assembly Bar sits a little removed from the big-hitting bar scene further uptown. But that's no reason to overlook it. Following an ownership change in 2014, the space has kept its recycled, industrial aesthetic. Thanks to the addition of some all-star bartenders, it also gained some serious cocktail credentials.
 
 Assembly's main room sports concrete floors, vintage Chesterfields and recycled wooden crates fashioned into tables. A spiral staircase leads to the mezzanine, where a dumb waiter elevates drinks from the bar, and tealight candles flicker against the dark. Outside, picnic tables sit on AstroTurf below a wall of faux ivy studded with fairy lights.
 
-At the bar, house-made syrups, bitters and tinctures are used to create classic cocktails and a revolving, seasonal list. The Finale has green Chartreuse, gin, lime, coconut syrup, pineapple syrup and coconut flakes. A Vogue mixes lychee liqueur, lemon, apple juice and gin.", phone: "(02) 9261 0552"
+At the bar, house-made syrups, bitters and tinctures are used to create classic cocktails and a revolving, seasonal list. The Finale has green Chartreuse, gin, lime, coconut syrup, pineapple syrup and coconut flakes. A Vogue mixes lychee liqueur, lemon, apple juice and gin.", phone: "(02) 9261 0552", address: "488 Kent St, Sydney"
+
 b4 = Bar.create name: "Grasshopper", description: "It’s tricky to locate, but when you do, Grasshopper is one of the nicer things to find lurking at the end of a dark alley. Planted inconspicuously at the far end of Temperance Lane, this tiny CBD sanctuary was one of the first of a number of small bars to crop up in the midst of Sydney’s interior.
 
 Opened by Martin O’Sullivan (who is President of the Small Bar Association) and Belinda Lai, Grasshopper is both a bar and a restaurant. The latter is a wonderfully cosy room upstairs with a small, French-leaning menu. Champagne and oysters? Veal with snail and garlic butter? Steak au poivre? Don’t mind if we do! The food is rich, tasty and suited to the warm, candle-flecked atmosphere.
 
-If you’re just in for a drink, head downstairs. In the depths of the ‘hopper you will find some competent bartenders mixing a list of quaintly old-fashioned drinks with a wonderfully new-age quality (they serve them in recycled jam jars).", phone: "(02) 9947 9025"
+If you’re just in for a drink, head downstairs. In the depths of the ‘hopper you will find some competent bartenders mixing a list of quaintly old-fashioned drinks with a wonderfully new-age quality (they serve them in recycled jam jars).", phone: "(02) 9947 9025", address: "1 Temperance Lane, Sydney"
+
 b5 = Bar.create name: "Mjølner", description: "The first thing you see when you come down the stairs is part of a Viking ship. Almenning says a local craftsman has carved the head of a dragon to protrude from the wall. Then there’s all the ancient Viking replica weapons and armour pieces collected by the team.
 
 The carvery has a daily rotation of four mains: a bird, a fish, meat and veg. It may be duck on Monday, chicken on Tuesday and pheasant on Wednesday. The animals will be done whole on a rotisserie.
 
 Meat hangs visibly in fridges (converted from old kilns) and carved in a “carving throne” – an extension of the kitchen that flows into the dining space. There is also a “leg service”, where you can buy your own leg of cured meats and ask for it to be brought to your table, where it can be sliced for you on request. The starters and desserts will be more modern-Australian.
 
-There are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus on cocktails. There’s also some craft beers available.", phone: "(02) 8646 4930"
+There are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus on cocktails. There’s also some craft beers available.", phone: "(02) 8646 4930", address: "267 Cleveland St, Redfern"
+
 b6 = Bar.create name: "The Barber Shop", description: "Climb the steps past the barber shop and you'll find yourself in a large room housing an elegant bar covered with white tiles. Tables and chairs sit atop concrete floors and tea light candles flicker through the murky light. There's an outdoor area out back. It's a pleasant spot, made so by dangling plants and funky old stools. And if the laneway looks familiar, that's because it's also home to The Baxter Inn.
 
-To drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture.", phone: "(02) 9299 9699"
+To drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture.", phone: "(02) 9299 9699", address: "275 Clarence St, Sydney NSW 2000"
 
 puts "Created #{Bar.all.length} bars."
 

@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 <% if flash[:success_message] %>
   <div class="success">
     <strong><%= flash[:success_message] %></strong>
@@ -47,6 +54,12 @@
 <br>
 <%= link_to "Add More Drinks", cocktail_bar_path(@bar)%>
 
+<br>
+<%= @bar.address %><br>
+<hr>
+
+<div id="map"></div>
+
 <hr>
 <p>Comments:</p>
 <% if @comments.present? %>
@@ -75,11 +88,42 @@
 <% end %>
 
 
+
 <hr>
 <% if @current_user.present? %>
   <%= link_to "Edit Bar Details", edit_bar_path(@bar) %>&nbsp;&nbsp;&nbsp;
   <%= link_to "Delete This Bar", bar_path(@bar), method: :delete %>
 <% end %>
 <br>
+<br>
 
 <%= link_to "Back to Main Page", bars_path %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to "Back to My Profile", profile_path %>
+
+
+
+
+
+
+<script>
+
+  function initMap() {
+    var myLatLng = {lat: <%= @bar.latitude %>, lng: <%= @bar.longitude %>};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Hello World!'
+    });
+  }
+</script>
+<script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpskf5JVqWv7kAPgmuqRgYR9NeN6eeWSY&callback=initMap">
+   </script>
+ </body>

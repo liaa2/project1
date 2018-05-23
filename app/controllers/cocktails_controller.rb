@@ -33,11 +33,22 @@ class CocktailsController < ApplicationController
   end
 
   def favourite
-    list = List.find params[:list_id]
-    unless list.user == @current_user
-      # ensure list belongs to current user, i.e. prevent list ID hackers!
-      redirect_to cocktails_path and return
-    end
+    # raise "hell"
+
+    # if list_name is present
+    # make a new list with that name, and store the result
+    # else
+    # use the given list id to add the cocktail to
+   if params[:list_name].present?
+     list = List.create name: params[:list_name], user: @current_user
+   else
+     list = List.find params[:list_id]
+     unless list.user == @current_user
+       # ensure list belongs to current user, i.e. prevent list ID hackers!
+       redirect_to cocktails_path and return
+     end
+   end
+
     cocktail = Cocktail.find params[:id]
     if list.cocktails.include? cocktail
       flash[:duplicate_message] = "#{ cocktail.name } is already in your #{ list.name }."
