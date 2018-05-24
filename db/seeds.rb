@@ -37,7 +37,7 @@ b2 = Bar.create name: "Stitch", description: "The Stitch story starts in 2009 wh
 
 From the initial idea of adorning the walls with old Singer sewing machines, they decided to go all out with the theme. Sewing machines and spools of thread mark the bar's street entrance. Downstairs, there’s a wall of booths, tables set against the staircase and vintage lamps throwing murky light.
 
-The bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu.", phone: "(02) 9279 0380", address: "61 York St, Sydney NSW 2000", website: "http://www.houseofpocket.com.au/bars/stitch-bar-sydney-cbd/venue-details/"
+The bar's cocktail menu changes frequently, offering riffs on classics plus more off-beat concoctions. A sizeable whisky selection is kept behind the bar, some of which is barrel-aged for use in Old Fashioneds and Manhattans. Beer and cider, and a wine list heavy on local drops completes the drinks menu.", phone: "(02) 9279 0380", address: "15 Broadway, Ultimo", website: "http://www.houseofpocket.com.au/bars/stitch-bar-sydney-cbd/venue-details/"
 
 b3 = Bar.create name: "Assembly Bar", description: "Assembly Bar sits a little removed from the big-hitting bar scene further uptown. But that's no reason to overlook it. Following an ownership change in 2014, the space has kept its recycled, industrial aesthetic. Thanks to the addition of some all-star bartenders, it also gained some serious cocktail credentials.
 
@@ -61,7 +61,7 @@ There are 450 whiskies on shelf, with plans to expand to 600, and a heavy focus 
 
 b6 = Bar.create name: "The Barber Shop", description: "Climb the steps past the barber shop and you'll find yourself in a large room housing an elegant bar covered with white tiles. Tables and chairs sit atop concrete floors and tea light candles flicker through the murky light. There's an outdoor area out back. It's a pleasant spot, made so by dangling plants and funky old stools. And if the laneway looks familiar, that's because it's also home to The Baxter Inn.
 
-To drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture.", phone: "(02) 9299 9699", address: "89 York St, Sydney NSW 2000", website: "http://thisisthebarbershop.com/"
+To drink, there's a good list of Australian beers and a wine list that's heavy on bottles from South Oz and France. But this being a cocktail bar, you're really here for the outstanding list of spirits and drinks made with them. Gin is a real passion and there are more than 300 to choose from, plus respectable ranges of whisky, rum, tequila and mezcal. They're paired with intriguing ingredients such as basil distillate (i.e. a spirit made from basil); almond oil and snowpea tincture.", phone: "(02) 9299 9699", address: "22 Hickson Road, Walsh Bay NSW 2000", website: "http://thisisthebarbershop.com/"
 
 puts "Created #{Bar.all.length} bars."
 
@@ -99,7 +99,7 @@ i3 = Ingredient.create beverage: "Rum"
 i4 = Ingredient.create beverage: "Tequila"
 i5 = Ingredient.create beverage: "Brandy"
 i6 = Ingredient.create beverage: "Whisky"
-i7 = Ingredient.create beverage: "liqueur"
+i7 = Ingredient.create beverage: "Liqueur"
 
 puts "Created #{Ingredient.all.length} ingredients."
 

@@ -1,22 +1,25 @@
 
 <%= form_for(@cocktail, :html => {:multipart => true}) do |f|%>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<br>
-<%= f.label :image %>
-<%= f.cl_image_upload :image %>
-<br>
-<%= f.label :description %>
-<%= f.text_area :description %>
-<br>
-  Ingredients:<br>
+<div class="form-group">
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control one" %>
+  <br>
+  <%= f.label :image %>
+  <%= f.cl_image_upload :image, class: "form-control" %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_area :description, class: "form-control" %>
+  <br>
+  Ingredients:
+  <br>
   <% @ingredients.each do |i| %>
-  <%= check_box_tag "ingredients[]",i.id, @cocktail.id.present? && @cocktail.ingredients.ids.include?(i.id), id: i.id %>
-  <%= label_tag i.id, "#{i.beverage}" %>
+    <%= check_box_tag "ingredients[]",i.id, @cocktail.id.present? && @cocktail.ingredients.ids.include?(i.id), id: i.id %>
+    <%= label_tag i.id, "#{i.beverage}" %>
   <% end %>
-<br>
-<%= f.label :bar_id, "Bar" %>
-<%= f.select :bar_id, Bar.pluck(:name, :id), include_blank: true %>
-<br>
-<%= f.submit%>
-<% end%>
+  <br>
+  <%= f.label :bar_id, "Bar" %>
+  <%= f.select :bar_id, Bar.pluck(:name, :id), include_blank: true %>
+  <br>
+  <%= f.submit class:"btn btn-primary"%>
+  <% end%>
+</div>

@@ -1,112 +1,52 @@
 <h2 class="bars">Bars in Sydney</h2>
 
-
-
 <%= link_to "Add More..", new_bar_path , class: "redirect"%>
-<br>
-<br>
-<br>
-<!-- <ul> -->
+<br><br><br>
+
 <div class="container">
   <div class="row">
     <% @bars.each do |b| %>
       <div class="col-sm-4">
-
-          <!-- <li> -->
-
         <%= link_to b.name, bar_path(b) %>
       </div>
-          <!-- </li> -->
     <% end %>
   </div>
 </div>
-<!-- </ul> -->
-
-<br>
-<br>
-<br>
-
-
-
+<br><br><br>
 
 <div class="searchBar">
-  <div class="searchText">Search your bar here:</div>
+  <div class="searchText">
+    Search your bar here:
+  </div>
   <%= form_tag search_bar_path, method: :get do %>
     <%= text_field_tag :query, nil, placeholder: "Enter seach keywords" %>
     <%= submit_tag "Search" %>
   <% end %>
 </div>
-<!--
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-  </div>
-</div> -->
-
-
-
-
-
-
 
 
 <div id="map"></div>
-<br>
-<br>
+<br><br>
 <%= link_to "Back To My Profile", profile_path %>
+
+
+
 
 <script>
 
   var bars = <%= @bar_locations.to_json.html_safe %>;
-  //  var bars = [
-  //   {"lat":-33.868103,"lng":151.2053,"name":"The Baxter Inn"},
-  //   {"lat":-33.867196,"lng":151.204545,"name":"Assembly Bar"},
-  //   {"lat":-33.863277,"lng":151.206962,"name":"Grasshopper"},
-  //   {"lat":-33.885988,"lng":151.198248,"name":"Mjølner"},
-  //   {"lat":-33.868103,"lng":151.2053,"name":"The Barber Shop"},
-  //   {"lat":-33.8713221,"lng":151.2046436,"name":"Stitch"}
+  // var bars = [
+  //   {"lat":-33.869667,"lng":151.2056116,"name":"The Baxter Inn","phone":"(02) 9221 5580","address":"152-156 Clarence St, Sydney","website":"http://thebaxterinn.com/"},
+  //   {"lat":-33.8835779,"lng":151.2009593,"name":"Stitch","phone":"(02) 9279 0380","address":"15 Broadway, Ultimo","website":"http://www.houseofpocket.com.au/bars/stitch-bar-sydney-cbd/venue-details/"},
+  //   {"lat":-33.8696192,"lng":151.2064988,"name":"Grasshopper","phone":"(02) 9947 9025","address":"1 Temperance Lane, Sydney","website":"http://thegrasshopperbar.com/"},
+  //   {"lat":-33.890072,"lng":151.2073062,"name":"Mjølner","phone":"(02) 8646 4930","address":"267 Cleveland St, Redfern","website":"https://mjolner.com.au/"},
+  //   {"lat":-33.8571982,"lng":151.2050025,"name":"The Barber Shop","phone":"(02) 9299 9699","address":"22 Hickson Road, Walsh Bay NSW 2000","website":"http://thisisthebarbershop.com/"},
+  //   {"lat":-33.867196,"lng":151.204545,"name":"Assembly Bar","phone":"(02) 9261 0552","address":"488 Kent St, Sydney","website":"http://www.assemblybar.com.au/"}
   // ];
 
 
 
- //  for (i = 0; i < locations.length; i++) {
- //   var marker = new google.maps.Marker({
- //     position: new google.maps.LatLng(locations[i][1], locations[i][2]),
- //     map: map
- //   });
- //
- //   //extend the bounds to include each marker's position
- //   bounds.extend(marker.position);
- //
- //   google.maps.event.addListener(marker, 'click', (function(marker, i) {
- //     return function() {
- //       infowindow.setContent(locations[i][0]);
- //       infowindow.open(map, marker);
- //     }
- //   })(marker, i));
- // }
- //
- // //now fit the map to the newly inclusive bounds
- // map.fitBounds(bounds);
- //
- // //(optional) restore the zoom level after the map is done scaling
- // var listener = google.maps.event.addListener(map, "idle", function () {
- //     map.setZoom(3);
- //     google.maps.event.removeListener(listener);
- // });
-
-
-
 function initMap() {
-  //
   let map = new google.maps.Map(document.getElementById('map'), {
     // zoom: 15,
     // center: bars[0]
@@ -123,7 +63,7 @@ function initMap() {
         `<h5>${bar.name}</h5>`+
         `<div>${bar.phone}</div>`+
         `<div>${bar.address}</div>`+
-        `<div>${bar.website}</div>`+
+        `<a href="${bar.website}" target= "_blank">`+`${bar.website}`+`</a>`+
         "</div>";
 
     let infowindow = new google.maps.InfoWindow({
@@ -139,18 +79,15 @@ function initMap() {
     bounds.extend(marker.position);
 
     marker.addListener('click', function() {
-      // return function() {
-      // infowindow.setContent();
       infowindow.open(map, marker);
-      // }
     });
   }
-  //now fit the map to the newly inclusive bounds
+  // fit the map to the newly inclusive bounds
   map.fitBounds(bounds);
 
-  //(optional) restore the zoom level after the map is done scaling
+  // restore the zoom level after the map is done scaling
   let listener = google.maps.event.addListener(map, "idle", function () {
-    map.setZoom(14);
+    map.setZoom(13);
     google.maps.event.removeListener(listener);
   });
 }

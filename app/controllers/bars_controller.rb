@@ -13,7 +13,6 @@ class BarsController < ApplicationController
       req = Cloudinary::Uploader.upload(params[:file])
       bar.image = req["public_id"]
     end
-
     bar.save
     redirect_to bars_path
   end
@@ -27,15 +26,6 @@ class BarsController < ApplicationController
     @results = Bar.where((["description ILIKE ?"] * terms.size).join(" AND "), *terms.map{|key| "%#{key}%"})
   end
 
-  # def cocktail
-  #   @cocktail = Cocktail.new
-  #   if params[:file].present?
-  #     req = Cloudinary::Uploader.upload(params[:file])
-  #     @cocktail.image = req["public_id"]
-  #   end
-  #   @cocktail.bar_id = params[:id]
-  #   @ingredients = Ingredient.all
-  # end
 
   def comment
     comment = Comment.new
@@ -64,13 +54,6 @@ class BarsController < ApplicationController
     redirect_to bar
   end
 
-  # def menu
-  #   # @lists = @current_user.lists
-  #   @bar = Bar.find params[:id]
-  #   # render template: "cocktails/index"
-  #   render :cocktails_path
-  # end
-
   def show
     @comments = Comment.all
   end
@@ -94,7 +77,6 @@ class BarsController < ApplicationController
       req = Cloudinary::Uploader.upload(params[:file])
       @bar.image = req["public_id"]
     end
-
     @bar.update bar_params
     redirect_to @bar
   end
@@ -107,7 +89,7 @@ class BarsController < ApplicationController
   private
 
   def bar_params
-    params.require(:bar).permit(:name, :description, :phone, :website)
+    params.require(:bar).permit(:name, :description, :phone, :website, :address)
   end
 
   def get_bar

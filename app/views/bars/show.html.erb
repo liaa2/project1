@@ -1,50 +1,29 @@
-
-
-
-
 <h2><%= @bar.name %></h2>
 
-Rating  : <%= rating_for @bar, 'cocktails', enable_half: true, disable_after_rate: false, half_show: true, imdb_avg: true %>
 
-
-<% if flash[:success_message] %>
-  <div class="success">
-    <strong><%= flash[:success_message] %></strong>
-  </div>
-
+<div>
+  <% if flash[:success_message] %>
+    <div class="success">
+      <strong><%= flash[:success_message] %></strong>
+    </div>
   <% elsif flash[:duplicate_message] %>
-  <div class="duplicate">
-    <strong><%= flash[:duplicate_message] %></strong>
-  </div>
-<% end %>
-
-<!--
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-      One of three columns
+    <div class="duplicate">
+      <strong><%= flash[:duplicate_message] %></strong>
     </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-  </div>
-</div> -->
-
-
-
-
-
-
+  <% end %>
+</div>
+<br>
+<div>
+  Rating  : <%= rating_for @bar, 'cocktails', enable_half: true, disable_after_rate: false, half_show: true, imdb_avg: true %>
+</div>
+<br><br>
 <div class="container">
   <div class="row">
     <div class="col-xl-6">
       <% if @bar.image.present? %>
-      <%= cl_image_tag @bar.image, class: "barImage"%>
+        <%= cl_image_tag @bar.image, class: "barImage"%>
       <% else %>
-      <%= image_tag "http://thepouringtales.com/wp-content/uploads/2016/01/The-Baxter-Inn-Sydney-132.jpg" , class: "barImage"%>
+        <%= image_tag "http://thepouringtales.com/wp-content/uploads/2016/01/The-Baxter-Inn-Sydney-132.jpg" , class: "barImage"%>
       <% end %>
     </div>
     <div class="col-xl-6">
@@ -55,90 +34,72 @@ Rating  : <%= rating_for @bar, 'cocktails', enable_half: true, disable_after_rat
     </div>
   </div>
 </div>
-<br>
-
-
-<%# link_to "Cocktails Menu", menu_bar_path(@bar) %>
-
+<br><br><br>
 
 <% if @current_user.present? %>
-
-<% if @current_user.bars.include? @bar %>
-<%= link_to 'Remove from Favourites', unfavourite_bar_path( @bar ) %>
-<% else %>
-<%= link_to 'Add to Favourites', favourite_bar_path( @bar ) %>
+  <% if @current_user.bars.include? @bar %>
+    <%= link_to 'Remove from Favourites', unfavourite_bar_path( @bar ) %>
+  <% else %>
+    <%= link_to 'Add to Favourites', favourite_bar_path( @bar ) %>
+  <% end %>
 <% end %>
-<% end %>
-<br>
-<br>
-<br>
-<br>
+<br><br><br><br>
 
 <p><strong>Popular drinks:</strong></p>
 
-
 <div class="container">
   <div class="row">
-  <% @bar.cocktails.each do |cocktail| %>
-  <div class="col-sm-2 cocktailDrinks">
-
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    <% @bar.cocktails.each do |cocktail| %>
+      <div class="col-sm-2 cocktailDrinks">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
 </div>
 
 <br>
 <%= link_to "Add More Drinks", cocktail_bar_path(@bar),class: "redirect"%>
-
 <br>
-
 <hr>
-
 <div id="map"></div>
-
 <hr>
 <p>Comments:</p>
 <% if @comments.present? %>
-<ul>
-  <% @bar.comments.each do |comment|%>
-  <li>
-    <%= comment.user.image %>&nbsp;<%= comment.user.username %>
-    <br>
-    <br>
-    <%= time_ago_in_words( comment.created_at ) %> ago <br>
-    <%= comment.content %>
-    <hr>
-  <% end %>
-  </li>
+  <ul>
+    <% @bar.comments.each do |comment|%>
+      <li>
+        <br>
+        <%= comment.content %>
+        <br><br><br>
+        <div class="commentsBox">
+        User:&nbsp;<%= comment.user.username %> <br>
+        <%= time_ago_in_words( comment.created_at ) %> ago
+        </div>
+        <hr>
+      <% end %>
+    </li>
+  </ul>
 <% end %>
-</ul>
+<br><br>
 
-<br>
-<br>
-<p>Add your comment here:</p>
 <%= form_tag comment_bar_path(@bar) do %>
-  <%= label_tag :add_comment %>
+  <%= label_tag :add_your_comment_here %>
+  <br>
   <%= text_area_tag :content %>
   <br>
   <%= submit_tag "submit"%>
 <% end %>
 
+<br><br>
 
-
-
-<br>
-<br>
-
-<%= link_to "Back to Main Page", bars_path %>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to "Back to Main Page", bars_path %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <%= link_to "Back to My Profile", profile_path %>
 
-<div id="barControl">
-<% if @current_user.present? %>
-<%= link_to "Edit Bar Details", edit_bar_path(@bar) , class: "redirect"%>&nbsp;&nbsp;&nbsp;
-<%= link_to "Delete This Bar", bar_path(@bar), method: :delete , class: "redirect"%>
-<% end %>
+<div class="control">
+  <% if @current_user.present? %>
+    <%= link_to "Edit Bar Details", edit_bar_path(@bar) , class: "redirect"%>&nbsp;&nbsp;&nbsp;
+    <%= link_to "Delete This Bar", bar_path(@bar), method: :delete , class: "redirect"%>
+  <% end %>
 </div>
 
 

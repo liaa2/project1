@@ -18,6 +18,7 @@ class CocktailsController < ApplicationController
       req = Cloudinary::Uploader.upload(params[:file])
       cocktail.image = req["public_id"]
     end
+    cocktail.ingredients << Ingredient.find( params[:ingredients] )
     cocktail.save
     # raise "hell"
     redirect_to cocktail.bar
@@ -79,7 +80,15 @@ class CocktailsController < ApplicationController
       req = Cloudinary::Uploader.upload(params[:file])
       @cocktail.image = req["public_id"]
     end
+
     @cocktail.update cocktail_params
+
+    @cocktail.ingredients.destroy_all
+    @cocktail.ingredients << Ingredient.find( params[:ingredients] )
+    # params[:ingredients].each do |iid|
+    #   @cocktail.ingredients << Ingredient.find( iid )
+    # end
+
     redirect_to @cocktail
   end
 

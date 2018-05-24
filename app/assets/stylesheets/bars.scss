@@ -6,8 +6,8 @@
   margin-bottom:40px;
 }
 
-.barContainer {
-  // margin-bottom: 50px;
+.commentsBox {
+  font-size: 12px;
 }
 
 .searchBar {
@@ -36,6 +36,10 @@
   overflow: hidden !important;
 }
 
-#barControl {
+.control {
   float:right;
+}
+
+.list-group-one {
+  width: 500px;
 }

@@ -1,13 +1,15 @@
 <h2>
   Search reasult for "<%= params[:query] %>"
 </h2>
-
-<ul>
-<% @results.each do |bar| %>
-  <li>
-    <%= link_to bar.name %> <br>
-    <%= bar.address %>
-  </li>
-  <br>
+<br>
+<div class="list-group-one">
+  <% @results.each do |bar| %>
+    <li class="list-group-item">
+      <%= link_to bar.name %> <br>
+      <%= bar.address %>
+    </li>
+    <br>
   <% end %>
-</ul>
+</div>
+<br>
+<%= link_to "Back", bars_path %>

@@ -21,6 +21,19 @@ h1 {
   font-size: 50px;
 }
 
+// body {
+//   background: url("background.jpg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
+
+.transparent {
+	background-color:transparent !important;
+	border-color:transparent;
+	background-image:none;
+	box-shadow:none;
+}
+
 h2, h4, h5,span {
  font-family: 'Permanent Marker', cursive;
 }
@@ -29,6 +42,10 @@ h2, h4, h5,span {
   font-size: 10px;
 }
 
+
+.form {
+  text-align: center;
+}
 
  * {
    box-sizing: border-box;
@@ -49,9 +66,6 @@ ul, li{
   min-width: 15rem !important;
   }
 
-// .displayName {
-//   color: rgb(37, 152, 208)
-// }
 
 .emailDisplay {
   margin-bottom: 20px;
@@ -73,4 +87,8 @@ ul, li{
 
 .footer {
   font-size: 10px;
+}
+
+.form-control, one {
+  width: 300px;
 }

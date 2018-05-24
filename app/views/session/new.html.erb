@@ -1,13 +1,15 @@
-<h1>Session Login Page</h1>
+<h2 id="signIn">Please sign in</h2>
 
 <strong><%= flash[:error] %></strong>
-
-<%= form_tag login_path do %>
-  <%= label_tag :email %>
-  <%= email_field_tag :email %>
+<br>
+<div class="form-group" id="signIn">
+<%= form_tag login_path do%>
+  <%= label_tag :email_address%>
+  <%= email_field_tag :email, nil, class: "form-control", placeholder:"Enter email"%>
   <br>
   <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  
-  <%= submit_tag "Login" %>
+  <%= password_field_tag :password, nil, class: "form-control", placeholder:"Password"%>
+  <br>
+  <%= submit_tag "Login" , class:"btn btn-primary"%>
 <% end %>
+</div>

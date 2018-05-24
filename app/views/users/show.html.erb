@@ -2,7 +2,6 @@
 <br>
 
 <div class="list-group">
-  <!-- <div class="col-md-8"> -->
     <div class = "row">
       <div class = "col-md-12">
         <h4>My personal lists</h4>
@@ -10,12 +9,8 @@
     </div>
 
     <% @user.lists.each do |l| %>
-    <!-- <div class = "row"> -->
-      <!-- <div class = "col-md-6"> -->
         <p><strong><%= link_to l.name, list_path(l), class: "list-group-item col-md-6"%></strong></p>
-      <!-- </div> -->
-      <% end %>
-    <!-- </div> -->
+    <% end %>
 
     <div class = "row">
       <div class = "col-md-12">
@@ -23,14 +18,7 @@
       </div>
     </div>
   </div>
-
-  <!-- </div> -->
 </div>
-<!-- <div id="userImage" class="col-md-4">
-  <% if @current_user.image.present? %>
-    <%# cl_image_tag @current_user.image%>
-  <% end%>
-</div> -->
 <br>
 <div class="list-group">
   <div class="row">
@@ -50,22 +38,4 @@
 
 
 <br>
-<%= link_to "Check for more..", bars_path, class: "redirect"%>
-
-<!-- <hr> -->
-<%# link_to "Back to Welcome Page", root_path%>
-
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-  </div>
-</div> -->
+<%= link_to "More bars..", bars_path, class: "redirect"%>
