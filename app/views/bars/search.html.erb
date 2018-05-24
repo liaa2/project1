@@ -1,0 +1,13 @@
+<h2>
+  Search reasult for "<%= params[:query] %>"
+</h2>
+
+<ul>
+<% @results.each do |bar| %>
+  <li>
+    <%= link_to bar.name %> <br>
+    <%= bar.address %>
+  </li>
+  <br>
+  <% end %>
+</ul>

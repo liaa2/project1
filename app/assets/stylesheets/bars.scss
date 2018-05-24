@@ -1,7 +1,41 @@
 
+
+
+.bars {
+  text-align: center;
+  margin-bottom:40px;
+}
+
+.barContainer {
+  // margin-bottom: 50px;
+}
+
+.searchBar {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.searchText {
+  margin-bottom: 10px;
+}
+
+.barImage {
+  width: 100%;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.cocktailDrinks {
+  border: 1px solid grey;
+}
+
 #map {
   height: 30vw;
-  width: 70vh;
+  width: 80vh;
   margin: auto;
   overflow: hidden !important;
+}
+
+#barControl {
+  float:right;
 }

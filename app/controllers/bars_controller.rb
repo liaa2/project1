@@ -18,6 +18,15 @@ class BarsController < ApplicationController
     redirect_to bars_path
   end
 
+  def search
+    # @results = Bar.where(name: params[:query])
+    # @results = Bar.where("name LIKE ? OR address LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
+    terms = params[:query].split(" ")
+    puts terms
+    # @results = Bar.where("description LIKE ? AND description LIKE ?", "%#{terms[0]}%","%#{terms[1]}%")
+    @results = Bar.where((["description ILIKE ?"] * terms.size).join(" AND "), *terms.map{|key| "%#{key}%"})
+  end
+
   # def cocktail
   #   @cocktail = Cocktail.new
   #   if params[:file].present?
@@ -71,7 +80,7 @@ class BarsController < ApplicationController
     @lists = @current_user.lists
 
     @bar_locations = @bars.map do |b|
-      {lat: b.latitude, lng: b.longitude, name: b.name}
+      {lat: b.latitude, lng: b.longitude, name: b.name, phone: b.phone, address: b.address, website: b.website}
     end
     # puts @bar_locations
 

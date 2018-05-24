@@ -26,20 +26,46 @@
 
   <!-- </div> -->
 </div>
-<div id="userImage" class="col-md-4">
+<!-- <div id="userImage" class="col-md-4">
   <% if @current_user.image.present? %>
     <%# cl_image_tag @current_user.image%>
   <% end%>
-</div>
+</div> -->
 <br>
-<h4>The bars I like: </h4>
+<div class="list-group">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>The bars I like: </h4>
+    </div>
+  </div>
+
+  <% @user.bars.each do |b| %>
+  <div class="row">
+    <div class="col-sm-12">
+      <p><strong><%= link_to b.name, bar_path(b), class: "list-group-item col-md-6" %></strong></p>
+    </div>
+  </div>
+  <% end %>
+</div>
 
 
-<% @user.bars.each do |b| %>
-<p><strong><%= link_to b.name, bar_path(b) %></strong></p>
-<% end %>
 <br>
 <%= link_to "Check for more..", bars_path, class: "redirect"%>
 
-<hr>
+<!-- <hr> -->
 <%# link_to "Back to Welcome Page", root_path%>
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div> -->

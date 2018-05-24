@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  post '/rate' => 'rater#create', :as => 'rate'
+  
   root to: "pages#home"
 
   get "/login" => "session#new"
@@ -20,6 +22,7 @@ Rails.application.routes.draw do
   post "/bars/:id/comment" => "bars#comment", as: :comment_bar
   get "/bars/:id/cocktails/new" => "cocktails#new", as: :cocktail_bar
   # get "/bars/:id/menu" => "bars#menu", as: :menu_bar
+  get "/search" => "bars#search", as: :search_bar
 
   resources :cocktails
 
@@ -28,6 +31,7 @@ Rails.application.routes.draw do
   delete "/cocktails/:id/favourite/:list_id"  => "cocktails#unfavourite", as: :unfavourite_cocktail
 
   resources :comments
+
 end
 
 

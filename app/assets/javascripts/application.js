@@ -16,6 +16,8 @@
 //= require_tree .
 //= require popper
 //= require bootstrap
+//= require jquery.raty
+//= require ratyrate
 
 $(document).ready(function () {
 

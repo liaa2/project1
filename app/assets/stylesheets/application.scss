@@ -21,7 +21,7 @@ h1 {
   font-size: 50px;
 }
 
-h2, h4,span {
+h2, h4, h5,span {
  font-family: 'Permanent Marker', cursive;
 }
 
@@ -45,13 +45,13 @@ ul, li{
 }
 
 .dropdown-menu {
-  padding: 10px 10px 0;
+  padding: 10px;
   min-width: 15rem !important;
   }
 
-.displayName {
-  color: rgb(37, 152, 208)
-}
+// .displayName {
+//   color: rgb(37, 152, 208)
+// }
 
 .emailDisplay {
   margin-bottom: 20px;
@@ -71,7 +71,6 @@ ul, li{
   display: none;
 }
 
-#profileImage {
-  width: 50%;
-  height: auto;
+.footer {
+  font-size: 10px;
 }
