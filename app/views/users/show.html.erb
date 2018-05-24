@@ -1,23 +1,45 @@
-<h1><%= @user.username %> personal profile page</h1>
+<h2>Something about <%= @user.username %>...</h2>
+<br>
 
-<p>My personal lists</p>
+<div class="list-group">
+  <!-- <div class="col-md-8"> -->
+    <div class = "row">
+      <div class = "col-md-12">
+        <h4>My personal lists</h4>
+      </div>
+    </div>
 
-<% @user.lists.each do |l| %>
-<div class = "row">
-  <p><strong><%= link_to l.name, list_path(l) %></strong></p>
-  <% end %>
+    <% @user.lists.each do |l| %>
+    <!-- <div class = "row"> -->
+      <!-- <div class = "col-md-6"> -->
+        <p><strong><%= link_to l.name, list_path(l), class: "list-group-item col-md-6"%></strong></p>
+      <!-- </div> -->
+      <% end %>
+    <!-- </div> -->
+
+    <div class = "row">
+      <div class = "col-md-12">
+        <%= link_to "Add More..", new_list_path, class: "redirect"%>
+      </div>
+    </div>
+  </div>
+
+  <!-- </div> -->
 </div>
-
-<%= link_to "Add More", new_list_path%>
-
-<p>The bars I like: </p>
+<div id="userImage" class="col-md-4">
+  <% if @current_user.image.present? %>
+    <%# cl_image_tag @current_user.image%>
+  <% end%>
+</div>
+<br>
+<h4>The bars I like: </h4>
 
 
 <% @user.bars.each do |b| %>
 <p><strong><%= link_to b.name, bar_path(b) %></strong></p>
 <% end %>
-
-<%= link_to "Check for more", bars_path%>
+<br>
+<%= link_to "Check for more..", bars_path, class: "redirect"%>
 
 <hr>
-<%= link_to "Back to Personal Setting", root_path %>
+<%# link_to "Back to Welcome Page", root_path%>

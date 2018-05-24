@@ -13,16 +13,76 @@
 
   <body>
     <h1>nostrum</h1>
-    <nav>
-      <% if @current_user.present? %>
-       Welcome, <%= @current_user.username %>!
-       <%= link_to "Log out", login_path, method: :delete %>
-      <% else %>
-      <%= link_to "login", login_path %>
-      <%= link_to "Sign Up", new_user_path %>
-      <% end %>
+
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <% if @current_user.present? %>
+      <span>Welcome, amigo!</span>&nbsp;&nbsp;&nbsp;
+      <!-- <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <%# link_to "Edit my details", edit_user_path(@current_user)%>&nbsp;&nbsp;||&nbsp;&nbsp;
+        </li>
+        <li class="nav-item">
+          <%# link_to "Log out", login_path, method: :delete%>
+        </li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+                <strong><%= @current_user.username%></strong>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <div class="navbar-login">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p class="text-center">
+                                    <% if @current_user.image.present? %>
+                                    <%= cl_image_tag @current_user.image , class: "userImage"%>
+                                    <% else %>
+                                    <%= image_tag "http://thephpfactory.com/images/user_profile1.png", class: "userImage"%>
+                                    <% end %>
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-left"><strong><%= @current_user.username %></strong></div>
+                                <div class="text-left small emailDisplay"><%= @current_user.email %></div>
+                                <div class="text-left settingButton">
+                                    <%= link_to "Personal Setting", edit_user_path(@current_user), class: "btn btn-primary btn-block btn-sm buttonFont"%>
+                                </div>
+                                <div class = "settingButton">
+                                  <%= link_to "Log out", login_path, method: :delete, class: "btn btn-danger btn-block buttonFont"%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- <li class="divider"></li>
+                <li>
+                    <div class="navbar-login navbar-login-session">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p>
+                                  <%# link_to "Log out", login_path, method: :delete, class: "btn btn-danger btn-block buttonFont"%>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+            <% else %>
+            <li class="nav-item">
+              <%= link_to "login", login_path%>&nbsp;&nbsp;||&nbsp;&nbsp;
+            </li>
+            <li class="nav-item">
+              <%= link_to "Sign Up", new_user_path%>
+            </li>
+            <% end %>
     </nav>
     <hr>
     <%= yield %>
   </body>
 </html>
+
+
+<%# cl_image_tag @current_user.image %>

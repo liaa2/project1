@@ -2,6 +2,7 @@
 
 
 
+<h2><%= @bar.name %></h2>
 
 
 
@@ -16,7 +17,6 @@
   </div>
 <% end %>
 
-<h1><%= @bar.name %></h1>
 
 <% if @bar.image.present? %>
 <%= cl_image_tag @bar.image %>
@@ -52,7 +52,7 @@
 <% end %>
 </ul>
 <br>
-<%= link_to "Add More Drinks", cocktail_bar_path(@bar)%>
+<%= link_to "Add More Drinks", cocktail_bar_path(@bar),class: "redirect"%>
 
 <br>
 <%= @bar.address %><br>
@@ -91,8 +91,8 @@
 
 <hr>
 <% if @current_user.present? %>
-  <%= link_to "Edit Bar Details", edit_bar_path(@bar) %>&nbsp;&nbsp;&nbsp;
-  <%= link_to "Delete This Bar", bar_path(@bar), method: :delete %>
+  <%= link_to "Edit Bar Details", edit_bar_path(@bar) , class: "redirect"%>&nbsp;&nbsp;&nbsp;
+  <%= link_to "Delete This Bar", bar_path(@bar), method: :delete , class: "redirect"%>
 <% end %>
 <br>
 <br>
@@ -107,6 +107,7 @@
 
 
 <script>
+
 
   function initMap() {
     var myLatLng = {lat: <%= @bar.latitude %>, lng: <%= @bar.longitude %>};

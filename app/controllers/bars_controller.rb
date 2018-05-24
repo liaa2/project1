@@ -69,6 +69,12 @@ class BarsController < ApplicationController
   def index
     @bars = Bar.all
     @lists = @current_user.lists
+
+    @bar_locations = @bars.map do |b|
+      {lat: b.latitude, lng: b.longitude, name: b.name}
+    end
+    # puts @bar_locations
+
   end
 
   def edit

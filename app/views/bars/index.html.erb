@@ -1,4 +1,4 @@
-<h1>Bars in Sydney</h1>
+<h2>Bars in Sydney</h2>
 
 <ul>
 <% @bars.each do |b| %>
@@ -10,7 +10,51 @@
 </ul>
 
 <br>
-<%= link_to "Add More", new_bar_path %>
+<%= link_to "Add More", new_bar_path , class: "redirect"%>
 <br>
 <br>
 <%= link_to "Back To My Profile", profile_path %>
+
+<div id="map"></div>
+
+<script>
+
+  var bars = <%= @bar_locations.to_json.html_safe %>;
+  //  var bars = [
+  //   {"lat":-33.868103,"lng":151.2053,"name":"The Baxter Inn"},
+  //   {"lat":-33.867196,"lng":151.204545,"name":"Assembly Bar"},
+  //   {"lat":-33.863277,"lng":151.206962,"name":"Grasshopper"},
+  //   {"lat":-33.885988,"lng":151.198248,"name":"Mjølner"},
+  //   {"lat":-33.868103,"lng":151.2053,"name":"The Barber Shop"},
+  //   {"lat":-33.8713221,"lng":151.2046436,"name":"Stitch"}
+  // ];
+
+  function initMap() {
+    //
+    var map = new google.maps.Map(document.getElementById('map'), {
+      // zoom: 15,
+      // center: bars[0]
+    });
+
+    var bounds = new google.maps.LatLngBounds();
+
+    for (var i = 0; i < bars.length; i++) {
+      const bar = bars[i];
+      var marker = new google.maps.Marker({
+        position: bar,
+        map: map,
+        title: bar.name
+      });
+
+      bounds.extend(marker.position);
+
+    }
+
+    map.fitBounds(bounds);
+
+  }
+</script>
+<script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpskf5JVqWv7kAPgmuqRgYR9NeN6eeWSY&callback=initMap">
+   </script>
+ </body>

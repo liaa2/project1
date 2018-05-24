@@ -33,18 +33,4 @@ $(document).ready(function () {
       $("#otherList").show()
     }
   })
-
-  // $("#addList").on("click", function (){
-  //   // let listName = $("#newList").val()
-  //   $.ajax({
-  //     type: "POST",
-  //     url: "/profile",
-  //     data: {"name": $("#newList").val()},
-  //     dataType: "json",
-  //     success: function(data){
-  //       console.log(data);
-  //     }
-  //   })
-  // })
-
 });

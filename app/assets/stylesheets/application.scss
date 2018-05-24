@@ -14,23 +14,64 @@
  *= require_tree .
  */
  @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Frijole|Permanent+Marker');
+
+h1 {
+  font-family: 'Frijole', cursive;
+  font-size: 50px;
+}
+
+h2, h4,span {
+ font-family: 'Permanent Marker', cursive;
+}
+
+.buttonFont {
+  font-size: 10px;
+}
+
 
  * {
    box-sizing: border-box;
  }
 
 
-ul {
+ul, li{
   list-style: none;
   padding-left: 0px;
 }
 
-img {
-  max-width: 500px;
+.userImage {
+  width: 100%;
+}
+
+.dropdown-menu {
+  padding: 10px 10px 0;
+  min-width: 15rem !important;
+  }
+
+.displayName {
+  color: rgb(37, 152, 208)
+}
+
+.emailDisplay {
+  margin-bottom: 20px;
+}
+
+.settingButton {
+  margin-top: 10px;
+}
+
+.redirect{
+  font-size: 12px;
 }
 
 #selectWarning {
   color: orange;
   font-weight: bold;
   display: none;
+}
+
+#profileImage {
+  width: 50%;
+  height: auto;
 }

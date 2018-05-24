@@ -12,7 +12,7 @@ class ListsController < ApplicationController
     list = List.new list_params
     list.user = @current_user
     list.save
-    redirect_to lists_path
+    redirect_to profile_path
   end
 
   def show
@@ -40,7 +40,7 @@ class ListsController < ApplicationController
 
   def destroy
     @list.destroy
-    redirect_to lists_path
+    redirect_to profile_path
   end
 
   private

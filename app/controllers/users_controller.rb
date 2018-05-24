@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :check_if_logged_in, only: [:profile]
-  # respond_to :js, :json, :html
+
 
   def new
     @user = User.new
@@ -34,14 +34,23 @@ class UsersController < ApplicationController
   end
 
   def update
-    cocktail = Cocktail.find params[:id]
-    redirect_to bar_path(bar)
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      @current_user.image = req["public_id"]
+    end
+   @current_user.update user_params
+   redirect_to profile_path
   end
 
   def edit
+    @user = User.find params[:id]
   end
 
   private
+
+  # def get_user
+  #   @user = User.find params[:id]
+  # end
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation)
