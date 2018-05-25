@@ -34,13 +34,11 @@ class UsersController < ApplicationController
   end
 
   def update
-
-    if params[:file].present?
-      req = Cloudinary::Uploader.upload(params[:file])
-      @current_user.image = req["public_id"]
-    end
-
     if @current_user.update user_params
+      if params[:file].present?
+        req = Cloudinary::Uploader.upload(params[:file])
+        @current_user.image = req["public_id"]
+      end
       redirect_to profile_path
     else
       flash[:errors] = @current_user.errors.full_messages
