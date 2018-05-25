@@ -1,4 +1,15 @@
 
+<% if flash[:cocktail_error] %>
+<div class="error">
+  <ol>
+  <% flash[:cocktail_error].each do |e| %>
+    <li><strong><%= e %></strong></li>
+    <% end %>
+  </ol>
+</div>
+<% end %>
+<br>
+
 <%= form_for(@cocktail, :html => {:multipart => true}) do |f|%>
 <div class="form-group">
   <%= f.label :name %>

@@ -13,16 +13,42 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    cocktail = Cocktail.new cocktail_params
-    if params[:file].present?
-      req = Cloudinary::Uploader.upload(params[:file])
-      cocktail.image = req["public_id"]
+    cocktail = Cocktail.create cocktail_params
+
+    if cocktail.persisted?
+      if params[:file].present?
+        req = Cloudinary::Uploader.upload(params[:file])
+        cocktail.image = req["public_id"]
+      end
+      cocktail.ingredients << Ingredient.find( params[:ingredients] )
+      cocktail.save
+      # raise "hell"
+      redirect_to cocktail.bar
     end
-    cocktail.ingredients << Ingredient.find( params[:ingredients] )
-    cocktail.save
-    # raise "hell"
-    redirect_to cocktail.bar
+    flash[:cocktail_error] = cocktail.errors.full_messages
+    redirect_to new_cocktail_path
   end
+
+
+  # def create
+  #   bar = Bar.create bar_params
+  #   if bar.persisted?
+  #     if params[:file].present?
+  #       req = Cloudinary::Uploader.upload(params[:file])
+  #       bar.image = req["public_id"]
+  #       bar.save
+  #     end
+  #     redirect_to bars_path
+  #   else
+  #     flash[:bar_error] =  bar.errors.full_messages
+  #     redirect_to new_bar_path
+  #   end
+  # end
+
+
+
+
+
 
   def show
     @lists = @cocktail.lists.where(user_id: @current_user)
@@ -76,20 +102,24 @@ class CocktailsController < ApplicationController
   end
 
   def update
-    if params[:file].present?
-      req = Cloudinary::Uploader.upload(params[:file])
-      @cocktail.image = req["public_id"]
+    if @cocktail.update cocktail_params
+      if @cocktail.name.present?
+        if params[:file].present?
+          req = Cloudinary::Uploader.upload(params[:file])
+          @cocktail.image = req["public_id"]
+        end
+
+        @cocktail.ingredients.destroy_all
+        @cocktail.ingredients << Ingredient.find( params[:ingredients] )
+        # params[:ingredients].each do |iid|
+        #   @cocktail.ingredients << Ingredient.find( iid )
+        # end
+
+        redirect_to cocktail_path(@cocktail)
+      end
     end
-
-    @cocktail.update cocktail_params
-
-    @cocktail.ingredients.destroy_all
-    @cocktail.ingredients << Ingredient.find( params[:ingredients] )
-    # params[:ingredients].each do |iid|
-    #   @cocktail.ingredients << Ingredient.find( iid )
-    # end
-
-    redirect_to @cocktail
+    flash[:cocktail_error] = @cocktail.errors.full_messages
+    redirect_to edit_cocktail_path( @cocktail )
   end
 
   def destroy

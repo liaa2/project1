@@ -1,4 +1,14 @@
 
+<% if flash[:errors] %>
+<strong>Please correct the following errors:</strong>
+<ol>
+  <% flash[:errors].each do |e| %>
+  <li><%= e %></li>
+  <% end %>
+</ol>
+<% end %>
+
+
 <div class="form-group">
   <%= form_for(@user, :html => {:multipart => true}) do |f| %>
     <%= f.label :username%>

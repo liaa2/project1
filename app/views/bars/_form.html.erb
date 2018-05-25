@@ -1,5 +1,14 @@
+<% if flash[:bar_error] %>
+<div class="error">
+  <ol>
+  <% flash[:bar_error].each do |e| %>
+    <li><strong><%= e %></strong></li>
+    <% end %>
+  </ol>
+</div>
+<% end %>
 
-
+<br>
 <%= form_for(@bar, :html => {:multipart => true}) do |f| %>
 <div class="form-group">
   <%= f.label :name%>

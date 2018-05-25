@@ -7,14 +7,18 @@ class BarsController < ApplicationController
   end
 
   def create
-    bar = Bar.new bar_params
-
-    if params[:file].present?
-      req = Cloudinary::Uploader.upload(params[:file])
-      bar.image = req["public_id"]
+    bar = Bar.create bar_params
+    if bar.persisted?
+      if params[:file].present?
+        req = Cloudinary::Uploader.upload(params[:file])
+        bar.image = req["public_id"]
+        bar.save
+      end
+      redirect_to bars_path
+    else
+      flash[:bar_error] =  bar.errors.full_messages
+      redirect_to new_bar_path
     end
-    bar.save
-    redirect_to bars_path
   end
 
   def search
@@ -73,12 +77,17 @@ class BarsController < ApplicationController
   end
 
   def update
-    if params[:file].present?
-      req = Cloudinary::Uploader.upload(params[:file])
-      @bar.image = req["public_id"]
+    if @bar.update bar_params
+      if params[:file].present?
+        req = Cloudinary::Uploader.upload(params[:file])
+        @bar.image = req["public_id"]
+        @bar.save
+      end
+      redirect_to @bar
+    else
+      flash[:bar_error] =  @bar.errors.full_messages
+      redirect_to edit_bar_path( @bar )
     end
-    @bar.update bar_params
-    redirect_to @bar
   end
 
   def destroy
