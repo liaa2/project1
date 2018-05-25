@@ -38,6 +38,7 @@ class UsersController < ApplicationController
       if params[:file].present?
         req = Cloudinary::Uploader.upload(params[:file])
         @current_user.image = req["public_id"]
+        @current_user.save
       end
       redirect_to profile_path
     else
