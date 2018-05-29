@@ -21,11 +21,23 @@ h1 {
   font-size: 50px;
 }
 
-// body {
-//   background: url("background.jpg");
-//   background-repeat: no-repeat;
-//   background-position: center;
-// }
+body {
+  position: relative;
+}
+
+body:after {
+  background: url("background.jpg");
+  background-position: contain;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity : 0.2;
+  z-index: -1;
+}
 
 .transparent {
 	background-color:transparent !important;
